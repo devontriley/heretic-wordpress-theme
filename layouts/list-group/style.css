@@ -1,0 +1,42 @@
+.layout-list-group {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.layout-list-group .column2 {
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .layout-list-group .column2 {
+    margin-top: 0;
+  }
+}
+.layout-list-group .column {
+  height: 100%;
+  padding: 50px;
+  border: 1px solid var(--bs-gray-400);
+}
+.layout-list-group .h4 {
+  margin: 2em 0 1.3em 0;
+}
+.layout-list-group .h4:first-child {
+  margin-top: 0;
+}
+.layout-list-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.layout-list-group ul li {
+  margin-bottom: 1em;
+}
+.layout-list-group ul li:last-child {
+  margin-bottom: 0;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-list-group.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-colored-icon-cards {
+    @include margin(85px 0);
+
+    .row {
+        margin-bottom: var(--bs-gutter-x);
+    }
+
+    div[class*=col].grid {
+        margin-bottom: $grid-gutter-width;
+    }
+
+    .card {
+        height: 100%;
+        border: none;
+        background: var(--bs-gray-700);
+        color: #fff;
+    }
+
+    .card-body {
+        @include padding(40px 60px);
+    }
+
+    img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    img + p {
+        margin-top: 20px;
+    }
+}

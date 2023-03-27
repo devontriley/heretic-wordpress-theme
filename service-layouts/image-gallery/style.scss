@@ -1,0 +1,25 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-image-gallery {
+    @include margin(85px 0);
+}
+
+.layout-image-gallery div[class*=col] {
+    margin-bottom: var(--bs-gutter-x);
+}
+
+.layout-image-gallery img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-image-gallery.is-preview {
+    margin-top: 0;
+    margin-bottom: 0;
+}

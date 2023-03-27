@@ -1,0 +1,25 @@
+.layout-image-gallery {
+  margin: calc(1.65625rem + 4.875vw) 0;
+}
+@media (min-width: 1200px) {
+  .layout-image-gallery {
+    margin: 5.3125rem 0;
+  }
+}
+
+.layout-image-gallery div[class*=col] {
+  margin-bottom: var(--bs-gutter-x);
+}
+
+.layout-image-gallery img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-image-gallery.is-preview {
+  margin-top: 0;
+  margin-bottom: 0;
+}

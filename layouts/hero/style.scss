@@ -1,0 +1,302 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+/* Universal hero */
+.layout-hero .eyebrow-text {
+    color: lightblue;
+    font-weight: 700;
+}
+
+/* Primary */
+
+.layout-hero.primary {
+
+    &.one-column {
+        .column1 {
+            text-align: center;
+        }
+
+        .carousel,
+        .single-image {
+            @include margin-top(60px);
+        }
+    }
+
+    &.two-columns {
+        .column1 {
+            text-align: center;
+            @include media-breakpoint-up(md) {
+                text-align: left;
+            }
+        }
+
+        .column2 {
+            @include margin-top(60px);
+            @include media-breakpoint-up(md) {
+
+            }
+        }
+    }
+
+    .image_video {
+        background: red;
+        width: 100%;
+        height: 400px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Carousel */
+
+.layout-hero .glide.content {
+    .content-wrapper {
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Image Background Carousel */
+
+.layout-hero.carousel.background-none {
+    .glide.content {
+        color: var(--bs-white);
+
+        img {
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+
+    .glide__slide {
+        position: relative;
+        align-self: stretch;
+        height: auto;
+
+        &:before {
+            content: '';
+            background: transparent linear-gradient(90deg, #00000099 0%, #54545400 100%) 0% 0% no-repeat padding-box;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 60%;
+            }
+
+            .content-wrapper-inner {
+                @include padding(135px 73px calc(135px + 60px) 73px); /* Calc makes bottom padding larger when the controls move below content at smaller screen sizes */
+
+                @include media-breakpoint-up(lg) {
+                    @include padding(135px 73px);
+                }
+            }
+        }
+    }
+
+    .controls {
+        @include media-breakpoint-down(lg) {
+            @include rfs(73px, left);
+            margin-left: $grid-gutter-width * 0.5;
+            bottom: clamp(20px, 3.2vw, 32px);
+        }
+    }
+}
+
+/* Not Image Background Carousel */
+
+.layout-hero.carousel:not(.background-none) {
+
+    .image {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    .glide.content {
+        @include padding(73px);
+
+        .glide__slide {
+            align-self: center;
+        }
+    }
+
+    /* Light Background Carousel */
+    &.background-light .glide.content {
+        background: #ccc;
+    }
+
+    /* Dark Background Carousel */
+    &.background-dark .glide.content {
+        background: #333;
+        color: #fff;
+    }
+}
+
+.layout-hero.carousel .glide.images,
+.layout-hero.carousel .glide.images .glide__track,
+.layout-hero.carousel .glide.images .glide__slides,
+.layout-hero.carousel .glide.images .glide__slide {
+    height: 100%;
+}
+
+.layout-hero.carousel {
+    .glide.images {
+        position: relative;
+
+        .glide__slides {
+            padding: 0;
+        }
+
+        img {
+            height: 100% !important;
+            width: 100% !important;
+            object-fit: cover;
+        }
+    }
+}
+
+.layout-hero.carousel .controls {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    z-index: 10;
+    left: auto;
+    right: calc(20px + $grid-gutter-width * 0.5);
+    bottom: 20px;
+    margin-left: 0;
+
+    button {
+        display: block;
+        @include rfs(60px, width);
+        @include rfs(60px, height);
+        border-radius: 60px;
+        background: #fff;
+        border: none;
+
+        &:last-child {
+            margin-left: 15px;
+        }
+    }
+}
+
+/* Secondary */
+.layout-hero.secondary .inner {
+    position: relative;
+}
+
+.layout-hero.secondary {
+    h1 {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        background: #fff;
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+        padding: 15px 40px 6px 40px;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        max-width: 80%;
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+    }
+
+    &.header-left h1 {
+        @include media-breakpoint-up(xl) {
+            left: 16.6666%; /* Two column widths */
+            transform: translateX(0);
+        }
+    }
+}
+
+.layout-hero.secondary img {
+    max-width: 100%;
+    height: auto !important;
+    aspect-ratio: 3.24 / 1;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+}
+
+/* Profile */
+.layout-hero.profile .inner {
+    position: relative;
+}
+
+.layout-hero.profile .banner-image {
+    max-width: 100%;
+    height: auto !important;
+    aspect-ratio: 3.24 / 1;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+}
+
+.layout-hero.profile .circular-overlap-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    //width: 180px !important;
+    //height: 180px !important;
+    @include rfs(180px !important, width);
+    @include rfs(180px !important, height);
+    border-radius: 180px;
+    border: 10px solid var(--bs-white);
+    object-fit: cover;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-hero.is-preview {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.layout-hero.is-preview .image_video {
+    height: 200px;
+}
+
+/* Admin secondary */
+.layout-hero.is-preview.secondary img {
+    height: 200px !important;
+}
+
+/* Admin carousel */
+.layout-hero.is-preview.carousel .glide__slides {
+    padding: 0;
+}
+
+.layout-hero.is-preview.carousel .glide__slide:not(:first-child) {
+    display: none;
+}
+
+.layout-hero.is-preview.carousel .glide.images .controls button {
+    pointer-events: none;
+}

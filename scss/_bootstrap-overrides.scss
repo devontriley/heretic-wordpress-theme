@@ -1,0 +1,26 @@
+// Typography
+
+$font-size-base: 1rem; // 16px
+$h1-font-size: $font-size-base * 3; // 48px
+$h2-font-size: $font-size-base * 1.75; // 28px
+$h3-font-size: $font-size-base * 1.5; // 24px
+$h4-font-size: $font-size-base * 1.375; // 22px
+$h5-font-size: $font-size-base * 1.25; // 20px
+$h6-font-size: $font-size-base; // 16px;
+$headings-font-weight: 700;
+$headings-line-height: 1.208em;
+$headings-margin-bottom: 0.625em;
+$paragraph-margin-bottom: 1.5em; /* 30px @ 20px font size */
+
+// Buttons
+
+$input-btn-padding-y: 1rem; // 16px
+$input-btn-padding-x: 2.5rem; // 40px
+$input-btn-font-size: 1.125rem; // 18px
+$btn-font-weight: 700;
+
+// Forms
+
+$input-padding-x: 25px;
+$form-select-bg-position: right 15px center;
+$form-label-font-size: 1rem;

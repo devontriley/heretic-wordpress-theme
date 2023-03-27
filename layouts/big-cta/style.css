@@ -1,0 +1,37 @@
+.layout-big-cta {
+  margin: calc(1.65625rem + 4.875vw) 0;
+}
+@media (min-width: 1200px) {
+  .layout-big-cta {
+    margin: 5.3125rem 0;
+  }
+}
+
+.layout-big-cta .cta-wrapper {
+  background: var(--bs-gray-500);
+  color: var(--bs-white);
+  text-align: center;
+  padding: 65px 30px;
+  border-radius: var(--borderRadius);
+}
+
+.layout-big-cta .text {
+  display: inline-block;
+  margin: 0;
+}
+
+.layout-big-cta .text-link {
+  display: inline-block;
+}
+
+.layout-big-cta p + .text-link {
+  margin-left: var(--bs-gutter-x);
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-big-cta.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

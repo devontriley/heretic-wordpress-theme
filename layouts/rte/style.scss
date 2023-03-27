@@ -1,0 +1,80 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-rte {
+    @include margin(85px 0);
+
+    .row {
+        align-items: center;
+    }
+
+    .image {
+        order: 2;
+        @include margin-top(30px);
+
+        @include media-breakpoint-up(lg) {
+            order: inherit;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Fifty Fifty */
+
+.layout-rte.size-fiftyfifty {
+    .row {
+        align-items: stretch;
+    }
+
+    .copy-inner {
+        background: #ccc;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: 100%;
+        padding: 30px;
+
+        @include media-breakpoint-up(sm) {
+            @include padding(70px calc(8.33333333% + var(--bs-gutter-x)));
+        }
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+/* Sidebar */
+
+.layout-rte.size-sidebar {
+    .row {
+        align-items: flex-start;
+    }
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-rte.is-preview {
+    margin-top: 0;
+    margin-bottom: 0;
+}

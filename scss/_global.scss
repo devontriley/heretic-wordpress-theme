@@ -1,0 +1,25 @@
+:root {
+    --borderRadius: 10px;
+}
+
+body {
+    padding-top: 105px; /* Matches header height */
+
+    &.nav-drawer-open {
+        height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+.cover-link {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layout-vertical-spacing {
+    @include margin(100px 0);
+}

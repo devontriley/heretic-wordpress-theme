@@ -1,0 +1,61 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-form {
+    @include margin(85px 0);
+
+    .form-boxed-container {
+        background: var(--bs-gray-200);
+        padding: 40px;
+        border-radius: var(--borderRadius);
+
+        @include media-breakpoint-up(sm) {
+            @include padding(80px 110px);
+        }
+    }
+
+    .newsletter-container {
+        @include padding(80px);
+        background: var(--bs-blue);
+        color: var(--bs-white);
+        border-radius: var(--borderRadius);
+
+        .gform_wrapper.gravity-theme .gform_fields {
+            position: relative;
+
+            .email {
+                grid-column: span 12;
+
+                input {
+                    border: none;
+                }
+            }
+        }
+
+        .gform_wrapper.gravity-theme #field_submit,
+        .gform_wrapper.gravity-theme .gform_footer {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            input[type="submit"] {
+                background: none;
+                border: none;
+                padding: 0;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .form-copy {
+        @include margin-bottom(70px);
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

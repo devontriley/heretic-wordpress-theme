@@ -1,0 +1,16 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout.code-block {
+    @include margin(85px 0);
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout.code-block.is-preview {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

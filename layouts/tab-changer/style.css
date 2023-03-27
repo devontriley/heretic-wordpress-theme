@@ -1,0 +1,48 @@
+.layout-tab-changer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* Remove animation on change */
+}
+.layout-tab-changer .list-select {
+  display: block;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .layout-tab-changer .list-select {
+    display: none;
+  }
+}
+.layout-tab-changer .list-select .form-select {
+  padding: 1rem 2.5rem 1rem 1rem;
+  background-position: right 1rem center;
+}
+.layout-tab-changer .list-group {
+  display: none;
+}
+@media (min-width: 768px) {
+  .layout-tab-changer .list-group {
+    display: block;
+  }
+}
+.layout-tab-changer .list-group button {
+  font-weight: 700;
+  border: none;
+  padding: 20px;
+}
+.layout-tab-changer .list-group button[aria-expanded=true] {
+  color: red;
+}
+.layout-tab-changer .collapsing {
+  transition: none;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-tab-changer.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.layout-tab-changer.is-preview .collapse:first-child {
+  display: block !important;
+}

@@ -1,0 +1,58 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-tab-changer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .list-select {
+        display: block;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+        .form-select {
+            padding: 1rem 2.5rem 1rem 1rem;
+            background-position: right 1rem center;
+        }
+    }
+
+    .list-group {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+
+        button {
+            font-weight: 700;
+            border: none;
+            padding: 20px;
+
+            &[aria-expanded="true"] {
+                color: red;
+            }
+        }
+    }
+
+    /* Remove animation on change */
+    .collapsing {
+        transition: none;
+    }
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-tab-changer.is-preview {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .collapse:first-child {
+        display: block !important;
+    }
+}

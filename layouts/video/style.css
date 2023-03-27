@@ -1,0 +1,12 @@
+.layout-video {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-video.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

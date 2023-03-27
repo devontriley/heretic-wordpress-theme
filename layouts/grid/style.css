@@ -1,0 +1,266 @@
+/* Universal Grid */
+.layout-grid {
+  margin: calc(1.65625rem + 4.875vw) 0;
+  clear: both; /* Fixes float issue on woocommerce product/category grid */
+}
+@media (min-width: 1200px) {
+  .layout-grid {
+    margin: 5.3125rem 0;
+  }
+}
+
+/* Icon and Blurb */
+.layout-grid.icon-and-blurb div[class*=col].grid {
+  margin-bottom: calc(1.5625rem + 3.75vw);
+}
+@media (min-width: 1200px) {
+  .layout-grid.icon-and-blurb div[class*=col].grid {
+    margin-bottom: 4.375rem;
+  }
+}
+.layout-grid.icon-and-blurb img {
+  margin-bottom: calc(1.3125rem + 0.75vw);
+  width: 30px;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .layout-grid.icon-and-blurb img {
+    margin-bottom: 1.875rem;
+  }
+}
+.layout-grid.icon-and-blurb p {
+  font-size: 1rem;
+  margin-bottom: 0.625em;
+}
+.layout-grid.icon-and-blurb p:last-child {
+  margin-bottom: 0;
+}
+
+/* Info Boxes */
+.layout-grid.info-boxes div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.info-boxes .card-img-top {
+  height: auto !important;
+  width: 100% !important;
+  aspect-ratio: 2.12/1;
+  object-fit: cover;
+}
+@media (max-width: 1199.98px) {
+  .layout-grid.info-boxes p {
+    font-size: 1rem;
+  }
+}
+.layout-grid.info-boxes p:last-child {
+  margin-bottom: 0;
+}
+
+/* Articles & Services */
+.layout-grid.articles div[class*=col].grid,
+.layout-grid.services div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.articles .text-center h1,
+.layout-grid.services .text-center h1 {
+  margin-bottom: 1.2em;
+}
+.layout-grid.articles .card,
+.layout-grid.services .card {
+  height: 100%;
+  border: none;
+  /* Used for Related Services on service single pages */
+}
+.layout-grid.articles .card .card-body,
+.layout-grid.services .card .card-body {
+  padding: 15px 0 0 0;
+}
+.layout-grid.articles .card .image,
+.layout-grid.services .card .image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.12/1;
+  background: var(--bs-gray-300);
+}
+.layout-grid.articles .card img,
+.layout-grid.services .card img {
+  position: absolute;
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+.layout-grid.articles .card .date,
+.layout-grid.services .card .date {
+  font-size: 1rem;
+  margin: 0;
+}
+.layout-grid.articles .card .service-category-pills,
+.layout-grid.services .card .service-category-pills {
+  margin-top: 15px;
+}
+.layout-grid.articles .btn,
+.layout-grid.services .btn {
+  margin-top: calc(1.4375rem + 2.25vw);
+}
+@media (min-width: 1200px) {
+  .layout-grid.articles .btn,
+  .layout-grid.services .btn {
+    margin-top: 3.125rem;
+  }
+}
+
+/* Team Members */
+.layout-grid.team-members div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.team-members .card {
+  height: 100%;
+}
+.layout-grid.team-members img {
+  height: auto !important;
+  width: 100% !important;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Artist Profiles */
+.layout-grid.artist-profiles div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.artist-profiles img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 180px !important;
+  aspect-ratio: 1/1;
+  border-radius: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.layout-grid.artist-profiles h3 {
+  margin: 0;
+}
+
+/* Product Categories */
+.layout-grid.product-categories div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.product-categories .card {
+  height: 100%;
+  border: none;
+}
+.layout-grid.product-categories .card .card-body {
+  padding: 25px 0 0 0;
+}
+.layout-grid.product-categories .image {
+  width: 100%;
+  aspect-ratio: 1.56/1;
+  background: var(--bs-gray-100);
+}
+.layout-grid.product-categories .image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  aspect-ratio: inherit;
+  object-fit: cover;
+}
+.layout-grid.product-categories .product-count {
+  margin: 0;
+}
+@media (max-width: 1199.98px) {
+  .layout-grid.product-categories .product-count {
+    font-size: 1rem;
+  }
+}
+
+/* Products */
+.layout-grid.products div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.products .card {
+  height: 100%;
+  border: none;
+}
+.layout-grid.products .card .card-body {
+  padding: 25px 0 0 0;
+}
+.layout-grid.products .card .card-body h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.layout-grid.products .card .card-body p.product-count {
+  margin: 0;
+}
+.layout-grid.products .image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--bs-gray-100);
+}
+.layout-grid.products .image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  aspect-ratio: inherit;
+  object-fit: cover;
+}
+
+.layout-grid.external-links div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.external-links .card {
+  height: 100%;
+}
+
+/* Logos */
+.layout-grid.logos div[class*=col].grid {
+  margin-bottom: 1.5rem;
+}
+.layout-grid.logos .card {
+  aspect-ratio: 1.87/1;
+}
+.layout-grid.logos .card-body {
+  background: #E6E8E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout-grid.logos img {
+  max-width: 60% !important;
+  max-height: 70% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+.layout-grid.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Info Boxes */
+.layout-grid.info-boxes.is-preview .card {
+  padding: 0;
+}
+
+/* Articles */
+.layout-grid.articles.is-preview .card {
+  padding: 0;
+}
+
+/* Team Members */
+.layout-grid.team-members.is-preview .card {
+  padding: 0;
+}
+
+/* Products */
+.layout-grid.products.is-preview .card {
+  padding: 0;
+  margin: 0;
+}
+
+/* Logos */
+.layout-grid.logos.is-preview .card {
+  padding: 0;
+  margin: 0;
+}

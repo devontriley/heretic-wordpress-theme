@@ -1,0 +1,75 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-accordion {
+    @include margin(85px 0);
+
+    .accordion-container {
+        background: var(--bs-gray-300);
+        border-radius: var(--borderRadius);
+        @include padding(100px 100px);
+    }
+
+    .accordion-item {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--bs-gray-400);
+        padding: 35px 0;
+    }
+
+    .accordion-body {
+        max-width: 650px;
+        padding: 20px 0 0 0;
+    }
+
+    .image {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            @include rfs(650px, height);
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+
+    .accordion-button {
+        background: transparent;
+        border: none;
+        padding: 0 30px 0 0;
+        margin: 0;
+        font: inherit;
+
+        &:after {
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-accordion.is-preview {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

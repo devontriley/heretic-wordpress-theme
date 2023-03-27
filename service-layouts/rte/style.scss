@@ -1,0 +1,50 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.layout-rte {
+    @include margin(85px 0);
+
+    .row {
+        align-items: center;
+    }
+
+    .image {
+        order: 2;
+        @include margin-top(30px);
+
+        @include media-breakpoint-up(lg) {
+            order: inherit;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    ul, ol {
+        margin: 1.5em 0;
+        padding: 0 0 0 1em;
+
+        li {
+            margin-bottom: 1.2em;
+        }
+    }
+
+    ul:last-child,
+    ol:last-child,
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**************************
+ Admin specific styles
+ *************************/
+
+.layout-rte.is-preview {
+    margin-top: 0;
+    margin-bottom: 0;
+}

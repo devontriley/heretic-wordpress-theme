@@ -1,0 +1,48 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+body {
+    .facetwp-checkbox {
+        background: none;
+        position: relative;
+        padding-left: 1.5em;
+        margin-bottom: 10px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            background-color: var(--bs-white);
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 0.25em;
+        }
+
+        &.checked {
+            background: none;
+
+            &:before {
+                background-color: $primary;
+            }
+        }
+    }
+
+    .facetwp-reset {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-sm;
+    }
+
+    .facetwp-load-more {
+        @extend .btn;
+        @extend .btn-primary;
+
+        &.facetwp-hidden {
+            display: none !important;
+        }
+    }
+}
