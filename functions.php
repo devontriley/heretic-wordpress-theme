@@ -67,7 +67,7 @@ if (!function_exists('register_heretic_styles')) :
         $postType = get_post_type();
 
         // Heretic theme styles
-        wp_enqueue_style( 'heretic-style', get_stylesheet_uri(), array(), time() );
+        wp_enqueue_style( 'heretic-style', get_template_directory_uri().'/style.css', array(), time() );
 
         // Woocommerce product archive
         if ( is_page( 'shop' ) || is_tax( 'product_cat') || is_singular( 'product' ) ) {
