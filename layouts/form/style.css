@@ -23,7 +23,7 @@
 }
 .layout-form .newsletter-container {
   padding: calc(1.625rem + 4.5vw);
-  background: var(--bs-blue);
+  background: var(--bs-primary);
   color: var(--bs-white);
   border-radius: var(--borderRadius);
 }
