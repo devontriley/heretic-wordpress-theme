@@ -121,6 +121,12 @@ if (!function_exists('heretic_scripts')) :
 endif;
 add_action( 'wp_enqueue_scripts', 'heretic_scripts' );
 
+// Admin footer modification
+function heretic_change_admin_footer () {
+    echo '<span id="footer-thankyou">Developed by <a href="https://heretic.agency" target="_blank">Heretic Agency</a></span>';
+}
+add_filter( 'admin_footer_text', 'heretic_change_admin_footer' );
+
 // Remove product has_archive
 function heretic_custom_post_type_args( $args, $post_type ) {
     if ( $post_type === 'product' ) {
