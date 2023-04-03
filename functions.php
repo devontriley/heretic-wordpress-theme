@@ -171,103 +171,117 @@ function heretic_remove_admin_bar() {
 
 // Register custom post types
 function heretic_register_custom_post_types() {
-    register_post_type('team-members',
-        array(
-            'labels'      => array(
-                'name'          => 'Team Members',
-                'singular_name' => 'Team Member'
-            ),
-            'menu_icon' => 'dashicons-admin-users',
-            'public'      => true,
-            'publicly_queryable' => true,
-            'has_archive' => false,
-            'taxonomies' => array(),
-            'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'slug' )
-        )
-    );
+    $enableTeamMembers = get_field( 'enable_team_members', 'option' );
+    $enableArtists = get_field( 'enable_artists', 'option' );
+    $enableServices = get_field( 'enable_services', 'option' );
 
-    register_post_type('artists',
-        array(
-            'labels' => array(
-                'name'          => 'Artists',
-                'singular_name' => 'Artist'
-            ),
-            'menu_icon' => 'dashicons-admin-customizer',
-            'public' => true,
-            'publicly_queryable' => true,
-            'has_archive' => false,
-            'taxonomies' => array(),
-            'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'slug' )
-        )
-    );
+    if ( $enableTeamMembers ) {
+        register_post_type('team-members',
+            array(
+                'labels'      => array(
+                    'name'          => 'Team Members',
+                    'singular_name' => 'Team Member'
+                ),
+                'menu_icon' => 'dashicons-admin-users',
+                'public'      => true,
+                'publicly_queryable' => true,
+                'has_archive' => false,
+                'taxonomies' => array(),
+                'hierarchical' => true,
+                'supports' => array( 'title', 'thumbnail', 'slug' )
+            )
+        );
+    }
 
-    register_post_type('services',
-        array(
-            'labels' => array(
-                'name'          => 'Services',
-                'singular_name' => 'Service'
-            ),
-            'menu_icon' => 'dashicons-list-view',
-            'public' => true,
-            'publicly_queryable' => true,
-            'has_archive' => false,
-            'taxonomies' => array(),
-            'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'slug' )
-        )
-    );
+    if ( $enableArtists ) {
+        register_post_type('artists',
+            array(
+                'labels' => array(
+                    'name'          => 'Artists',
+                    'singular_name' => 'Artist'
+                ),
+                'menu_icon' => 'dashicons-admin-customizer',
+                'public' => true,
+                'publicly_queryable' => true,
+                'has_archive' => false,
+                'taxonomies' => array(),
+                'hierarchical' => true,
+                'supports' => array( 'title', 'thumbnail', 'slug' )
+            )
+        );
+    }
+
+    if ( $enableServices ) {
+        register_post_type('services',
+            array(
+                'labels' => array(
+                    'name'          => 'Services',
+                    'singular_name' => 'Service'
+                ),
+                'menu_icon' => 'dashicons-list-view',
+                'public' => true,
+                'publicly_queryable' => true,
+                'has_archive' => false,
+                'taxonomies' => array(),
+                'hierarchical' => true,
+                'supports' => array( 'title', 'thumbnail', 'slug' )
+            )
+        );
+    }
 }
 add_action('init', 'heretic_register_custom_post_types');
 
 // Register custom taxonomies
 function register_custom_taxonomies() {
-    $labels = array(
-        'name'              => 'Services Categories',
-        'singular_name'     => 'Services Category',
-        'search_items'      => 'Search Services Categories',
-        'all_items'         => 'All Services Categories',
-        'parent_item'       => 'Parent Services Category',
-        'parent_item_colon' => 'Parent Services Category:',
-        'edit_item'         => 'Edit Services Category',
-        'update_item'       => 'Update Services Category',
-        'add_new_item'      => 'Add New Services Category',
-        'new_item_name'     => 'New Services Category Name',
-        'menu_name'         => 'Services Categories',
-    );
-    $args   = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'services-category' ],
-    );
-    register_taxonomy( 'services-categories', [ 'services' ], $args );
+    $enableServices = get_field( 'enable_services', 'option' );
 
-    $labels = array(
-        'name'              => 'Services Tags',
-        'singular_name'     => 'Services Tag',
-        'search_items'      => 'Search Services Tags',
-        'all_items'         => 'All Services Tags',
-        'parent_item'       => 'Parent Services Tag',
-        'parent_item_colon' => 'Parent Services Tag:',
-        'edit_item'         => 'Edit Services Tag',
-        'update_item'       => 'Update Services Tag',
-        'add_new_item'      => 'Add New Services Tag',
-        'new_item_name'     => 'New Services Tag Name',
-        'menu_name'         => 'Services Tags',
-    );
-    $args   = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'services-tag' ],
-    );
-    register_taxonomy( 'services-tags', [ 'services' ], $args );
+    if ( $enableServices ) {
+        $labels = array(
+            'name'              => 'Services Categories',
+            'singular_name'     => 'Services Category',
+            'search_items'      => 'Search Services Categories',
+            'all_items'         => 'All Services Categories',
+            'parent_item'       => 'Parent Services Category',
+            'parent_item_colon' => 'Parent Services Category:',
+            'edit_item'         => 'Edit Services Category',
+            'update_item'       => 'Update Services Category',
+            'add_new_item'      => 'Add New Services Category',
+            'new_item_name'     => 'New Services Category Name',
+            'menu_name'         => 'Services Categories',
+        );
+        $args   = array(
+            'hierarchical'      => true,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => [ 'slug' => 'services-category' ],
+        );
+        register_taxonomy( 'services-categories', [ 'services' ], $args );
+
+        $labels = array(
+            'name'              => 'Services Tags',
+            'singular_name'     => 'Services Tag',
+            'search_items'      => 'Search Services Tags',
+            'all_items'         => 'All Services Tags',
+            'parent_item'       => 'Parent Services Tag',
+            'parent_item_colon' => 'Parent Services Tag:',
+            'edit_item'         => 'Edit Services Tag',
+            'update_item'       => 'Update Services Tag',
+            'add_new_item'      => 'Add New Services Tag',
+            'new_item_name'     => 'New Services Tag Name',
+            'menu_name'         => 'Services Tags',
+        );
+        $args   = array(
+            'hierarchical'      => true,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => [ 'slug' => 'services-tag' ],
+        );
+        register_taxonomy( 'services-tags', [ 'services' ], $args );
+    }
 }
 add_action( 'init', 'register_custom_taxonomies' );
 
