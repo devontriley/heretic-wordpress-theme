@@ -285,6 +285,32 @@ function register_custom_taxonomies() {
 }
 add_action( 'init', 'register_custom_taxonomies' );
 
+// Show "Gallery Images" meta field on Artist pages
+// This was my best solution to easily get the gallery images without needing to inspect every image on the frontend
+//Register Meta box
+function add_artists_gallery_images_meta () {
+    if ( post_type_exists( 'artists' ) ) {
+        // Add meta field
+        add_action( 'add_meta_boxes', function() {
+            add_meta_box( 'artist-gallery-images', 'Artist Gallery Images', 'artist_gallery_images_meta_cb', 'artists', 'normal' );
+        } );
+
+        // Display meta field
+        function artist_gallery_images_meta_cb( $post ) {
+            $galleryImages = get_post_meta( $post->ID, 'gallery-images', true );
+            echo '<textarea type="text" name="gallery-images" style="width: 100%; height: 200px;">'. esc_attr( $galleryImages ) .'</textarea>';
+        }
+
+        // Save meta field
+        add_action( 'save_post', function( $post_id ) {
+            if ( isset( $_POST['gallery-images'] ) ) {
+                update_post_meta( $post_id, 'gallery-images', $_POST['gallery-images'] );
+            }
+        } );
+    }
+}
+add_action( 'init', 'add_artists_gallery_images_meta' );
+
 // Add Admin Product Types filter
 function products_taxonomy_filter($post_type) {
     if( $post_type == 'products' ) {
