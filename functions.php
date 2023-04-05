@@ -48,6 +48,15 @@ function heretic_mime_types( $mimes ) {
 }
 add_filter('upload_mimes', 'heretic_mime_types');
 
+// Enable Bughed on development
+if ( wp_get_environment_type() !== 'production' ) {
+    function load_bugherd() { ?>
+        <!-- Bugherd -->
+        <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=xunwkfarbvamuqrpcanvxq" async="true"></script>
+    <?php }
+    add_action( 'wp_head', 'load_bugherd' );
+}
+
 // Register admin styles and scripts
 function heretic_enqueue_admin_script( $hook ) {
     global $pagenow;
