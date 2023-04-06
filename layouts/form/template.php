@@ -4,6 +4,8 @@ $formShortcode = get_sub_field( 'form_shortcode' );
 $eyebrowText = get_sub_field( 'eyebrow_text' );
 $header = get_sub_field( 'header' );
 $bodyCopy = get_sub_field( 'body_copy' );
+
+$newsletterForm = get_field( 'newsletter_form_embed', 'option' );
 ?>
 
 <div class="layout-form">
@@ -68,8 +70,10 @@ $bodyCopy = get_sub_field( 'body_copy' );
                                         <?php include( 'form-copy.php' ); ?>
                                     </div>
 
-                                    <?php if ( $formShortcode ) : ?>
-                                        <?php echo do_shortcode( $formShortcode ); ?>
+                                    <?php if ( $newsletterForm ) : ?>
+                                        <div class="newsletter-form">
+                                            <?php echo $newsletterForm ?>
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                             </div>

@@ -87,7 +87,7 @@ $socialLinks = get_field( 'social_media_links', 'option' );
             <?php endif; ?>
             <div class="col-12 col-xl-4">
                 <!-- Newsletter -->
-                <div class="footer-newsletter">
+                <div class="newsletter-form">
                     <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
                     <?php echo $newsletterFormEmbed ?>
 <!--                    <form>-->
