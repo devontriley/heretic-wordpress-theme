@@ -3,14 +3,11 @@
     <div class="card-body">
         <!-- Header -->
         <?php if ( $card['card_header'] ) : ?>
-            <!-- Header -->
-            <?php if ( $header ) : ?>
-                <h3><?php echo $card['card_header'] ?></h3>
-            <?php endif; ?>
-            <!-- Card body -->
-            <?php if ( $card['card_body'] ) : ?>
-                <p><?php echo $card['card_body'] ?></p>
-            <?php endif; ?>
+            <h3><?php echo $card['card_header'] ?></h3>
+        <?php endif; ?>
+        <!-- Card body -->
+        <?php if ( $card['card_body'] ) : ?>
+            <p class="mb-0"><?php echo $card['card_body'] ?></p>
         <?php endif; ?>
     </div>
 </div>
