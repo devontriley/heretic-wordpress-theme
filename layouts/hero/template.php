@@ -124,10 +124,6 @@ if ( $format !== 'Carousel' ) {
                                 <div class="glide__slide">
                                     <div class="content-wrapper">
                                         <div class="content-wrapper-inner">
-                                            <!-- Eyebrow -->
-                                            <?php if ($eyebrow) : ?>
-                                                <p class="eyebrow"><?php echo $eyebrow ?></p>
-                                            <?php endif; ?>
                                             <!-- Header -->
                                             <?php if ($header) : ?>
                                                 <<?php echo $headerSize ?>>
