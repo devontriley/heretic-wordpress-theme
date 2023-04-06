@@ -1,1 +1,48 @@
-if("function"==typeof Glide){const a=document.querySelectorAll(".layout-hero.carousel-active");a.forEach(e=>{var o=e.querySelector(".glide.content"),t=e.querySelector(".glide.images");let r,l;o&&(r=new Glide(o,{type:"carousel",animationDuration:0,swipeThreshold:!1,dragThreshold:!1}).mount()),t&&(l=new Glide(t,{type:"carousel",animationDuration:0,swipeThreshold:!1,dragThreshold:!1}).mount()),o=e.querySelector(".prev"),t=e.querySelector(".next"),o.addEventListener("click",e=>{e.preventDefault(),console.log("prev"),r&&r.go("<"),l&&l.go("<")}),t.addEventListener("click",e=>{e.preventDefault(),console.log("next"),r&&r.go(">"),l&&l.go(">")})})}
+if ( "function" == typeof Glide ) {
+    const carousels = document.querySelectorAll(".layout-hero.carousel-active");
+
+    carousels.forEach( carousel => {
+
+        const content = carousel.querySelector(".glide.content")
+        const images = carousel.querySelector(".glide.images")
+        let glideContent, glideImages
+
+        if ( content ) {
+            glideContent = new Glide(content, {
+                type:"carousel",
+                animationDuration:0,
+                swipeThreshold:!1,
+                dragThreshold:!1
+            }).mount()
+        }
+
+        if ( images ) {
+            glideImages = new Glide( images, {
+                type:"carousel",
+                animationDuration:0,
+                swipeThreshold:!1,
+                dragThreshold:!1
+            }).mount()
+
+            let prevBtn = carousel.querySelector(".prev")
+            let nextBtn = carousel.querySelector(".next")
+
+            prevBtn.addEventListener("click", e => {
+                e.preventDefault()
+
+                glideContent.go("<")
+                glideImages.go("<")
+            })
+
+            nextBtn.addEventListener("click", e => {
+                e.preventDefault()
+
+                console.log('WOOO')
+
+                glideContent.go(">")
+                glideImages.go(">")
+            })
+        }
+
+    })
+}
