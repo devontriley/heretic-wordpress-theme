@@ -40,6 +40,9 @@
 .layout-grid.info-boxes div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
+.layout-grid.info-boxes .card {
+  height: 100%;
+}
 .layout-grid.info-boxes .card-img-top {
   height: auto !important;
   width: 100% !important;

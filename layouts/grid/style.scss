@@ -37,6 +37,10 @@
         margin-bottom: $grid-gutter-width;
     }
 
+    .card {
+        height: 100%;
+    }
+
     .card-img-top {
         height: auto !important;
         width: 100% !important;

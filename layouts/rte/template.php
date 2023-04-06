@@ -52,7 +52,7 @@ $button = get_sub_field('button');
                     <?php
                     if ( ! $isServicesSingle ) {
                         $colClasses = 'col-sm-10 offset-sm-1';
-                        $colClasses .= $centeredText ? 'text-center col-md-6 offset-md-3' : 'col-md-8 offset-md-2';
+                        $colClasses .= $centeredText ? ' text-center col-md-6 offset-md-3' : ' col-md-8 offset-md-2';
                     } else {
                         $colClasses = 'col-12';
                     }
