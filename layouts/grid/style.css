@@ -8,6 +8,12 @@
     margin: 5.3125rem 0;
   }
 }
+.layout-grid .header h1, .layout-grid .header .h1 {
+  margin-bottom: 1.08em;
+}
+.layout-grid .header h2, .layout-grid .header .h2, .layout-grid .header h3, .layout-grid .header .h3 {
+  margin-bottom: 2.5em;
+}
 
 /* Icon and Blurb */
 .layout-grid.icon-and-blurb div[class*=col].grid {

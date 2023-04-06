@@ -6,6 +6,16 @@
 .layout-grid {
     @include margin(85px 0);
     clear: both; /* Fixes float issue on woocommerce product/category grid */
+
+    .header {
+        h1, .h1 {
+            margin-bottom: 1.08em;
+        }
+
+        h2, .h2, h3, .h3 {
+            margin-bottom: 2.5em;
+        }
+    }
 }
 
 /* Icon and Blurb */
