@@ -8,7 +8,7 @@ $bodyCopy = get_sub_field( 'body_copy' );
 $newsletterForm = get_field( 'newsletter_form_embed', 'option' );
 ?>
 
-<div class="layout-form">
+<div class="layout-form <?php if ( $is_preview ) { echo 'is-preview'; } ?>">
     <div class="container-lg">
         <div class="row">
             <div class="<?php echo ( $format !== 'Newsletter' ) ? 'col-sm-10 offset-sm-1' : 'col-12'; ?>">
