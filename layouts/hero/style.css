@@ -127,14 +127,25 @@
 }
 .layout-hero.carousel:not(.background-none) .image {
   display: none;
+  position: relative;
 }
 @media (min-width: 992px) {
   .layout-hero.carousel:not(.background-none) .image {
     display: block;
   }
 }
+.layout-hero.carousel:not(.background-none) .glide.images {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .layout-hero.carousel:not(.background-none) .glide.content {
   padding: calc(1.58125rem + 3.975vw);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   .layout-hero.carousel:not(.background-none) .glide.content {
