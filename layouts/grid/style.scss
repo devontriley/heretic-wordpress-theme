@@ -93,14 +93,15 @@
             width: 100%;
             height: auto;
             aspect-ratio: 2.12 / 1;
-            background: var(--bs-gray-300);
         }
 
         img {
             position: absolute;
             height: 100% !important;
             width: 100% !important;
+            max-width: none !important;
             object-fit: cover;
+            border-radius: var(--borderRadius);
         }
 
         .date {
