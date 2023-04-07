@@ -46,10 +46,6 @@
 }
 
 /* Carousel */
-.layout-hero .glide.content .content-wrapper *:last-child {
-  margin-bottom: 0;
-}
-
 /* Image Background Carousel */
 .layout-hero.carousel.background-none .glide.content {
   color: var(--bs-white);
@@ -170,8 +166,17 @@
   height: 100%;
 }
 
+.layout-hero.carousel .glide.content {
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+.layout-hero.carousel .glide.content .content-wrapper *:last-child {
+  margin-bottom: 0;
+}
 .layout-hero.carousel .glide.images {
   position: relative;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
 }
 .layout-hero.carousel .glide.images .glide__slides {
   padding: 0;

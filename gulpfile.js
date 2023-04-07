@@ -3,6 +3,27 @@ const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 const log = require('fancy-log')
+const browsersync = require("browser-sync").create();
+
+// BrowserSync
+function browserSync(done) {
+    browsersync.init({
+        proxy: 'vinfen-gateway-multisite.local',
+        open: false,
+        notify: false,
+        ghostMode: false,
+        ui: {
+            port: 8001
+        }
+    });
+    done();
+}
+
+// BrowserSync Reload
+function browserSyncReload(done) {
+    browsersync.reload();
+    done();
+}
 
 function js() {
     return src([
@@ -14,6 +35,7 @@ function js() {
         .pipe(uglify())
         .pipe(rename({ extname: '.min.js' }))
         .pipe(dest('.'))
+        .pipe(browsersync.stream());
 }
 
 function layoutSCSS() {
@@ -22,6 +44,7 @@ function layoutSCSS() {
     ])
         .pipe(sass().on('error', sass.logError))
         .pipe(dest('layouts'))
+        .pipe(browsersync.stream());
 }
 
 function serviceLayoutSCSS() {
@@ -30,6 +53,7 @@ function serviceLayoutSCSS() {
     ])
         .pipe(sass().on('error', sass.logError))
         .pipe(dest('service-layouts'))
+        .pipe(browsersync.stream());
 }
 
 function mainSCSS() {
@@ -38,12 +62,15 @@ function mainSCSS() {
     ])
         .pipe(sass().on('error', sass.logError))
         .pipe(dest('.'))
+        .pipe(browsersync.stream());
+}
+
+function watchFiles () {
+    watch( [ './layouts/**/*.scss' ], series( layoutSCSS, browserSyncReload ) )
+    watch( [ './service-layouts/**/*.scss' ], series( serviceLayoutSCSS, browserSyncReload ) )
+    watch( [ './scss/*.scss' ], series( mainSCSS, browserSyncReload ) )
+    watch( [ '**/*.js', '!**/*.min.js', '!gulpfile.js', '!mode_modules/**' ], series( js, browserSyncReload ) )
 }
 
 exports.build = parallel( layoutSCSS, mainSCSS, js )
-exports.default = () => {
-    watch( [ './layouts/**/*.scss' ], layoutSCSS )
-    watch( [ './service-layouts/**/*.scss' ], serviceLayoutSCSS )
-    watch( [ './scss/*.scss' ], mainSCSS )
-    watch( [ '**/*.js', '!**/*.min.js', '!gulpfile.js', '!mode_modules/**' ], js )
-}
+exports.default = parallel( browserSync, watchFiles )

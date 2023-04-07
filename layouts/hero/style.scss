@@ -54,14 +54,6 @@
 
 /* Carousel */
 
-.layout-hero .glide.content {
-    .content-wrapper {
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
 /* Image Background Carousel */
 
 .layout-hero.carousel.background-none {
@@ -175,8 +167,21 @@
 }
 
 .layout-hero.carousel {
+    .glide.content {
+        border-radius: var(--borderRadius);
+        overflow: hidden;
+
+        .content-wrapper {
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .glide.images {
         position: relative;
+        border-radius: var(--borderRadius);
+        overflow: hidden;
 
         .glide__slides {
             padding: 0;
