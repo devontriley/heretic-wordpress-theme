@@ -241,6 +241,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 .layout-grid.logos img {
   max-width: 60% !important;
