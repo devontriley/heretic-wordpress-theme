@@ -71,3 +71,8 @@
 .layout-form .form-copy *:last-child {
   margin-bottom: 0;
 }
+
+.layout-form.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
