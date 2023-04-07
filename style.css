@@ -18981,6 +18981,10 @@ body.hidden-scroll {
   }
 }
 
+.card {
+  overflow: hidden;
+}
+
 :root {
   --borderRadius: 10px;
 }
