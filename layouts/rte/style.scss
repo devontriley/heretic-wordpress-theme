@@ -21,6 +21,7 @@
         img {
             max-width: 100% !important;
             height: auto !important;
+            border-radius: var(--borderRadius);
         }
     }
 
@@ -43,6 +44,7 @@
         align-items: center;
         height: 100%;
         padding: 30px;
+        border-radius: var(--borderRadius);
 
         @include media-breakpoint-up(sm) {
             @include padding(70px calc(8.33333333% + var(--bs-gutter-x)));
