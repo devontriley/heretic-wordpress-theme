@@ -137,6 +137,10 @@
 .layout-grid.artist-profiles div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
+.layout-grid.artist-profiles a {
+  color: inherit;
+  text-decoration: none;
+}
 .layout-grid.artist-profiles img {
   width: 100% !important;
   height: 100% !important;
