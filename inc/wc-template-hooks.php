@@ -1,6 +1,18 @@
 <?php
 
 /*
+ * Alter main shop page loop
+ */
+function _additional_woo_query( $q ) {
+    echo '<pre>';
+    print_r($q);
+    echo '</pre>';
+
+    $q->set( 'posts_per_page', 1 );
+}
+add_action( 'woocommerce_product_query', '_additional_woo_query' );
+
+/*
  * Remove woocommerce sidebar
  */
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );

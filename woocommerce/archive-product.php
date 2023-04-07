@@ -51,6 +51,8 @@ do_action( 'woocommerce_before_main_content' );
 
     <?php if ( is_shop() ) : ?>
 
+        <?php //echo do_shortcode( '[product_categories parent="0" ids="48, 149, 127, 118, 18, 115, 121, 164, 116, 120, 177, 119, 172, 139, 169"]' ); ?>
+
         <?php if ( $shopIntroHeader && $shopIntroBody ) : ?>
             <div class="layout-rte mt-0">
                 <div class="container-lg">
