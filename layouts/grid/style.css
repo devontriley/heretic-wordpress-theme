@@ -176,6 +176,7 @@
   max-width: none !important;
   aspect-ratio: inherit;
   object-fit: cover;
+  border-radius: var(--borderRadius);
 }
 .layout-grid.product-categories .product-count {
   margin: 0;
@@ -215,6 +216,7 @@
   max-width: none !important;
   aspect-ratio: inherit;
   object-fit: cover;
+  border-radius: var(--borderRadius);
 }
 
 .layout-grid.external-links div[class*=col].grid {

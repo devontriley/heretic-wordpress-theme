@@ -190,6 +190,7 @@
             max-width: none !important;
             aspect-ratio: inherit;
             object-fit: cover;
+            border-radius: var(--borderRadius);
         }
     }
 
@@ -239,6 +240,7 @@
             max-width: none !important;
             aspect-ratio: inherit;
             object-fit: cover;
+            border-radius: var(--borderRadius);
         }
     }
 }
