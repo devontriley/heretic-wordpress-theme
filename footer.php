@@ -37,7 +37,7 @@ $socialLinks = get_field( 'social_media_links', 'option' );
                     <ul>
                         <?php foreach ( $footerMenu1 as $key => $menuItem ) : ?>
                             <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->post_title ?></a>
+                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
