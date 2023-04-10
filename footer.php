@@ -119,7 +119,7 @@ $socialLinks = get_field( 'social_media_links', 'option' );
             <div class="copyright-column col-12 col-xl-auto">
                 <p class="copyright">
                     © <?php echo date('Y') ?> Gateway Arts, All Rights Reserved.
-                    <a href="#" class="privacy-policy">Privacy Policy</a>
+                    <a href="<?php echo get_site_url() . '/privacy-policy' ?>" class="privacy-policy">Privacy Policy</a>
                 </p>
             </div>
             <?php if ( $socialLinks ) : ?>
