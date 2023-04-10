@@ -32,6 +32,18 @@
 .layout-rte p:last-child {
   margin-bottom: 0;
 }
+.layout-rte ul, .layout-rte ol {
+  margin: 1.5em 0;
+  padding: 0 0 0 1em;
+}
+.layout-rte ul li, .layout-rte ol li {
+  margin-bottom: 1.2em;
+}
+.layout-rte ul:last-child,
+.layout-rte ol:last-child,
+.layout-rte p:last-child {
+  margin-bottom: 0;
+}
 
 /* Fifty Fifty */
 .layout-rte.size-fiftyfifty .row {

@@ -19528,15 +19528,17 @@ body .facetwp-load-more.facetwp-hidden {
     margin-bottom: 0;
   }
 }
-.service-container .service-content div[class*=layout]:not(:last-child) {
+.service-container .service-content div[class*=layout] {
   margin: calc(1.5rem + 3vw) 0;
-  padding-bottom: calc(1.5rem + 3vw);
-  border-bottom: 1px solid var(--bs-gray-300);
 }
 @media (min-width: 1200px) {
-  .service-container .service-content div[class*=layout]:not(:last-child) {
+  .service-container .service-content div[class*=layout] {
     margin: 3.75rem 0;
   }
+}
+.service-container .service-content div[class*=layout]:not(:last-child) {
+  padding-bottom: calc(1.5rem + 3vw);
+  border-bottom: 1px solid var(--bs-gray-300);
 }
 @media (min-width: 1200px) {
   .service-container .service-content div[class*=layout]:not(:last-child) {

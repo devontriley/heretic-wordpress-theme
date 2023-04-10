@@ -51,8 +51,9 @@
 
     .service-content {
         div[class*="layout"] {
+            @include margin(60px 0);
+
             &:not(:last-child) {
-                @include margin(60px 0);
                 @include padding-bottom(60px);
                 border-bottom: 1px solid var(--bs-gray-300);
             }

@@ -5,7 +5,7 @@ $header = get_sub_field( 'header' );
 $listItems = get_sub_field( 'list_items' );
 ?>
 
-<div id="service-layout-check-list-<?php echo $serviceLayoutCounter ?>" class="layout-check-list" data-layout-count="<?php echo $serviceLayoutCounter ?>">
+<div id="service-layout-check-list-<?php echo $serviceLayoutCounter ?>" class="layout-check-list <?php if ( $is_preview ){ echo 'is-preview'; } ?>" data-layout-count="<?php echo $serviceLayoutCounter ?>">
     <!-- Header -->
     <?php if ( $header ) : ?>
         <h2><?php echo $header ?></h2>

@@ -31,3 +31,6 @@
   left: 0;
   top: 0.2em;
 }
+.layout-check-list.is-preview {
+  margin: 20px 0;
+}
