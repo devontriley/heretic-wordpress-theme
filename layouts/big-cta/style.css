@@ -6,26 +6,36 @@
     margin: 5.3125rem 0;
   }
 }
-
 .layout-big-cta .cta-wrapper {
-  background: var(--bs-gray-500);
-  color: var(--bs-white);
+  color: #fff;
   text-align: center;
+  font-weight: 700;
   padding: 65px 30px;
   border-radius: var(--borderRadius);
+  background-color: var(--bs-secondary);
 }
-
 .layout-big-cta .text {
   display: inline-block;
   margin: 0;
+  opacity: 0.7;
 }
-
 .layout-big-cta .text-link {
   display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  /* 16px @ 16px base */
+  line-height: 1.6em;
 }
-
+@media (min-width: 768px) {
+  .layout-big-cta .text-link {
+    font-size: 1.25rem;
+    /* 20px @ 16px base */
+  }
+}
 .layout-big-cta p + .text-link {
   margin-left: var(--bs-gutter-x);
+  margin-right: var(--bs-gutter-x);
 }
 
 /**************************
