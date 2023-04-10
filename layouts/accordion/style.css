@@ -65,6 +65,9 @@
   right: 0;
   top: 5px;
 }
+.layout-accordion .accordion-button:not(.collapsed) {
+  color: inherit;
+}
 .layout-accordion .accordion-button:focus {
   box-shadow: none;
 }

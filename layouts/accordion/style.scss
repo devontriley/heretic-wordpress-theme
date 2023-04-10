@@ -59,6 +59,10 @@
             right: 0;
             top: 5px;
         }
+
+        &:not(.collapsed) {
+            color: inherit;
+        }
     }
 
     .accordion-button:focus {
