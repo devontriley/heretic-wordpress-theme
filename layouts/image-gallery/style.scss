@@ -4,15 +4,24 @@
 
 .layout-image-gallery {
     @include margin(85px 0);
+
+    div[class*=col] {
+        margin-bottom: var(--bs-gutter-x);
+    }
+
+    img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: var(--borderRadius);
+    }
 }
 
-.layout-image-gallery div[class*=col] {
-    margin-bottom: var(--bs-gutter-x);
-}
-
-.layout-image-gallery img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+.simple-lightbox {
+    .sl-image {
+        img {
+            border-radius: var(--borderRadius);
+        }
+    }
 }
 
 /**************************

@@ -6,14 +6,17 @@
     margin: 5.3125rem 0;
   }
 }
-
 .layout-image-gallery div[class*=col] {
   margin-bottom: var(--bs-gutter-x);
 }
-
 .layout-image-gallery img {
   aspect-ratio: 1/1;
   object-fit: cover;
+  border-radius: var(--borderRadius);
+}
+
+.simple-lightbox .sl-image img {
+  border-radius: var(--borderRadius);
 }
 
 /**************************
