@@ -36,9 +36,10 @@ if ( ! $rows ) {
                 <div class="row">
                     <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
                         <div class="row justify-content-center">
-                            <?php for ( $i = 0; $i < $cardCount; $i++ ) : ?>
+                            <?php for ( $i = 0; $i < $cardCount; $i++ ) :
+                                $cardColor = $cards[$i]['color'] ?: 'primary'; ?>
                                 <div class="grid col-sm-6 col-md-<?php echo $tabletColumnWidth ?> col-lg-<?php echo $columnWidth ?>">
-                                    <div class="card">
+                                    <div class="card" data-color="<?php echo $cardColor ?>">
                                         <?php if ( $cards[$i]['url'] ) : ?>
                                             <a href="<?php echo $cards[$i]['url'] ?>" class="cover-link"></a>
                                         <?php endif; ?>

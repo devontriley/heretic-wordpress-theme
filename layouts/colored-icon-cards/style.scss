@@ -18,6 +18,11 @@
         border: none;
         background: var(--bs-gray-700);
         color: #fff;
+
+        &[data-color="primary"] { background-color: var(--bs-primary); }
+        &[data-color="secondary"] { background-color: var(--bs-secondary); }
+        &[data-color="tertiary1"] { background-color: var(--bs-tertiary-1); }
+        &[data-color="tertiary2"] { background-color: var(--bs-tertiary-2); }
     }
 
     .card-body {
