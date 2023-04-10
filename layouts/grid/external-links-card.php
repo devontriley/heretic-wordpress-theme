@@ -1,5 +1,7 @@
 <div class="card">
-    <a href="<?php echo $card['text_link']['url'] ?>" target="_blank" class="cover-link"></a>
+    <?php if ( $card['text_link'] ) : ?>
+        <a href="<?php echo $card['text_link']['url'] ?>" target="_blank" class="cover-link"></a>
+    <?php endif; ?>
     <div class="card-body">
         <!-- Header -->
         <?php if ( $card['card_header'] ) : ?>
