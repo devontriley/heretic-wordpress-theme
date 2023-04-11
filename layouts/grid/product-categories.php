@@ -1,20 +1,17 @@
 <?php
-$productCategories = get_terms(array(
-    'taxonomy' => 'product_cat',
-    'hide_empty' => true
-));
+$productCategories = get_sub_field ( 'product_categories' );
 ?>
 
 <div class="container-lg">
     <div class="row">
-        <div class="col-sm-10 offset-sm-1 col-md-4 col-lg-12 offset-lg-0">
-            <h2><?php echo $header ?></h2>
+        <div class="header text-center col-sm-10 offset-sm-1 col-md-4 col-lg-12 offset-lg-0">
+            <h1><?php echo $header ?></h1>
         </div>
     </div>
 
-    <?php if( $productCategories ) : ?>
-        <div class="row">
-            <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
+            <?php if ( $productCategories ) : ?>
                 <div class="row">
                     <?php foreach ( $productCategories as $key => $category ) : ?>
                         <div class="grid col-6 col-md-4 col-xl-3">
@@ -22,9 +19,11 @@ $productCategories = get_terms(array(
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
+            <?php else : ?>
+                <p>You must select at least one product category</p>
+            <?php endif; ?>
         </div>
-    <?php endif; ?>
+    </div>
 </div>
 
 <?php unset( $productCategories ); ?>

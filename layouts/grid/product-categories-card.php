@@ -1,11 +1,12 @@
 <?php
+$termLink = get_term_link( $category->term_id );
 $thumbnailID = get_term_meta( $category->term_id, 'thumbnail_id', true );
 $featuredImage = wp_get_attachment_image( $thumbnailID );
 ?>
 
 <div class="card">
     <?php if ( $category ) : ?>
-        <a href="<?php echo get_permalink( $category->term_id ); ?>" target="" class="cover-link"></a>
+        <a href="<?php echo $termLink ?>" target="" class="cover-link"></a>
     <?php endif; ?>
     <!-- Image -->
     <div class="image">
@@ -26,5 +27,5 @@ $featuredImage = wp_get_attachment_image( $thumbnailID );
 </div>
 
 <?php
-unset( $featuredImage );
+unset( $thumbnailID, $featuredImage, $category );
 ?>
