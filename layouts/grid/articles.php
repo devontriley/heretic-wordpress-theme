@@ -6,7 +6,7 @@ $articleCount = get_sub_field( 'article_count' );
 
 <div class="container-lg">
     <div class="row">
-        <div class="col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
+        <div class="header col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
             <<?php echo $headerSize ?>>
                 <?php echo $header ?>
             </<?php echo $headerSize ?>>
@@ -16,7 +16,8 @@ $articleCount = get_sub_field( 'article_count' );
     <?php
     $posts = new WP_Query(array(
         'post_type' => 'post',
-        'posts_per_page' => $articleCount ?: 3
+        'posts_per_page' => $articleCount ?: 3,
+        'offset' => is_page_template( 'page-blog-home.php' ) ? 3 : 0
     ));
 
     if ( $posts->found_posts ) : ?>

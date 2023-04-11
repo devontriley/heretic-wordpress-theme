@@ -25,11 +25,11 @@ $permalink = get_the_permalink( $postID );
                         </p>
                     <?php endif; ?>
                     <header class="entry-header">
-                        <h1>
+                        <h2 class="h1">
                             <a href="<?php echo $permalink ?>">
                                 <?php echo $postTitle ?>
                             </a>
-                        </h1>
+                        </h2>
                     </header>
                     <div class="entry-content">
                         <p class="post-date"><?php echo get_the_date( 'F d, Y', $postID ); ?></p>
