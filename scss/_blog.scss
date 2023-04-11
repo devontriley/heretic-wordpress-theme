@@ -17,8 +17,18 @@
     @include margin-bottom(60px);
     border-bottom: 1px solid var(--bs-gray-300);
 
-    &.post-single-header {
+    .post-categories {
+        @include font-size(18px);
 
+        a {
+            color: var(--bs-primary);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--bs-primary-shade);
+                text-decoration: underline;
+            }
+        }
     }
 
     figure {
@@ -33,6 +43,7 @@
             height: auto !important;
             aspect-ratio: 1.54 / 1;
             object-fit: cover;
+            border-radius: var(--borderRadius);
         }
     }
 

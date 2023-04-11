@@ -19687,6 +19687,17 @@ body .facetwp-load-more.facetwp-hidden {
     margin-bottom: 3.75rem;
   }
 }
+.featured-post .post-categories {
+  font-size: 1.125rem;
+}
+.featured-post .post-categories a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+.featured-post .post-categories a:hover {
+  color: var(--bs-primary-shade);
+  text-decoration: underline;
+}
 .featured-post figure {
   margin: 30px 0 0 0;
 }
@@ -19700,6 +19711,7 @@ body .facetwp-load-more.facetwp-hidden {
   height: auto !important;
   aspect-ratio: 1.54/1;
   object-fit: cover;
+  border-radius: var(--borderRadius);
 }
 .featured-post h1 a, .featured-post .h1 a {
   text-decoration: none;
