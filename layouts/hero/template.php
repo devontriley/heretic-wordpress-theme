@@ -68,6 +68,8 @@ if ( $format !== 'Carousel' ) {
                             </div>
                         <?php elseif ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'single-image' ) ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video ?>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
@@ -86,6 +88,8 @@ if ( $format !== 'Carousel' ) {
                             </div>
                         <?php elseif ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full' ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video ?>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
