@@ -19877,10 +19877,19 @@ p, li {
 
 /* Search */
 .header-search {
+  display: inline-block;
   border: none;
   background: none;
   padding: 0;
-  margin-right: 30px;
+  margin-right: 25px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cart */
+.header-cart {
+  display: inline-block;
+  margin-right: 20px;
   text-decoration: none;
   color: inherit;
 }
