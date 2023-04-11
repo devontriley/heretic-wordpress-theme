@@ -41,6 +41,10 @@ $button = get_sub_field('button');
                     <?php if ( $bodyCopy ) : ?>
                         <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
                     <?php endif; ?>
+                    <!-- Button -->
+                    <?php if ( $button ) : ?>
+                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                    <?php endif; ?>
                 </div>
 
             <?php elseif ( $size === 'Medium' ) : ?>
