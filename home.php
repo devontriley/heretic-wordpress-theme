@@ -2,27 +2,14 @@
 
 <div class="container-lg">
 
-
-    <?php if ( is_home() ) : ?>
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h1 class="text-center"><?php echo get_the_title( get_option( 'page_for_posts' ) ) ?></h1>
-            </div>
+    <?php if ( have_posts() ) : ?>
+        <div class="layout-grid articles">
+            <?php include( get_template_directory().'/layouts/grid/articles.php' ); ?>
         </div>
     <?php endif; ?>
 
-    <?php
-    while ( have_posts() ) :
-        the_post();
+    <?php heretic_the_posts_navigation(); ?>
 
-        get_template_part( 'template-parts/content/content-page' );
-
-        // If comments are open or there is at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) {
-            comments_template();
-        }
-    endwhile;
-    ?>
 </div>
 
 <?php get_footer(); ?>

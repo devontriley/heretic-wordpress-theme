@@ -28,31 +28,6 @@
     }
 }
 
-.navigation.pagination {
-    @include margin(40px 0);
-
-    .next {
-        margin-left: 15px;
-    }
-
-    .prev {
-        margin-right: 15px;
-    }
-
-    .current {
-        font-weight: 700;
-    }
-
-    a {
-        color: $primary;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
 .search-form {
 
     .search-term {

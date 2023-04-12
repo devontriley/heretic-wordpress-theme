@@ -42,21 +42,4 @@
     endswitch;
     ?>
 
-<?php else : ?>
-
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-        <h1><?php the_title(); ?></h1>
-
-        <!--	--><?php //get_template_part( 'template-parts/header/excerpt-header', get_post_format() ); ?>
-
-        <!--	<div class="entry-content">-->
-        <!--		--><?php //get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
-        <!--	</div>-->
-        <!---->
-        <!--	<footer class="entry-footer default-max-width">-->
-        <!--		--><?php //heretic_entry_meta_footer(); ?>
-        <!--	</footer>-->
-    </article>
-
 <?php endif; ?>
