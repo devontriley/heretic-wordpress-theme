@@ -4928,7 +4928,7 @@ body .gform_wrapper.gravity-theme .input-group > textarea:not(:focus).is-invalid
   align-self: stretch;
 }
 
-.visually-hidden, .newsletter-form label,
+.visually-hidden, .newsletter-form label, .navigation.post-navigation .screen-reader-text,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;
   width: 1px !important;
@@ -19456,6 +19456,72 @@ body .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address)
 }
 .navigation.pagination a:hover {
   text-decoration: underline;
+}
+
+.navigation.post-navigation {
+  margin: calc(1.4375rem + 2.25vw) 0;
+}
+@media (min-width: 1200px) {
+  .navigation.post-navigation {
+    margin: 3.125rem 0;
+  }
+}
+@media (min-width: 576px) {
+  .navigation.post-navigation .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+.navigation.post-navigation .nav-previous,
+.navigation.post-navigation .nav-next {
+  flex: 0 0 45%;
+}
+@media (min-width: 992px) {
+  .navigation.post-navigation .nav-previous,
+  .navigation.post-navigation .nav-next {
+    flex: 0 0 33%;
+  }
+}
+.navigation.post-navigation .nav-previous a,
+.navigation.post-navigation .nav-next a {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.navigation.post-navigation .nav-previous {
+  margin-bottom: 1em;
+}
+@media (min-width: 576px) {
+  .navigation.post-navigation .nav-previous {
+    margin-bottom: 0;
+  }
+}
+.navigation.post-navigation .nav-previous .svg-icon {
+  margin-right: 10px;
+}
+@media (min-width: 576px) {
+  .navigation.post-navigation .nav-next {
+    text-align: right;
+  }
+}
+.navigation.post-navigation .nav-next .svg-icon {
+  margin-left: 10px;
+}
+.navigation.post-navigation .meta-nav {
+  margin: 0;
+}
+.navigation.post-navigation a {
+  text-decoration: none;
+  color: inherit;
+}
+.navigation.post-navigation a:hover {
+  color: var(--bs-primary-shade);
+  text-decoration: underline;
+}
+.navigation.post-navigation p {
+  font-size: 0.75rem;
+  margin: 0;
 }
 
 body .facetwp-checkbox {
