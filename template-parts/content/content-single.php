@@ -32,21 +32,30 @@
                         );
                         ?>
 
-<!--                        <footer class="entry-footer default-max-width">-->
-<!--                            --><?php //heretic_entry_meta_footer(); ?>
-<!--                        </footer>-->
-
                         <?php if ( ! is_singular( 'attachment' ) ) : ?>
                             <?php // get_template_part( 'template-parts/post/author-bio' ); ?>
                         <?php endif; ?>
                     </div>
 
                     <?php
+                    $terms = get_the_terms( $post, 'category' );
+                    $taxArgs = array_map( function( $term ) {
+                        return array(
+                            'taxonomy' => 'category',
+                            'field' => 'slug',
+                            'terms' => $term->slug
+                        );
+                    }, $terms );
                     $recentPosts = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 3,
+                        'post__not_in' => array( $post->ID ),
                         'orderby' => 'date',
-                        'order' => 'DESC'
+                        'order' => 'DESC',
+                        'tax_query' => array(
+                            'relation' => 'OR',
+                            $taxArgs
+                        )
                     ));
 
                     if ( $recentPosts->have_posts() ) :
