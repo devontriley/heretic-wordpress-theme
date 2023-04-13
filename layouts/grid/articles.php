@@ -44,12 +44,12 @@ function getArticles ( $articleCount ) {
     else :
 
         $isBlogHome = is_page_template( 'page-blog-home.php' );
-        $posts = new WP_Query(array(
+        $blogPosts = new WP_Query(array(
             'post_type' => 'post',
             'posts_per_page' => $articleCount ?: 3,
             'offset' => $isBlogHome ? 3 : 0
         ));
-        $articles = $posts->posts;
+        $articles = $blogPosts->posts;
 
     endif;
 
@@ -82,11 +82,11 @@ $articles = getArticles( $articleCount );
     <div class="row">
         <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
             <div class="row">
-                <?php foreach ( $articles as $key => $article ) : ?>
-                    <div class="grid col-sm-6 col-md-6 col-lg-4">
-                        <?php include('articles-card.php') ?>
-                    </div>
-                <?php endforeach; ?>
+<!--                --><?php //foreach ( $articles as $key => $article ) : ?>
+<!--                    <div class="grid col-sm-6 col-md-6 col-lg-4">-->
+<!--                        --><?php //include('articles-card.php') ?>
+<!--                    </div>-->
+<!--                --><?php //endforeach; ?>
             </div>
         </div>
     </div>
