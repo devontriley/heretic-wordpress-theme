@@ -26,6 +26,7 @@
 }
 .layout-colored-icon-cards .card[data-color=tertiary1] {
   background-color: var(--bs-tertiary-1);
+  color: #000;
 }
 .layout-colored-icon-cards .card[data-color=tertiary2] {
   background-color: var(--bs-tertiary-2);

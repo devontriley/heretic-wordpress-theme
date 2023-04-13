@@ -21,7 +21,10 @@
 
         &[data-color="primary"] { background-color: var(--bs-primary); }
         &[data-color="secondary"] { background-color: var(--bs-secondary); }
-        &[data-color="tertiary1"] { background-color: var(--bs-tertiary-1); }
+        &[data-color="tertiary1"] {
+            background-color: var(--bs-tertiary-1);
+            color: $black;
+        }
         &[data-color="tertiary2"] { background-color: var(--bs-tertiary-2); }
     }
 
