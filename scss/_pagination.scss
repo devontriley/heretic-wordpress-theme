@@ -24,12 +24,10 @@
     }
 }
 
+// Post navigation on post single
+
 .navigation.post-navigation {
     @include margin(50px 0);
-
-    .screen-reader-text {
-        @extend .visually-hidden;
-    }
 
     .nav-links {
         @include media-breakpoint-up(sm) {

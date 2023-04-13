@@ -4928,7 +4928,7 @@ body .gform_wrapper.gravity-theme .input-group > textarea:not(:focus).is-invalid
   align-self: stretch;
 }
 
-.visually-hidden, .newsletter-form label, .navigation.post-navigation .screen-reader-text,
+.visually-hidden, .newsletter-form label, .screen-reader-text,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;
   width: 1px !important;

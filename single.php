@@ -19,33 +19,26 @@ get_header();
 
         get_template_part( 'template-parts/content/content-single' );
 
-//	if ( is_attachment() ) {
-//		// Parent post navigation.
-//		the_post_navigation(
-//			array(
-//				/* translators: %s: Parent post link. */
-//				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentytwentyone' ), '%title' ),
-//			)
-//		);
-//	}
+        // Previous/next post navigation.
+        $heretic_next = is_rtl() ? heretic_get_icon_svg( 'ui', 'arrow_left' ) : heretic_get_icon_svg( 'ui', 'arrow_right' );
+        $heretic_prev = is_rtl() ? heretic_get_icon_svg( 'ui', 'arrow_right' ) : heretic_get_icon_svg( 'ui', 'arrow_left' );
 
-        // If comments are open or there is at least one comment, load up the comment template.
-//	if ( comments_open() || get_comments_number() ) {
-//		comments_template();
-//	}
-//
-	// Previous/next post navigation.
-	$heretic_next = is_rtl() ? heretic_get_icon_svg( 'ui', 'arrow_left' ) : heretic_get_icon_svg( 'ui', 'arrow_right' );
-	$heretic_prev = is_rtl() ? heretic_get_icon_svg( 'ui', 'arrow_right' ) : heretic_get_icon_svg( 'ui', 'arrow_left' );
-
-	the_post_navigation(
-		array(
-			'next_text' => '<p class="post-title">%title</p><p class="meta-nav">' . $heretic_next . '</p>',
-			'prev_text' => '<p class="meta-nav">' . $heretic_prev . '</p><p class="post-title">%title</p>',
-		)
-	);
+        the_post_navigation(
+            array(
+                'next_text' => '<p class="post-title">%title</p><p class="meta-nav">' . $heretic_next . '</p>',
+                'prev_text' => '<p class="meta-nav">' . $heretic_prev . '</p><p class="post-title">%title</p>',
+            )
+        );
     endwhile;
     ?>
+
+    <div class="row">
+        <div class="col">
+            <div class="layout-grid articles">
+                <?php include( get_template_directory().'/layouts/grid/articles.php' ); ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>

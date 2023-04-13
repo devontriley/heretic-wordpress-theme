@@ -20,6 +20,10 @@ body {
     height: 100%;
 }
 
+.screen-reader-text {
+    @extend .visually-hidden;
+}
+
 .layout-vertical-spacing {
     @include margin(100px 0);
 }

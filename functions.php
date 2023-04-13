@@ -96,6 +96,10 @@ if (!function_exists('register_heretic_styles')) :
         if ( is_home() ) {
             wp_enqueue_style( 'heretic-layout-grid', get_template_directory_uri().'/layouts/grid/style.css', array() );
         }
+
+        if ( is_singular( 'post' ) ) {
+            wp_enqueue_style( 'heretic-layout-grid', get_template_directory_uri().'/layouts/grid/style.css', array() );
+        }
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'register_heretic_styles' );

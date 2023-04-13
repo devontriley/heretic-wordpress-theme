@@ -32,36 +32,21 @@
                         );
                         ?>
 
-                        <?php if ( ! is_singular( 'attachment' ) ) : ?>
-                            <?php // get_template_part( 'template-parts/post/author-bio' ); ?>
-                        <?php endif; ?>
                     </div>
 
                     <?php
-                    $terms = get_the_terms( $post, 'category' );
-                    $taxArgs = array_map( function( $term ) {
-                        return array(
-                            'taxonomy' => 'category',
-                            'field' => 'slug',
-                            'terms' => $term->slug
-                        );
-                    }, $terms );
                     $recentPosts = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 3,
                         'post__not_in' => array( $post->ID ),
                         'orderby' => 'date',
-                        'order' => 'DESC',
-                        'tax_query' => array(
-                            'relation' => 'OR',
-                            $taxArgs
-                        )
+                        'order' => 'DESC'
                     ));
 
                     if ( $recentPosts->have_posts() ) :
                     ?>
                     <div class="col-lg-3 offset-lg-1 recent-posts-sidebar">
-                        <p class="sidebar-header">RECENT</p>
+                        <p class="sidebar-header">Recent</p>
 
                         <?php foreach ( $recentPosts->posts as $p ) : ?>
                         <div class="recent-post">
