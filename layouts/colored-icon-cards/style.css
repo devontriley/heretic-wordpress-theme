@@ -21,15 +21,27 @@
 .layout-colored-icon-cards .card[data-color=primary] {
   background-color: var(--bs-primary);
 }
+.layout-colored-icon-cards .card[data-color=primary]:hover {
+  background-color: var(--bs-primary-shade);
+}
 .layout-colored-icon-cards .card[data-color=secondary] {
   background-color: var(--bs-secondary);
+}
+.layout-colored-icon-cards .card[data-color=secondary]:hover {
+  background-color: var(--bs-secondary-shade);
 }
 .layout-colored-icon-cards .card[data-color=tertiary1] {
   background-color: var(--bs-tertiary-1);
   color: #000;
 }
+.layout-colored-icon-cards .card[data-color=tertiary1]:hover {
+  background-color: var(--bs-tertiary-1-shade);
+}
 .layout-colored-icon-cards .card[data-color=tertiary2] {
   background-color: var(--bs-tertiary-2);
+}
+.layout-colored-icon-cards .card[data-color=tertiary2]:hover {
+  background-color: var(--bs-tertiary-2-shade);
 }
 .layout-colored-icon-cards .card-body {
   padding: calc(1.375rem + 1.5vw) calc(1.5rem + 3vw);
