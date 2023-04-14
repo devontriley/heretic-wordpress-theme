@@ -17,7 +17,7 @@
 .layout-big-cta .cta-wrapper:hover {
   background-color: var(--bs-secondary-tint);
 }
-.layout-big-cta .cta-wrapper .text-link {
+.layout-big-cta .cta-wrapper:hover .text-link {
   text-decoration: underline;
 }
 .layout-big-cta .text {
