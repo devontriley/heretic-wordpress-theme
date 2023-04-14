@@ -14,6 +14,12 @@
   border-radius: var(--borderRadius);
   background-color: var(--bs-secondary);
 }
+.layout-big-cta .cta-wrapper:hover {
+  background-color: var(--bs-secondary-tint);
+}
+.layout-big-cta .cta-wrapper .text-link {
+  text-decoration: underline;
+}
 .layout-big-cta .text {
   display: inline-block;
   margin: 0;

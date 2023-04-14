@@ -12,6 +12,14 @@
         padding: 65px 30px;
         border-radius: var(--borderRadius);
         background-color: var(--bs-secondary);
+
+        &:hover {
+            background-color: var(--bs-secondary-tint);
+        }
+
+        .text-link {
+            text-decoration: underline;
+        }
     }
 
     .text {
