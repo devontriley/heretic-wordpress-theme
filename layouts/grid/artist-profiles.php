@@ -7,7 +7,8 @@ $artists = new WP_Query(array(
     'meta_query' => array(
         array(
             'key' => 'archived',
-            'compare' => 'NOT EXISTS'
+            'value' => true,
+            'compare' => '!='
         )
     )
 ));
@@ -19,7 +20,8 @@ $archivedArtists = new WP_Query(array(
     'meta_query' => array(
         array(
             'key' => 'archived',
-            'compare' => 'EXISTS'
+            'value' => true,
+            'compare' => '='
         )
     )
 ));
