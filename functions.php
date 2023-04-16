@@ -367,26 +367,6 @@ function fwp_add_facet_labels() {
 }
 add_action( 'wp_head', 'fwp_add_facet_labels', 100 );
 
-// Alter frontend search query
-function heretic_filter_search( $query ) {
-    if ( $query->is_search && !is_admin() ) {
-        $postsPerPage = '4';
-
-        switch ( $query->query['post_type'] ) :
-            case 'post':
-                $postsPerPage = '6';
-                break;
-            case 'page':
-                $postsPerPage = '8';
-                break;
-        endswitch;
-
-        $query->set( 'posts_per_page', 1 );
-    }
-    return $query;
-}
-add_filter( 'pre_get_posts','heretic_filter_search' );
-
 
 // ACF Layout Thumbnails
 

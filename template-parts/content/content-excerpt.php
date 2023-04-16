@@ -17,11 +17,11 @@
     <?php
     switch ( get_post_type() ) :
         case 'post':
-            $p = get_post();
+            $article = get_post();
             include( get_template_directory().'/layouts/grid/articles-card.php' );
             break;
         case 'page':
-            $p = get_post();
+            $article = get_post();
             include( get_template_directory().'/layouts/grid/articles-card.php' );
             break;
         case 'product':

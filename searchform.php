@@ -15,7 +15,21 @@
 $heretic_unique_id = wp_unique_id( 'search-form-' );
 $heretic_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . esc_attr( $args['aria_label'] ) . '"' : '';
 
-$postTypeParam = $_GET['post_type'];
+$getPostType = $_GET['source'];
+
+// Get post types used by SearchWP engine
+$post_types = array();
+$engine_slug = 'default';
+$engine_options = get_option( 'searchwp_engines' );
+if ( isset( $engine_options[ $engine_slug ] ) ) {
+    $engine_settings = $engine_options[ $engine_slug ];
+    if ( isset( $engine_settings['sources'] ) ) {
+        $sources = $engine_settings['sources'];
+        foreach ( $sources as $source => $value ) {
+            $post_types[] = str_replace( 'post.', '', $source );
+        }
+    }
+}
 ?>
 
 <form
@@ -48,12 +62,10 @@ $postTypeParam = $_GET['post_type'];
         </button>
     </div>
 
-    <select name="post_type" class="form-select">
-        <option value="post" <?php if ( $postTypeParam === 'post' ){ echo 'selected'; }?>>Posts</option>
-        <option value="page" <?php if ( $postTypeParam === 'page' ){ echo 'selected'; }?>>Pages</option>
-        <option value="artists" <?php if ( $postTypeParam === 'artists' ){ echo 'selected'; }?>>Artists</option>
-        <option value="services" <?php if ( $postTypeParam === 'services' ){ echo 'selected'; }?>>Services</option>
-        <option value="team-members" <?php if ( $postTypeParam === 'team-members' ){ echo 'selected'; }?>>Team Members</option>
-        <option value="product" <?php if ( $postTypeParam === 'product' ){ echo 'selected'; }?>>Products</option>
+    <select name="source" class="form-select">
+        <?php foreach ( $post_types as $type ) :
+            $typeName = ( $type === 'tribe_events' ) ? 'Events' : $type; ?>
+            <option value="<?php echo $type ?>" <?php if ( $getPostType === $type ){ echo 'selected'; }?>><?php echo ucfirst( $typeName ); ?></option>
+        <?php endforeach; ?>
     </select>
 </form>

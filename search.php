@@ -7,23 +7,6 @@
  */
 global $wp_query;
 $isSearchTemplate = true;
-
-// Default search query with no "s" param doesn't return results ordered by post_type,
-// as it should based on the searchwp-customizations.php plugin
-// So instead we'll create a new query fetching all results for all post types
-//if ( ! $wp_query->query_vars['s'] ) {
-//    $wp_query = new WP_Query(array(
-//        'posts_per_page' => -1,
-//        'post_type' => 'any',
-//        'orderby' => 'type',
-//        'order' => 'ASC'
-//    ));
-//}
-
-echo '<pre>';
-//print_r(get_post_type_object('product'));
-echo '</pre>';
-
 $totalPosts = $wp_query->found_posts;
 $lastPostType = null;
 $loopIteration = 0;
@@ -45,6 +28,7 @@ $loopIteration = 0;
      * When no search term is passed the posts aren't ordered by post_type so we can't display the different sections properly
      */
     if ( $wp_query->query['s'] ) : ?>
+
         <?php if ( have_posts() ) : ?>
 
             <?php while ( have_posts() ) :
@@ -100,14 +84,14 @@ $loopIteration = 0;
                     <div class="search-result-type post-type-<?php echo $postType ?>">
                     <div class="layout-grid <?php echo $gridType ?>">
 
-                    <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-md-6 col-lg-12 offset-lg-0">
-                            <div class="search-results-type-header">
-                                <h2><?php echo $sectionHeader ?></h2>
+<!--                    <div class="row">-->
+<!--                        <div class="col-sm-10 offset-sm-1 col-md-6 col-lg-12 offset-lg-0">-->
+<!--                            <div class="search-results-type-header">-->
+<!--                                <h2>--><?php //echo $sectionHeader ?><!--</h2>-->
 <!--                                <a href="--><?php //echo $postTypeLink ?><!--">View all results</a>-->
-                            </div>
-                        </div>
-                    </div>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="row">
                     <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
@@ -115,16 +99,16 @@ $loopIteration = 0;
 
                 <?php endif; ?>
 
-                <div class="<?php echo $gridItemClasses ?>">
-                    <?php
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
-                    ?>
-                </div>
+                        <div class="<?php echo $gridItemClasses ?>">
+                            <?php
+                            /*
+                             * Include the Post-Format-specific template for the content.
+                             * If you want to override this in a child theme, then include a file
+                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                             */
+                            get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
+                            ?>
+                        </div>
 
                 <?php
                 /* When the next post's type doesn't match the current post's type,
