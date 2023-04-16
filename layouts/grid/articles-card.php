@@ -2,7 +2,7 @@
 // $article variable must exist for this module to function properly
 $articleID = $article->ID;
 $articleTitle = $article->post_title;
-$fImage = wp_get_attachment_image( get_post_thumbnail_id( $articleID ), 'full' );
+$fImage = wp_get_attachment_image( get_post_thumbnail_id( $articleID ), 'full', false, array( 'sizes' => '(max-width: 575px) 100vw, (min-width: 576px) and (max-width: 992px) 50vw, 33vw' ) );
 $featuredImage = get_the_post_thumbnail( $articleID );
 ?>
 
