@@ -18987,6 +18987,7 @@ body.hidden-scroll {
 
 :root {
   --borderRadius: 10px;
+  --eyebrow-color: $black;
 }
 
 body {
@@ -19800,17 +19801,27 @@ body .facetwp-load-more.facetwp-hidden {
     margin: 5rem 0;
   }
 }
+.post-single .entry-content .alignleft,
+.post-single .entry-content .alignright {
+  float: right;
+  margin: 20px 0 20px 20px;
+  max-width: 50% !important;
+}
+.post-single .entry-content .alignleft {
+  float: left;
+}
 .post-single .entry-content img {
   max-width: 100% !important;
   height: auto !important;
 }
 .post-single .entry-content p:has(img) {
-  margin: calc(1.59375rem + 4.125vw) 0;
+  margin: 40x 0;
 }
-@media (min-width: 1200px) {
-  .post-single .entry-content p:has(img) {
-    margin: 4.6875rem 0;
-  }
+.post-single .entry-content p:has(img):first-child {
+  margin-top: 0;
+}
+.post-single .entry-content p:has(img) strong {
+  display: block;
 }
 .post-single .entry-content p:last-child {
   margin-bottom: 0;
@@ -19826,6 +19837,10 @@ body .facetwp-load-more.facetwp-hidden {
 }
 .post-single .entry-content .wp-caption .wp-caption-text {
   margin: 1.5rem 0 0 0;
+}
+.post-single .entry-content figure figcaption {
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 .recent-posts-sidebar .sidebar-header {
@@ -19848,6 +19863,7 @@ body .facetwp-load-more.facetwp-hidden {
   /* 14px @ 16px base */
   font-weight: 700;
   margin-bottom: 1.43em;
+  color: var(--eyebrow-color);
 }
 
 @media (max-width: 575.98px) {
