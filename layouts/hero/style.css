@@ -152,10 +152,10 @@
   align-self: center;
 }
 .layout-hero.carousel:not(.background-none).background-light .glide.content {
-  background: #ccc;
+  background: var(--hero-carousel-bg-light);
 }
 .layout-hero.carousel:not(.background-none).background-dark .glide.content {
-  background: #333;
+  background: var(--hero-carousel-bg-dark);
   color: #fff;
 }
 
