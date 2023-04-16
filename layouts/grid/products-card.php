@@ -1,19 +1,23 @@
 <?php
 $checkoutURL = wc_get_checkout_url();
 $price = $product->get_price();
-$featuredImage = $product->get_image();
+$featuredImage = wp_get_attachment_image( $product->get_image_id(), 'full' );
 ?>
 
     <div class="card">
         <!-- Image -->
         <div class="image">
             <?php if ( $featuredImage ) : ?>
-                <?php echo $featuredImage ?>
+                <a href="<?php echo $product->get_permalink(); ?>">
+                    <?php echo $featuredImage ?>
+                </a>
             <?php endif; ?>
         </div>
         <div class="card-body">
             <!-- Header -->
-            <h3 class="card-title"><?php echo $product->get_title() ?></h3>
+            <h3 class="card-title">
+                <a href="<?php echo $product->get_permalink(); ?>"><?php echo $product->get_title() ?></a>
+            </h3>
             <!-- Price -->
             <p class="price"><?php echo $price ?></p>
             <!-- Add to cart button -->
