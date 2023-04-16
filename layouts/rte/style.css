@@ -50,7 +50,7 @@
   align-items: stretch;
 }
 .layout-rte.size-fiftyfifty .copy-inner {
-  background: #ccc;
+  background: var(--rte-fifty-fifty-bg-color);
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
