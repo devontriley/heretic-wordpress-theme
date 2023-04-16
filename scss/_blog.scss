@@ -70,13 +70,32 @@
 
     .entry-content {
 
+        .alignleft,
+        .alignright {
+            float: right;
+            margin: 20px 0 20px 20px;
+            max-width: 50% !important;
+        }
+
+        .alignleft {
+            float: left;
+        }
+
         img {
             max-width: 100% !important;
             height: auto !important;
         }
 
         p:has(img) {
-            @include margin(75px 0);
+            @include margin(40x 0);
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            strong {
+                display: block;
+            }
         }
 
         p:last-child {
@@ -89,6 +108,13 @@
 
             .wp-caption-text {
                 margin: $grid-gutter-width 0 0 0;
+            }
+        }
+
+        figure {
+            figcaption {
+                font-size: 12px;
+                margin-top: 10px;
             }
         }
     }
