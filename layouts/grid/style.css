@@ -41,6 +41,13 @@
 .layout-grid.icon-and-blurb p:last-child {
   margin-bottom: 0;
 }
+.layout-grid.icon-and-blurb a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+.layout-grid.icon-and-blurb a:hover {
+  text-decoration: underline;
+}
 
 /* Info Boxes */
 .layout-grid.info-boxes div[class*=col].grid {
@@ -48,6 +55,9 @@
 }
 .layout-grid.info-boxes .card {
   height: 100%;
+}
+.layout-grid.info-boxes .card:hover .card-title {
+  color: var(--bs-primary);
 }
 .layout-grid.info-boxes .card-img-top {
   height: auto !important;
@@ -79,6 +89,10 @@
   border: none;
   border-radius: 0;
   /* Used for Related Services on service single pages */
+}
+.layout-grid.articles .card:hover .card-title,
+.layout-grid.services .card:hover .card-title {
+  color: var(--bs-primary);
 }
 .layout-grid.articles .card .card-body,
 .layout-grid.services .card .card-body {
@@ -127,6 +141,17 @@
 .layout-grid.team-members .card {
   height: 100%;
 }
+.layout-grid.team-members .card .title {
+  font-size: 1rem;
+}
+.layout-grid.team-members .card a {
+  font-size: 1.125rem;
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+.layout-grid.team-members .card a:hover {
+  text-decoration: underline;
+}
 .layout-grid.team-members img {
   height: auto !important;
   width: 100% !important;
@@ -137,6 +162,9 @@
 /* Artist Profiles */
 .layout-grid.artist-profiles div[class*=col].grid {
   margin-bottom: 1.5rem;
+}
+.layout-grid.artist-profiles .artist-card:hover .artist-name {
+  color: var(--bs-primary);
 }
 .layout-grid.artist-profiles a {
   color: inherit;
@@ -163,6 +191,9 @@
   height: 100%;
   border: none;
   border-radius: 0;
+}
+.layout-grid.product-categories .card:hover .card-title {
+  color: var(--bs-primary);
 }
 .layout-grid.product-categories .card .card-body {
   padding: 25px 0 0 0;
@@ -198,6 +229,9 @@
   border: none;
   border-radius: 0;
 }
+.layout-grid.products .card:hover .card-title {
+  color: var(--bs-primary);
+}
 .layout-grid.products .card .card-body {
   padding: 25px 0 0 0;
 }
@@ -227,6 +261,9 @@
 }
 .layout-grid.external-links .card {
   height: 100%;
+}
+.layout-grid.external-links .card:hover .card-title {
+  color: var(--bs-primary);
 }
 
 /* Logos */

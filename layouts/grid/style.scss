@@ -38,6 +38,15 @@
             margin-bottom: 0;
         }
     }
+
+    a {
+        color: var(--bs-primary);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 /* Info Boxes */
@@ -49,6 +58,12 @@
 
     .card {
         height: 100%;
+
+        &:hover {
+            .card-title {
+                color: var(--bs-primary);
+            }
+        }
     }
 
     .card-img-top {
@@ -84,6 +99,12 @@
         height: 100%;
         border: none;
         border-radius: 0;
+
+        &:hover {
+            .card-title {
+                color: var(--bs-primary);
+            }
+        }
 
         .card-body {
             padding: 15px 0 0 0;
@@ -129,6 +150,20 @@
 
     .card {
         height: 100%;
+
+        .title {
+            @include font-size(16px);
+        }
+
+        a {
+            @include font-size(18px);
+            color: var(--bs-primary);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     img {
@@ -143,6 +178,14 @@
 .layout-grid.artist-profiles {
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
+    }
+
+    .artist-card {
+        &:hover {
+            .artist-name {
+                color: var(--bs-primary);
+            }
+        }
     }
 
     a {
@@ -175,6 +218,12 @@
         height: 100%;
         border: none;
         border-radius: 0;
+
+        &:hover {
+            .card-title {
+                color: var(--bs-primary);
+            }
+        }
 
         .card-body {
             padding: 25px 0 0 0;
@@ -216,6 +265,12 @@
         border: none;
         border-radius: 0;
 
+        &:hover {
+            .card-title {
+                color: var(--bs-primary);
+            }
+        }
+
         .card-body {
             padding: 25px 0 0 0;
 
@@ -255,6 +310,12 @@
 
     .card {
         height: 100%;
+
+        &:hover {
+            .card-title {
+                color: var(--bs-primary);
+            }
+        }
     }
 }
 

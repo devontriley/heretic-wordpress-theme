@@ -5,7 +5,7 @@
     <div class="card-body">
         <!-- Header -->
         <?php if ( $card['card_header'] ) : ?>
-            <h3><?php echo $card['card_header'] ?></h3>
+            <h3 class="card-title"><?php echo $card['card_header'] ?></h3>
         <?php endif; ?>
         <!-- Card body -->
         <?php if ( $card['card_body'] ) : ?>

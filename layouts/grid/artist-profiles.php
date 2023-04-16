@@ -31,9 +31,7 @@ $archivedArtists = new WP_Query(array(
     <!-- Current Artists -->
     <div class="row">
         <div class="header text-center col-md-6 offset-md-3 col-lg-12 offset-lg-0">
-            <<?php echo $headerSize ?>>
-                Current Artists
-            </<?php echo $headerSize ?>>
+            <h1>Current Artists</h1>
         </div>
     </div>
 
@@ -54,9 +52,7 @@ $archivedArtists = new WP_Query(array(
     <!-- Archived Artists -->
     <div class="row">
         <div class="header text-center col-md-6 offset-md-3 col-lg-12 offset-lg-0">
-            <<?php echo $headerSize ?>>
-                Archived Artists
-            </<?php echo $headerSize ?>>
+            <h1>Archived Artists</h1>
         </div>
     </div>
 

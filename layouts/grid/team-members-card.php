@@ -26,7 +26,7 @@ if ( $bio && !$allGridTeamMembers[$id] ) {
         <?php endif; ?>
         <!-- Title -->
         <?php if ( $title ) : ?>
-            <p class="mb-0"><?php echo $title ?></p>
+            <p class="title mb-0"><?php echo $title ?></p>
         <?php endif; ?>
         <!-- Link -->
         <?php

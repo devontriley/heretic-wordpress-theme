@@ -17,7 +17,7 @@ $featuredImage = wp_get_attachment_image( $thumbnailID );
     <div class="card-body">
         <!-- Header -->
         <?php if( $category->name ) : ?>
-            <h3><?php echo $category->name ?></h3>
+            <h3 class="card-title"><?php echo $category->name ?></h3>
         <?php endif; ?>
         <!-- Product count -->
         <p class="product-count">

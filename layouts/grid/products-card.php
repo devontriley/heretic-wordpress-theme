@@ -13,7 +13,7 @@ $featuredImage = $product->get_image();
         </div>
         <div class="card-body">
             <!-- Header -->
-            <h3><?php echo $product->get_title() ?></h3>
+            <h3 class="card-title"><?php echo $product->get_title() ?></h3>
             <!-- Price -->
             <p class="price"><?php echo $price ?></p>
             <!-- Add to cart button -->
