@@ -115,3 +115,13 @@ add_action( 'woocommerce_before_subcategory_title', 'woocommerce_close_wrapper_c
 function woocommerce_close_wrapper_category_thumbnail( $category ) {
     echo '</div>';
 }
+
+/*
+ * Add correct btn classes to add tocart buttons in loop
+ */
+
+function my_custom_add_to_cart_args( $args, $product ) {
+    $args['class'] = 'wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart btn btn-primary';
+    return $args;
+}
+add_filter( 'woocommerce_loop_add_to_cart_args', 'my_custom_add_to_cart_args', 10, 2 );

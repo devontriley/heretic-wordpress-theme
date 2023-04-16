@@ -242,9 +242,6 @@
 .layout-grid.products .card .card-body p.product-count {
   margin: 0;
 }
-.layout-grid.products .card .card-body .btn {
-  display: block;
-}
 .layout-grid.products .image {
   width: 100%;
   aspect-ratio: 1/1;
