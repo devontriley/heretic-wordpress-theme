@@ -49,10 +49,8 @@ $loopIteration = 0;
 
                 switch ( $postType ) :
                     case 'post':
-                        $gridType = 'articles';
-                        $gridItemClasses = 'grid col-sm-6 col-md-6 col-lg-4';
-                        break;
                     case 'page':
+                    case 'tribe_events':
                         $gridType = 'articles';
                         $gridItemClasses = 'grid col-sm-6 col-md-6 col-lg-4';
                         break;

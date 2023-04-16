@@ -21,11 +21,11 @@ $featuredImage = get_the_post_thumbnail( $articleID );
         <?php if( $articleTitle ) : ?>
             <h3 class="card-title"><?php echo $articleTitle ?></h3>
         <?php endif; ?>
-        <?php if ( get_post_type( $articleID ) === 'post' ) : ?>
-        <!-- Date -->
-        <p class="date">
-            <?php echo get_the_date( 'M d, Y', $articleID ) ?>
-        </p>
+        <?php if ( in_array( get_post_type( $articleID ), array( 'post', 'tribe_events') )) : ?>
+            <!-- Date -->
+            <p class="date">
+                <?php echo get_the_date( 'M d, Y', $articleID ) ?>
+            </p>
         <?php endif; ?>
     </div>
 </div>

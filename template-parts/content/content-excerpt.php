@@ -17,10 +17,8 @@
     <?php
     switch ( get_post_type() ) :
         case 'post':
-            $article = get_post();
-            include( get_template_directory().'/layouts/grid/articles-card.php' );
-            break;
         case 'page':
+        case 'tribe_events':
             $article = get_post();
             include( get_template_directory().'/layouts/grid/articles-card.php' );
             break;
