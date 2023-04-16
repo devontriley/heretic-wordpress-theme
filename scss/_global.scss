@@ -1,12 +1,5 @@
 @import "../node_modules/bootstrap/scss/variables";
 
-:root {
-    --borderRadius: 10px;
-    --eyebrow-color: $black;
-
-    --rte-fifty-fifty-bg-color: $gray-300;
-}
-
 body {
     padding-top: 105px; /* Matches header height */
 
