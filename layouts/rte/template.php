@@ -7,6 +7,7 @@ $size = get_sub_field('size');
 $centeredText = get_sub_field('centered_text');
 $eyebrowText = get_sub_field('eyebrow_text');
 $header = get_sub_field('header');
+$headerSize = get_sub_field('header_size');
 $bodyCopy = get_sub_field('body_copy');
 $sidebar = get_sub_field('sidebar');
 $imageVideo = get_sub_field('image_or_video');
@@ -35,7 +36,7 @@ $button = get_sub_field('button');
                     <?php endif; ?>
                     <!-- Header -->
                     <?php if ( $header ) : ?>
-                        <h2><?php echo $header ?></h2>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                     <?php endif; ?>
                     <!-- Body copy -->
                     <?php if ( $bodyCopy ) : ?>
@@ -69,7 +70,7 @@ $button = get_sub_field('button');
                         <?php endif; ?>
                         <!-- Header -->
                         <?php if ( $header ) : ?>
-                            <h2><?php echo $header ?></h2>
+                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                         <?php endif; ?>
                         <!-- Body copy -->
                         <?php if ( $bodyCopy ) : ?>
@@ -100,7 +101,7 @@ $button = get_sub_field('button');
                             <?php endif; ?>
                             <!-- Header -->
                             <?php if ( $header ) : ?>
-                                <h2><?php echo $header ?></h2>
+                                <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                             <?php endif; ?>
                             <!-- Body copy -->
                             <?php if ( $bodyCopy ) : ?>
@@ -120,7 +121,7 @@ $button = get_sub_field('button');
                             <?php endif; ?>
                             <!-- Header -->
                             <?php if ( $header ) : ?>
-                                <h2><?php echo $header ?></h2>
+                                <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                             <?php endif; ?>
                             <!-- Body copy -->
                             <?php if ( $bodyCopy ) : ?>
@@ -158,7 +159,7 @@ $button = get_sub_field('button');
                         <?php endif; ?>
                         <!-- Header -->
                         <?php if ( $header ) : ?>
-                            <h2><?php echo $header ?></h2>
+                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                         <?php endif; ?>
                         <!-- Body copy -->
                         <?php if ( $bodyCopy ) : ?>
@@ -178,7 +179,7 @@ $button = get_sub_field('button');
                         <?php endif; ?>
                         <!-- Header -->
                         <?php if ( $header ) : ?>
-                            <h2><?php echo $header ?></h2>
+                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                         <?php endif; ?>
                         <!-- Body copy -->
                         <?php if ( $bodyCopy ) : ?>
@@ -206,7 +207,7 @@ $button = get_sub_field('button');
                     <?php endif; ?>
                     <!-- Header -->
                     <?php if ( $header ) : ?>
-                        <h2 class="h1"><?php echo $header ?></h2>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                     <?php endif; ?>
                     <!-- Body copy -->
                     <?php if ( $bodyCopy ) : ?>
@@ -242,7 +243,7 @@ $button = get_sub_field('button');
                                 <?php endif; ?>
                                 <!-- Header -->
                                 <?php if ( $header ) : ?>
-                                    <h2><?php echo $header ?></h2>
+                                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                                 <?php endif; ?>
                                 <!-- Body copy -->
                                 <?php if ( $bodyCopy ) : ?>
@@ -266,7 +267,7 @@ $button = get_sub_field('button');
                                 <?php endif; ?>
                                 <!-- Header -->
                                 <?php if ( $header ) : ?>
-                                    <h2><?php echo $header ?></h2>
+                                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                                 <?php endif; ?>
                                 <!-- Body copy -->
                                 <?php if ( $bodyCopy ) : ?>
