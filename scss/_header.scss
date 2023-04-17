@@ -123,13 +123,14 @@
             position: relative;
             margin: 0 10px;
             padding-bottom: 10px;
+            font-weight: 700;
+            cursor: default;
 
             &:hover {
                 color: var(--bs-primary);
             }
 
             & > a {
-                font-weight: 700;
                 text-decoration: none;
 
                 & > svg {
@@ -152,6 +153,7 @@
     margin: 0;
     padding: 0;
     color: var(--bs-body-color);
+    font-weight: 400;
 
     .sub-menu-inner {
         width: 285px;

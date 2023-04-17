@@ -20013,12 +20013,13 @@ p, li {
   position: relative;
   margin: 0 10px;
   padding-bottom: 10px;
+  font-weight: 700;
+  cursor: default;
 }
 .primary-nav.menu-top > li:hover {
   color: var(--bs-primary);
 }
 .primary-nav.menu-top > li > a {
-  font-weight: 700;
   text-decoration: none;
 }
 .primary-nav.menu-top > li > a > svg {
@@ -20036,6 +20037,7 @@ p, li {
   margin: 0;
   padding: 0;
   color: var(--bs-body-color);
+  font-weight: 400;
 }
 .primary-nav-container .sub-menu .sub-menu-inner {
   width: 285px;
