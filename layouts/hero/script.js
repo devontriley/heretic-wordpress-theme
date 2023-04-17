@@ -28,18 +28,22 @@ if ( "function" == typeof Glide ) {
         let prevBtn = carousel.querySelector(".prev")
         let nextBtn = carousel.querySelector(".next")
 
-        prevBtn.addEventListener("click", e => {
-            e.preventDefault()
+        if ( prevBtn ) {
+            prevBtn.addEventListener("click", e => {
+                e.preventDefault()
 
-            if ( glideContent ) glideContent.go("<")
-            if ( glideImages ) glideImages.go("<")
-        })
+                if ( glideContent ) glideContent.go("<")
+                if ( glideImages ) glideImages.go("<")
+            })
+        }
 
-        nextBtn.addEventListener("click", e => {
-            e.preventDefault()
+        if ( nextBtn ) {
+            nextBtn.addEventListener("click", e => {
+                e.preventDefault()
 
-            if ( glideContent ) glideContent.go(">")
-            if ( glideImages ) glideImages.go(">")
-        })
+                if ( glideContent ) glideContent.go(">")
+                if ( glideImages ) glideImages.go(">")
+            })
+        }
     })
 }
