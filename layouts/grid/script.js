@@ -1,1 +1,25 @@
-const teamMemberDrawer=document.getElementById("team-members-bio-drawer"),teamMemberDrawerBios=teamMemberDrawer.querySelectorAll(".team-member"),teamMemberDrawerOffcanvas=new bootstrap.Offcanvas("#team-members-bio-drawer"),teamMemberOpenButtons=document.querySelectorAll(".team-member-open-drawer");teamMemberDrawer.addEventListener("hidden.bs.offcanvas",e=>{teamMemberDrawerBios.forEach(e=>{e.classList.remove("d-block")})}),document.addEventListener("click",e=>{e.target.classList.contains("team-member-open-drawer")&&(e.preventDefault(),e=e.target.dataset.id)&&(teamMemberDrawer.querySelector('.team-member[data-id="'+e+'"]').classList.add("d-block"),teamMemberDrawerOffcanvas.show())});
+const teamMemberDrawer = document.getElementById("team-members-bio-drawer");
+
+if ( teamMemberDrawer ) {
+    const teamMemberDrawerBios = teamMemberDrawer.querySelectorAll(".team-member");
+    const teamMemberDrawerOffcanvas = new bootstrap.Offcanvas("#team-members-bio-drawer");
+    const teamMemberOpenButtons = document.querySelectorAll(".team-member-open-drawer");
+
+    teamMemberDrawer.addEventListener("hidden.bs.offcanvas", event => {
+        teamMemberDrawerBios.forEach(bio => {
+            bio.classList.remove("d-block");
+        });
+    });
+
+    document.addEventListener("click", event => {
+        if (event.target.classList.contains("team-member-open-drawer")) {
+            event.preventDefault();
+            let id = event.target.dataset.id;
+            if (id) {
+                let member = teamMemberDrawer.querySelector('.team-member[data-id="' + id + '"]');
+                member.classList.add("d-block");
+                teamMemberDrawerOffcanvas.show();
+            }
+        }
+    });
+}
