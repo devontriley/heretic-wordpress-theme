@@ -32,8 +32,8 @@ $bodyCopy = $servicesIntro['body_copy'];
     <div class="row">
         <div class="col-md-3">
             <div class="services-facets">
-                <?php echo do_shortcode( '[facetwp facet="conditions"]' ); ?>
-                <?php echo do_shortcode( '[facetwp facet="age_eligibility"]' ); ?>
+                <?php echo do_shortcode( '[facetwp facet="services_by_type"]' ); ?>
+                <?php echo do_shortcode( '[facetwp facet="settings"]' ); ?>
                 <?php echo do_shortcode( '[facetwp facet="reset_all_filters"]' ); ?>
             </div>
         </div>
