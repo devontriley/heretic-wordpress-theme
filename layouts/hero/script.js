@@ -23,26 +23,23 @@ if ( "function" == typeof Glide ) {
                 swipeThreshold:!1,
                 dragThreshold:!1
             }).mount()
-
-            let prevBtn = carousel.querySelector(".prev")
-            let nextBtn = carousel.querySelector(".next")
-
-            prevBtn.addEventListener("click", e => {
-                e.preventDefault()
-
-                glideContent.go("<")
-                glideImages.go("<")
-            })
-
-            nextBtn.addEventListener("click", e => {
-                e.preventDefault()
-
-                console.log('WOOO')
-
-                glideContent.go(">")
-                glideImages.go(">")
-            })
         }
 
+        let prevBtn = carousel.querySelector(".prev")
+        let nextBtn = carousel.querySelector(".next")
+
+        prevBtn.addEventListener("click", e => {
+            e.preventDefault()
+
+            if ( glideContent ) glideContent.go("<")
+            if ( glideImages ) glideImages.go("<")
+        })
+
+        nextBtn.addEventListener("click", e => {
+            e.preventDefault()
+
+            if ( glideContent ) glideContent.go(">")
+            if ( glideImages ) glideImages.go(">")
+        })
     })
 }
