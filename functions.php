@@ -170,6 +170,11 @@ if( function_exists('acf_add_options_page') ) {
 // Include shortcodes
 //include('includes/shortcodes.php');
 
+// Display TranslatePress language switcher
+if ( function_exists('translatepress_is_enabled' ) && translatepress_is_enabled() ) {
+    echo do_shortcode('[language-switcher]');
+}
+
 // Hide admin toolbar when logged in
 function heretic_remove_admin_bar() {
     if (!current_user_can('administrator') && !is_admin()) {
