@@ -91,6 +91,8 @@ $button = get_sub_field('button');
                         <div class="<?php echo $isServicesSingle ? 'col-12' : 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-0 image'; ?>">
                             <?php if ( $image ) : ?>
                                 <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                            <?php elseif ( $video ) : ?>
+                                <?php echo $video; ?>
                             <?php endif; ?>
                         </div>
                         <!-- Copy -->
@@ -136,6 +138,8 @@ $button = get_sub_field('button');
                         <div class="<?php echo $isServicesSingle ? 'col-12' : 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 image'; ?>">
                             <?php if ( $image ) : ?>
                                 <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                            <?php elseif ( $video ) : ?>
+                                <?php echo $video; ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
@@ -149,6 +153,8 @@ $button = get_sub_field('button');
                     <div class="<?php echo $isServicesSingle ? 'col-12' : 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-1 image'; ?>">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video; ?>
                         <?php endif; ?>
                     </div>
                     <!-- Copy -->
@@ -194,6 +200,8 @@ $button = get_sub_field('button');
                     <div class="<?php echo $isServicesSingle ? 'col-12' : 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-1 image'; ?>">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video; ?>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
@@ -231,6 +239,8 @@ $button = get_sub_field('button');
                     <div class="d-none d-lg-block col-lg-6 image">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video; ?>
                         <?php endif; ?>
                     </div>
                     <!-- Copy -->
@@ -284,6 +294,8 @@ $button = get_sub_field('button');
                     <div class="d-none d-lg-block col-lg-6 image">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
+                        <?php elseif ( $video ) : ?>
+                            <?php echo $video; ?>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
