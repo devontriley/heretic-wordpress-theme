@@ -111,28 +111,37 @@
     }
 }
 
-.primary-nav.menu-top {
-    margin: 0;
-    padding: 0;
-}
+.primary-nav {
 
-.primary-nav a {
-    color: inherit;
-}
+    &.menu-top {
+        margin: 0;
+        padding: 0;
 
-.primary-nav.menu-top > li {
-    display: inline-block;
-    position: relative;
-    margin: 0 15px;
-}
+        & > li {
+            @include font-size(18px);
+            display: inline-block;
+            position: relative;
+            margin: 0 15px;
+            padding-bottom: 10px;
 
-.primary-nav.menu-top > li > a {
-    font-weight: 700;
-    text-decoration: none;
-}
+            &:hover {
+                color: var(--bs-primary);
+            }
 
-.primary-nav.menu-top > li > a > svg {
-    width: 10px;
+            & > a {
+                font-weight: 700;
+                text-decoration: none;
+
+                & > svg {
+                    width: 10px;
+                }
+            }
+        }
+    }
+
+    a {
+        color: inherit;
+    }
 }
 
 .primary-nav-container .sub-menu {
@@ -141,7 +150,8 @@
     left: 0;
     top: 100%;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 0;
+    color: var(--bs-body-color);
 
     .sub-menu-inner {
         width: 285px;
@@ -153,15 +163,25 @@
 
     li {
         display: block;
+        @include font-size(16px);
 
         a {
             position: relative;
             display: block;
-            padding: 12px 40px 12px 55px;
+            padding: 12px 40px 12px 45px;
             text-decoration: none;
 
             &:hover {
-                background: var(--bs-gray-300);
+                &:before {
+                    content: '';
+                    background: var(--bs-primary);
+                    opacity: 0.2;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             .sub-menu-icon {
@@ -192,6 +212,7 @@
 
             &:hover .bi-arrow-right {
                 display: block;
+                fill: var(--bs-primary);
             }
         }
     }

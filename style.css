@@ -20007,24 +20007,25 @@ p, li {
   margin: 0;
   padding: 0;
 }
-
-.primary-nav a {
-  color: inherit;
-}
-
 .primary-nav.menu-top > li {
+  font-size: 1.125rem;
   display: inline-block;
   position: relative;
   margin: 0 15px;
+  padding-bottom: 10px;
 }
-
+.primary-nav.menu-top > li:hover {
+  color: var(--bs-primary);
+}
 .primary-nav.menu-top > li > a {
   font-weight: 700;
   text-decoration: none;
 }
-
 .primary-nav.menu-top > li > a > svg {
   width: 10px;
+}
+.primary-nav a {
+  color: inherit;
 }
 
 .primary-nav-container .sub-menu {
@@ -20033,7 +20034,8 @@ p, li {
   left: 0;
   top: 100%;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0;
+  color: var(--bs-body-color);
 }
 .primary-nav-container .sub-menu .sub-menu-inner {
   width: 285px;
@@ -20044,15 +20046,23 @@ p, li {
 }
 .primary-nav-container .sub-menu li {
   display: block;
+  font-size: 1rem;
 }
 .primary-nav-container .sub-menu li a {
   position: relative;
   display: block;
-  padding: 12px 40px 12px 55px;
+  padding: 12px 40px 12px 45px;
   text-decoration: none;
 }
-.primary-nav-container .sub-menu li a:hover {
-  background: var(--bs-gray-300);
+.primary-nav-container .sub-menu li a:hover:before {
+  content: "";
+  background: var(--bs-primary);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .primary-nav-container .sub-menu li a .sub-menu-icon {
   margin-right: 15px;
@@ -20079,6 +20089,7 @@ p, li {
 }
 .primary-nav-container .sub-menu li a:hover .bi-arrow-right {
   display: block;
+  fill: var(--bs-primary);
 }
 
 .primary-nav-container li:hover .sub-menu {
