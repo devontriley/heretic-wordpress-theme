@@ -159,6 +159,27 @@
   object-fit: cover;
 }
 
+/* Team Member Drawer */
+#team-members-bio-drawer .btn-close {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+#team-members-bio-drawer .btn-close svg:hover {
+  color: var(--bs-primary);
+}
+#team-members-bio-drawer .offcanvas-body {
+  padding-top: 35px;
+}
+#team-members-bio-drawer .team-member {
+  display: none;
+}
+
 /* Artist Profiles */
 .layout-grid.artist-profiles div[class*=col].grid {
   margin-bottom: 1.5rem;
