@@ -22,6 +22,8 @@ let navDrawerOpen = false
 
 /* Nav drawer toggling */
 if ( navDrawer ) {
+    const navDrawerLinksWithChildren = document.querySelectorAll( '.nav-drawer li.has-children' )
+
     if( hamburgerButton ) {
         hamburgerButton.addEventListener( 'click', e => {
             hamburgerButton.classList.toggle( 'is-active' )
@@ -51,22 +53,23 @@ if ( navDrawer ) {
             document.body.classList.remove( 'nav-drawer-open' )
 
             navDrawer.classList.remove( 'active' )
+
+            navDrawerLinksWithChildren.forEach(link => {
+                link.classList.remove('active')
+            })
         }
 
         navDrawerOpen = !navDrawerOpen
     }
 
     /* Nav drawer dropdowns */
-    const navDrawerLinksWithChildren = document.querySelectorAll( '.nav-drawer li.has-children' )
     navDrawerLinksWithChildren.forEach( link => {
-        const linkTag = Array.prototype.filter.call( link.children, el => el.matches('a') )
+        link.addEventListener( 'click', e => {
+            navDrawerLinksWithChildren.forEach(li => {
+                li.classList.remove('active')
+            })
 
-        console.log(linkTag)
-
-        linkTag[0].addEventListener( 'click', e => {
-            const subMenu = e.currentTarget.nextElementSibling
-            link.classList.toggle( 'active' )
-            e.preventDefault()
+            link.classList.add( 'active' )
         })
     })
 }
