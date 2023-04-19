@@ -323,7 +323,7 @@ function add_artists_gallery_images_meta () {
         } );
     }
 }
-add_action( 'init', 'add_artists_gallery_images_meta' );
+//add_action( 'init', 'add_artists_gallery_images_meta' );
 
 // Add Admin Product Types filter
 function products_taxonomy_filter($post_type) {
