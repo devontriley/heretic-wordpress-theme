@@ -68,7 +68,7 @@ function mainSCSS() {
 function watchFiles () {
     watch( [ './layouts/**/*.scss' ], series( layoutSCSS, browserSyncReload ) )
     watch( [ './service-layouts/**/*.scss' ], series( serviceLayoutSCSS, browserSyncReload ) )
-    watch( [ './scss/*.scss' ], series( mainSCSS, browserSyncReload ) )
+    watch( [ './scss/**/*.scss' ], series( mainSCSS, browserSyncReload ) )
     watch( [ '**/*.js', '!**/*.min.js', '!gulpfile.js', '!mode_modules/**' ], series( js, browserSyncReload ) )
 }
 

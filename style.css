@@ -18980,6 +18980,19 @@ body.hidden-scroll {
     font-size: 14px;
   }
 }
+.btn:hover, body .facetwp-load-more:hover, body .facetwp-reset:hover, body .gform_wrapper.gravity-theme .gform_footer button:hover,
+body .gform_wrapper.gravity-theme .gform_footer input:hover,
+body .gform_wrapper.gravity-theme .gform_page_footer button:hover,
+body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart.wc-forward:hover:before, .woocommerce #respond input#submit.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce-page #respond input#submit.alt:hover,
+.woocommerce-page input.button.alt:hover,
+.woocommerce-page a.button:hover,
+.woocommerce-page button.button:hover {
+  text-decoration: none;
+}
 
 .card {
   overflow: hidden;
