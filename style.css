@@ -19831,12 +19831,9 @@ body .facetwp-load-more.facetwp-hidden {
 }
 .post-single .entry-content .alignleft,
 .post-single .entry-content .alignright {
-  float: right;
-  margin: 20px 0 20px 20px;
-  max-width: 50% !important;
-}
-.post-single .entry-content .alignleft {
-  float: left;
+  float: none;
+  margin: 20px auto;
+  max-width: 100% !important;
 }
 .post-single .entry-content img {
   max-width: 100% !important;
