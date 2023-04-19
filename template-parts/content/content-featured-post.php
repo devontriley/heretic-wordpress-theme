@@ -26,9 +26,9 @@ $permalink = get_the_permalink( $postID );
                     <?php endif; ?>
                     <header class="entry-header">
                         <h2 class="h1">
-                            <a href="<?php echo $permalink ?>">
+                            <?php if ( ! is_singular( 'post' ) ) { ?><a href="<?php echo $permalink ?>"><?php } ?>
                                 <?php echo $postTitle ?>
-                            </a>
+                            <?php if ( ! is_singular( 'post' ) ) { ?></a><?php } ?>
                         </h2>
                     </header>
                     <div class="entry-content">
@@ -46,9 +46,9 @@ $permalink = get_the_permalink( $postID );
                     </div>
                 </div>
                 <div class="col-md-4 offset-md-1 col-lg-6 offset-lg-1">
-                    <a href="<?php echo $permalink ?>">
+                    <?php if ( ! is_singular( 'post' ) ) { ?><a href="<?php echo $permalink ?>"><?php } ?>
                         <?php heretic_post_thumbnail(); ?>
-                    </a>
+                    <?php if ( ! is_singular( 'post' ) ) { ?></a><?php } ?>
                 </div>
             </div>
         </div>
