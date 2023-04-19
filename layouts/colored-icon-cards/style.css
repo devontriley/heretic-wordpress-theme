@@ -1,4 +1,4 @@
-.layout-colored-icon-cards .container-lg > .row:last-child {
+.layout-colored-icon-cards .container-lg > .row:last-child .row {
   margin-bottom: -1.5rem;
 }
 .layout-colored-icon-cards div[class*=col].grid {

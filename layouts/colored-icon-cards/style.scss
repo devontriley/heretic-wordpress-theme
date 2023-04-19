@@ -5,7 +5,7 @@
 .layout-colored-icon-cards {
 
     // Ensures that the module content doesn't create additional vertical spacing
-    .container-lg > .row:last-child {
+    .container-lg > .row:last-child .row {
         margin-bottom: calc($grid-gutter-width * -1);
     }
 
