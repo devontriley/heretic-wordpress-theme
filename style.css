@@ -19843,6 +19843,7 @@ body .facetwp-load-more.facetwp-hidden {
   font-size: 12px;
   margin-top: 10px;
 }
+.post-single .entry-content .aligncenter,
 .post-single .entry-content img {
   max-width: 100% !important;
   height: auto !important;
