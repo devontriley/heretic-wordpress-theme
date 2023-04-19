@@ -19910,7 +19910,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: inherit;
+  color: var(--bs-primary-shade);
   text-decoration: underline;
 }
 
