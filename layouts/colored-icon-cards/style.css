@@ -1,5 +1,5 @@
-.layout-colored-icon-cards .row {
-  margin-bottom: var(--bs-gutter-x);
+.layout-colored-icon-cards .container-lg > .row:last-child {
+  margin-bottom: -1.5rem;
 }
 .layout-colored-icon-cards div[class*=col].grid {
   margin-bottom: 1.5rem;

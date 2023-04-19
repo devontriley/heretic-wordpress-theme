@@ -4,8 +4,9 @@
 
 .layout-colored-icon-cards {
 
-    .row {
-        margin-bottom: var(--bs-gutter-x);
+    // Ensures that the module content doesn't create additional vertical spacing
+    .container-lg > .row:last-child {
+        margin-bottom: calc($grid-gutter-width * -1);
     }
 
     div[class*=col].grid {
