@@ -102,6 +102,14 @@
     color: inherit;
 }
 
+/* Donate */
+.header-donate {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+    }
+}
+
 /* Primary Nav */
 .primary-nav-container {
     display: none;

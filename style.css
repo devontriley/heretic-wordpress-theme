@@ -20039,6 +20039,16 @@ a:hover {
   color: inherit;
 }
 
+/* Donate */
+.header-donate {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header-donate {
+    display: inline-block;
+  }
+}
+
 /* Primary Nav */
 .primary-nav-container {
   display: none;

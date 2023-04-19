@@ -1,7 +1,7 @@
 <?php
 $notificationBar = get_field( 'notification_bar', 'option' );
 $enableNotificationBar = $notificationBar['enable_notification_bar'];
-
+$donateURL = get_field( 'donate_url', 'option' );
 $logo = get_field( 'logo', 'option' );
 ?>
 
@@ -57,7 +57,7 @@ $logo = get_field( 'logo', 'option' );
                         </svg>
                     </a>
                 <?php endif; ?>
-                <a href="" class="header-donate btn btn-primary">
+                <a href="<?php echo $donateURL ?>" class="header-donate btn btn-primary">
                     Donate
                 </a>
             </div>
@@ -66,7 +66,7 @@ $logo = get_field( 'logo', 'option' );
 
     <!-- Nav drawer -->
     <div id="nav-drawer" class="nav-drawer">
-        <a href="" class="btn btn-primary d-block">Donate</a>
+        <a href="<?php echo $donateURL ?>" class="btn btn-primary d-block">Donate</a>
         <?php get_template_part( 'template-parts/header/site-nav' ); ?>
     </div>
 </header>
