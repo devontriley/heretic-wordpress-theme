@@ -34,6 +34,11 @@
     margin-top: 3.75rem;
   }
 }
+@media (min-width: 768px) {
+  .layout-hero.primary.two-columns .column2 {
+    margin-top: 0;
+  }
+}
 .layout-hero.primary .image_video {
   background: red;
   width: 100%;

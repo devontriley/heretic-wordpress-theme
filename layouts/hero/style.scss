@@ -34,7 +34,7 @@
         .column2 {
             @include margin-top(60px);
             @include media-breakpoint-up(md) {
-
+                margin-top: 0;
             }
         }
     }
