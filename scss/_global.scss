@@ -1,6 +1,6 @@
 @import "../node_modules/bootstrap/scss/variables";
 
-body {
+html body {
     padding-top: 105px; /* Matches header height */
 
     &.nav-drawer-open {

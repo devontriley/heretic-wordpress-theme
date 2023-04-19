@@ -18995,10 +18995,10 @@ body.hidden-scroll {
   --newsletter-bg-color: var(--bs-primary);
 }
 
-body {
+html body {
   padding-top: 105px; /* Matches header height */
 }
-body.nav-drawer-open {
+html body.nav-drawer-open {
   height: 100%;
   overflow-y: hidden;
 }
