@@ -4,7 +4,7 @@ global $layoutCounter;
 $testimonials = get_sub_field('testimonials');
 ?>
 
-<div class="layout-testimonials <?php if ( $is_preview ){ echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-testimonials layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">

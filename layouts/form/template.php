@@ -1,4 +1,6 @@
 <?php
+global $layoutCounter;
+
 $format = get_sub_field( 'format' );
 $formShortcode = get_sub_field( 'form_shortcode' );
 $eyebrowText = get_sub_field( 'eyebrow_text' );
@@ -8,7 +10,7 @@ $bodyCopy = get_sub_field( 'body_copy' );
 $newsletterForm = get_field( 'newsletter_form_embed', 'option' );
 ?>
 
-<div class="layout-form <?php if ( $is_preview ) { echo 'is-preview'; } ?>">
+<div class="layout-form layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="<?php echo ( $format !== 'Newsletter' ) ? 'col-sm-10 offset-sm-1' : 'col-12'; ?>">

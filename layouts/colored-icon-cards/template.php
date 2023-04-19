@@ -7,7 +7,7 @@ if ( ! $rows ) {
 $defaultCardColor = get_sub_field( 'default_card_color' ) ?: 'primary';
 ?>
 
-<div class="layout-colored-icon-cards">
+<div class="layout-colored-icon-cards layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <?php if ( $rows ) : ?>
             <?php foreach ( $rows as $key => $row ) :

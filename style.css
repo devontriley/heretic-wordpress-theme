@@ -19012,12 +19012,21 @@ body.nav-drawer-open {
 }
 
 .layout-vertical-spacing {
-  margin: calc(1.75rem + 6vw) 0;
+  margin-top: calc(1.75rem + 6vw);
+  margin-bottom: calc(1.75rem + 6vw);
 }
 @media (min-width: 1200px) {
   .layout-vertical-spacing {
-    margin: 6.25rem 0;
+    margin-top: 6.25rem;
   }
+}
+@media (min-width: 1200px) {
+  .layout-vertical-spacing {
+    margin-bottom: 6.25rem;
+  }
+}
+.entry-content .layout-vertical-spacing:first-child {
+  margin-top: 0;
 }
 
 .woocommerce,

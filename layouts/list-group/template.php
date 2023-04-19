@@ -7,7 +7,7 @@ $column2 = get_sub_field( 'column_2' );
 if ( $column2 ) $column2List = $column2['lists'];
 ?>
 
-<div class="layout-list-group <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-list-group layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1">

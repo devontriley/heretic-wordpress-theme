@@ -5,7 +5,7 @@ $header = get_sub_field( 'header' );
 $accordionItems = get_sub_field( 'accordion_items' );
 ?>
 
-<div id="service-layout-accordion-<?php echo $serviceLayoutCounter ?>" class="layout-accordion <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $serviceLayoutCounter ?>">
+<div id="service-layout-accordion-<?php echo $serviceLayoutCounter ?>" class="layout-accordion layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $serviceLayoutCounter ?>">
 
     <!-- Header -->
     <?php if ( $header ) : ?>

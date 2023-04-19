@@ -23,5 +23,10 @@ body {
 }
 
 .layout-vertical-spacing {
-    @include margin(100px 0);
+    @include margin-top(100px);
+    @include margin-bottom(100px);
+
+    .entry-content &:first-child {
+        margin-top: 0;
+    }
 }

@@ -4,7 +4,7 @@ global $layoutCounter;
 $tabs = get_sub_field( 'tabs' );
 ?>
 
-<div class="layout-tab-changer <?php if ( $is_preview ) { echo 'is-preview'; } ?>" id="tabChanger-<?php echo $layoutCounter ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div id="tabChanger-<?php echo $layoutCounter ?>" class="layout-tab-changer layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1">

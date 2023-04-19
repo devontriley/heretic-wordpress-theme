@@ -4,7 +4,7 @@ global $serviceLayoutCounter;
 $linkItems = get_sub_field( 'link_items' );
 ?>
 
-<div id="service-layout-icon-links-<?php echo $serviceLayoutCounter ?>" class="layout-icon-links" data-layout-count="<?php echo $serviceLayoutCounter ?>">
+<div id="service-layout-icon-links-<?php echo $serviceLayoutCounter ?>" class="layout-icon-links layout-vertical-spacing" data-layout-count="<?php echo $serviceLayoutCounter ?>">
     <ul>
         <?php foreach ( $linkItems as $key => $item ) : ?>
             <li>

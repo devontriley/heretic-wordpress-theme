@@ -6,7 +6,7 @@ $image = get_sub_field( 'image' );
 $accordionItems = get_sub_field( 'accordion_items' );
 ?>
 
-<div class="layout-accordion <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-accordion layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1">

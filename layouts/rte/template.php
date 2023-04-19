@@ -17,10 +17,7 @@ $imageVideoAlignment = get_sub_field('image_video_alignment');
 $button = get_sub_field('button');
 ?>
 
-<div id="layout-rte-<?php echo $layoutCounter ?>" class="layout-rte
-    <?php if ( $is_preview ){ echo 'is-preview '; } ?>
-    <?php echo 'size-'.strtolower($size); ?>
-" data-layout-count="<?php echo $layoutCounter ?>">
+<div id="layout-rte-<?php echo $layoutCounter ?>" class="layout-rte layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview '; } ?> <?php echo 'size-'.strtolower($size); ?>" data-layout-count="<?php echo $layoutCounter ?>">
 
     <?php if ( ! $isServicesSingle ) : ?>
     <div class="container-lg">

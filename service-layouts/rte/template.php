@@ -6,7 +6,7 @@ $bodyCopy = get_sub_field('body_copy');
 $button = get_sub_field('button');
 ?>
 
-<div id="service-layout-rte-<?php echo $serviceLayoutCounter ?>" class="layout-rte <?php if ( $is_preview ){ echo 'is-preview '; } ?>" data-layout-count="<?php echo $serviceLayoutCounter ?>">
+<div id="service-layout-rte-<?php echo $serviceLayoutCounter ?>" class="layout-rte layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview '; } ?>" data-layout-count="<?php echo $serviceLayoutCounter ?>">
 
     <!-- Header -->
     <?php if ( $header ) : ?>

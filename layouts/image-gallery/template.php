@@ -6,7 +6,7 @@ $bodyCopy = get_sub_field('body_copy');
 $images = get_sub_field( 'images' );
 ?>
 
-<div id="layout-image-gallery-<?php echo $layoutCounter ?>" class="layout-image-gallery <?php if ( $is_preview ) { echo 'is-preview'; } ?>"
+<div id="layout-image-gallery-<?php echo $layoutCounter ?>" class="layout-image-gallery layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>"
      data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
 
