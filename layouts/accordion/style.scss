@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-accordion {
-    @include margin(85px 0);
 
     .accordion-container {
         background: var(--bs-gray-300);

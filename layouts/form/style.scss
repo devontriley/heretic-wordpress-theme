@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-form {
-    @include margin(85px 0);
 
     .form-boxed-container {
         background: var(--bs-gray-200);

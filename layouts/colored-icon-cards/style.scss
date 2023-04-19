@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-colored-icon-cards {
-    @include margin(85px 0);
 
     .row {
         margin-bottom: var(--bs-gutter-x);

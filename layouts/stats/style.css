@@ -1,7 +1,3 @@
-.layout-stats {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 .layout-stats div[class*=col] {
   margin-bottom: var(--bs-gutter-x);
 }

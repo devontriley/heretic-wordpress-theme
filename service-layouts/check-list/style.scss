@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-check-list {
-    @include margin(85px 0);
 
     h2 {
         @include margin-bottom(40px);

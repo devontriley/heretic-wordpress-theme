@@ -4,7 +4,6 @@
 
 /* Universal Grid */
 .layout-grid {
-    @include margin(85px 0);
     clear: both; /* Fixes float issue on woocommerce product/category grid */
 
     .header {

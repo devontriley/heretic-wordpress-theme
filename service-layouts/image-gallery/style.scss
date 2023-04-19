@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-image-gallery {
-    @include margin(85px 0);
 }
 
 .layout-image-gallery div[class*=col] {

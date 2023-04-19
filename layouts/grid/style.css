@@ -1,12 +1,6 @@
 /* Universal Grid */
 .layout-grid {
-  margin: calc(1.65625rem + 4.875vw) 0;
   clear: both; /* Fixes float issue on woocommerce product/category grid */
-}
-@media (min-width: 1200px) {
-  .layout-grid {
-    margin: 5.3125rem 0;
-  }
 }
 .layout-grid .header h1, .layout-grid .header .h1 {
   margin-bottom: 1.08em;
