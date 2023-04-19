@@ -3,8 +3,10 @@
         <a href="<?php echo $card['text_link']['url'] ?>" target="<?php echo $card['text_link']['target'] ?>" class="cover-link"></a>
     <?php endif; ?>
     <!-- Image -->
-    <?php if ( $card['image'] && $card['image_type'] !== 'No Image' ) : ?>
-        <?php echo wp_get_attachment_image( $card['image']['ID'], 'full', '', array( 'class' => 'card-img-top') ) ?>
+    <?php if ( $card['image'] ) : ?>
+        <div class="card-img-top">
+            <?php echo wp_get_attachment_image( $card['image']['ID'], 'full' ) ?>
+        </div>
     <?php endif; ?>
     <div class="card-body">
         <!-- Header -->

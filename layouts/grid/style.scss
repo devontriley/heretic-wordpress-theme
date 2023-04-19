@@ -70,10 +70,29 @@
     }
 
     .card-img-top {
-        height: auto !important;
-        width: 100% !important;
+        position: relative;
+        height: auto;
+        width: 100%;
         aspect-ratio: 2.12 / 1;
+    }
+
+    .card-img-top img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover;
+    }
+
+    [data-image-as-icon="1"] .card-img-top img {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto !important;
+        height: auto !important;
+        max-height: 90%;
+        object-fit: inherit;
     }
 
     p {
