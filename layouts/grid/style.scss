@@ -51,6 +51,10 @@
 /* Info Boxes */
 .layout-grid.info-boxes {
 
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -86,6 +90,11 @@
 /* Articles & Services */
 .layout-grid.articles,
 .layout-grid.services {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -143,6 +152,11 @@
 
 /* Team Members */
 .layout-grid.team-members {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -203,6 +217,11 @@
 
 /* Artist Profiles */
 .layout-grid.artist-profiles {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -237,6 +256,11 @@
 
 /* Product Categories */
 .layout-grid.product-categories {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -283,6 +307,11 @@
 
 /* Products */
 .layout-grid.products {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -331,6 +360,11 @@
 }
 
 .layout-grid.external-links {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
@@ -348,6 +382,11 @@
 
 /* Logos */
 .layout-grid.logos {
+
+    .container-lg .row:last-child .row {
+        margin-bottom: calc($grid-gutter-width * -1);
+    }
+
     div[class*=col].grid {
         margin-bottom: $grid-gutter-width;
     }
