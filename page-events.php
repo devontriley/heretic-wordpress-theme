@@ -1,10 +1,14 @@
-<?php get_header(); ?>
+<?php
+// Template Name: Events
+get_header(); ?>
 
     <?php
     while ( have_posts() ) :
         the_post();
 
         get_template_part( 'template-parts/content/content-page' );
+
+        echo do_shortcode( '[tribe_events]' );
 
         // If comments are open or there is at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) {
