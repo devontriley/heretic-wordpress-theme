@@ -20095,6 +20095,7 @@ a:hover {
 .primary-nav-container .sub-menu li {
   display: block;
   font-size: 1rem;
+  margin: 0;
 }
 .primary-nav-container .sub-menu li a {
   position: relative;

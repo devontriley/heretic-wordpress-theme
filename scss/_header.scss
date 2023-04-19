@@ -166,6 +166,7 @@
     li {
         display: block;
         @include font-size(16px);
+        margin: 0;
 
         a {
             position: relative;
