@@ -18992,6 +18992,7 @@ body.hidden-scroll {
   --rte-fifty-fifty-bg-color: $gray-300;
   --hero-carousel-bg-light: $gray-300;
   --hero-carousel-bg-dark: $gray-900;
+  --newsletter-bg-color: var(--bs-primary);
 }
 
 body {
@@ -19026,7 +19027,12 @@ body.nav-drawer-open {
   }
 }
 .entry-content .layout-vertical-spacing:first-child {
-  margin-top: 0;
+  margin-top: calc(1.4375rem + 2.25vw);
+}
+@media (min-width: 1200px) {
+  .entry-content .layout-vertical-spacing:first-child {
+    margin-top: 3.125rem;
+  }
 }
 
 .woocommerce,
