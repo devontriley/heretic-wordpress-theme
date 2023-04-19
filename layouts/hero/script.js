@@ -9,20 +9,40 @@ if ( "function" == typeof Glide ) {
 
         if ( content ) {
             glideContent = new Glide(content, {
-                type:"carousel",
-                animationDuration:0,
+                type: 'carousel',
+                animationDuration: 0,
                 swipeThreshold:!1,
                 dragThreshold:!1
-            }).mount()
+            })
+
+            glideContent.mount()
         }
 
         if ( images ) {
             glideImages = new Glide( images, {
-                type:"carousel",
-                animationDuration:0,
+                type: 'slider',
+                animationDuration: 500,
                 swipeThreshold:!1,
-                dragThreshold:!1
-            }).mount()
+                dragThreshold:!1,
+                classes: {
+                    activeSlide: 'glide__slide--active'
+                },
+                throttle: 500
+            })
+
+            glideImages.on( 'run', () => {
+                const nextIndex = glideImages.index
+                const slides = glideImages.selector.querySelectorAll( '.glide__slide' )
+                slides[ nextIndex ].classList.add( 'glide__slide--next' )
+            })
+
+            glideImages.on( 'run.after', () => {
+                const index = glideImages.index
+                const slides = glideImages.selector.querySelectorAll( '.glide__slide' )
+                slides[ index ].classList.remove( 'glide__slide--next' )
+            })
+
+            glideImages.mount()
         }
 
         let prevBtn = carousel.querySelector(".prev")

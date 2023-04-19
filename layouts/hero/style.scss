@@ -75,6 +75,8 @@
         position: relative;
         align-self: stretch;
         height: auto;
+        display: flex;
+        align-items: center;
 
         &:before {
             content: '';
@@ -134,6 +136,33 @@
         top: 0;
         width: 100%;
         height: 100%;
+
+        .glide__slides {
+            width: 100% !important;
+            transform: translate3d(0,0,0) !important;
+        }
+
+        .glide__slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+            z-index: 1;
+            margin: 0 !important;
+
+            &.glide__slide--active {
+                opacity: 1;
+                z-index: 2;
+            }
+
+            &.glide__slide--next {
+                opacity: 1;
+                z-index: 3;
+            }
+        }
     }
 
     .glide.content {
