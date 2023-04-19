@@ -8,14 +8,16 @@ get_header(); ?>
 
         get_template_part( 'template-parts/content/content-page' );
 
-        echo do_shortcode( '[tribe_events]' );
-
         // If comments are open or there is at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) {
             comments_template();
         }
     endwhile;
     ?>
+
+    <div class="container-lg">
+        <?php echo do_shortcode( '[tribe_events]' ); ?>
+    </div>
 
     <?php if ( get_edit_post_link() ) : ?>
         <footer class="entry-footer default-max-width">
