@@ -27,6 +27,6 @@ body {
     @include margin-bottom(100px);
 
     .entry-content &:first-child {
-        margin-top: 0;
+        @include margin-top(50px);
     }
 }

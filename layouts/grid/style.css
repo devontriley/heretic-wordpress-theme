@@ -44,6 +44,9 @@
 }
 
 /* Info Boxes */
+.layout-grid.info-boxes .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.info-boxes div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -69,6 +72,10 @@
 }
 
 /* Articles & Services */
+.layout-grid.articles .container-lg .row:last-child .row,
+.layout-grid.services .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.articles div[class*=col].grid,
 .layout-grid.services div[class*=col].grid {
   margin-bottom: 1.5rem;
@@ -129,6 +136,9 @@
 }
 
 /* Team Members */
+.layout-grid.team-members .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.team-members div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -175,6 +185,9 @@
 }
 
 /* Artist Profiles */
+.layout-grid.artist-profiles .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.artist-profiles div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -199,6 +212,9 @@
 }
 
 /* Product Categories */
+.layout-grid.product-categories .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.product-categories div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -236,6 +252,9 @@
 }
 
 /* Products */
+.layout-grid.products .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.products div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -271,6 +290,9 @@
   border-radius: var(--borderRadius);
 }
 
+.layout-grid.external-links .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.external-links div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
@@ -282,6 +304,9 @@
 }
 
 /* Logos */
+.layout-grid.logos .container-lg .row:last-child .row {
+  margin-bottom: -1.5rem;
+}
 .layout-grid.logos div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
