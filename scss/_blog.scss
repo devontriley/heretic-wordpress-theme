@@ -132,5 +132,9 @@
         p.date {
             font-size: 1rem;
         }
+
+        &:hover h3 {
+            color: var(--bs-primary);
+        }
     }
 }

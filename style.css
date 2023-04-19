@@ -19878,6 +19878,9 @@ body .facetwp-load-more.facetwp-hidden {
 .recent-posts-sidebar .recent-post p.date {
   font-size: 1rem;
 }
+.recent-posts-sidebar .recent-post:hover h3, .recent-posts-sidebar .recent-post:hover .h3 {
+  color: var(--bs-primary);
+}
 
 .eyebrow {
   font-size: 0.875rem;
