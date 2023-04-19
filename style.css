@@ -19039,10 +19039,13 @@ html body.nav-drawer-open {
     margin-bottom: 6.25rem;
   }
 }
+
+.primary-header + div[class*=layout],
 .entry-content .layout-vertical-spacing:first-child {
   margin-top: calc(1.4375rem + 2.25vw);
 }
 @media (min-width: 1200px) {
+  .primary-header + div[class*=layout],
   .entry-content .layout-vertical-spacing:first-child {
     margin-top: 3.125rem;
   }
