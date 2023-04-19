@@ -5,7 +5,7 @@ if ( "function" == typeof Glide ) {
 
         const content = carousel.querySelector(".glide.content")
         const images = carousel.querySelector(".glide.images")
-        let glideContent, glideImages
+        let glideContent, glideImages, imageIsChanging = false
 
         if ( content ) {
             glideContent = new Glide(content, {
@@ -26,17 +26,18 @@ if ( "function" == typeof Glide ) {
                 dragThreshold:!1,
                 classes: {
                     activeSlide: 'glide__slide--active'
-                },
-                throttle: 500
+                }
             })
 
             glideImages.on( 'run', () => {
+                imageIsChanging = true
                 const nextIndex = glideImages.index
                 const slides = glideImages.selector.querySelectorAll( '.glide__slide' )
                 slides[ nextIndex ].classList.add( 'glide__slide--next' )
             })
 
             glideImages.on( 'run.after', () => {
+                imageIsChanging = false
                 const index = glideImages.index
                 const slides = glideImages.selector.querySelectorAll( '.glide__slide' )
                 slides[ index ].classList.remove( 'glide__slide--next' )
@@ -52,8 +53,8 @@ if ( "function" == typeof Glide ) {
             prevBtn.addEventListener("click", e => {
                 e.preventDefault()
 
-                if ( glideContent ) glideContent.go("<")
-                if ( glideImages ) glideImages.go("<")
+                if ( glideContent && !imageIsChanging ) glideContent.go("<")
+                if ( glideImages && !imageIsChanging ) glideImages.go("<")
             })
         }
 
@@ -61,8 +62,8 @@ if ( "function" == typeof Glide ) {
             nextBtn.addEventListener("click", e => {
                 e.preventDefault()
 
-                if ( glideContent ) glideContent.go(">")
-                if ( glideImages ) glideImages.go(">")
+                if ( glideContent && !imageIsChanging ) glideContent.go(">")
+                if ( glideImages && !imageIsChanging ) glideImages.go(">")
             })
         }
     })
