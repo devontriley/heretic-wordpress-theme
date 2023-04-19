@@ -40,7 +40,23 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
-		<?php heretic_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <?php if ( get_edit_post_link() ) : ?>
+        <footer class="entry-footer default-max-width">
+            <div class="container-lg">
+                <div class="row">
+                    <?php
+                    edit_post_link(
+                        sprintf(
+                        /* translators: %s: Post title. Only visible to screen readers. */
+                            esc_html__( 'Edit %s', 'heretic' ),
+                            '<span class="screen-reader-text">' . get_the_title() . '</span>'
+                        ),
+                        '<span class="edit-link">',
+                        '</span>'
+                    );
+                    ?>
+                </div>
+            </div>
+        </footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

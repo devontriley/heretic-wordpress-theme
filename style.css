@@ -19035,6 +19035,15 @@ body.nav-drawer-open {
   }
 }
 
+footer.entry-footer {
+  margin: calc(1.3125rem + 0.75vw) 0;
+}
+@media (min-width: 1200px) {
+  footer.entry-footer {
+    margin: 1.875rem 0;
+  }
+}
+
 .woocommerce,
 .woocommerce-page {
   /* PDP */

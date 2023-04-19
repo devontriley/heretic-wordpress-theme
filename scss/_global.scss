@@ -30,3 +30,7 @@ body {
         @include margin-top(50px);
     }
 }
+
+footer.entry-footer {
+    @include margin(30px 0);
+}
