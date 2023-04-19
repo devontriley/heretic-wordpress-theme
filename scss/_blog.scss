@@ -71,10 +71,19 @@
     .entry-content {
 
         .alignleft,
-        .alignright {
+        .alignright,
+        .alignleft.wp-caption,
+        .alignright.wp-caption {
+            display: block;
             float: none;
             margin: 20px auto;
             max-width: 100% !important;
+        }
+
+        figure figcaption,
+        p.wp-caption-text {
+            font-size: 12px;
+            margin-top: 10px;
         }
 
         img {
@@ -96,22 +105,6 @@
 
         p:last-child {
             margin-bottom: 0;
-        }
-
-        .wp-caption {
-            max-width: 100% !important;
-            @include margin(75px 0);
-
-            .wp-caption-text {
-                margin: $grid-gutter-width 0 0 0;
-            }
-        }
-
-        figure {
-            figcaption {
-                font-size: 12px;
-                margin-top: 10px;
-            }
         }
     }
 }
