@@ -1,12 +1,12 @@
 <?php
 global $layoutCounter;
 
-if ( ! $format ) $format = get_sub_field('format');
-if ( ! $columns ) $columns = get_sub_field('columns');
-if ( ! $imageType ) $imageType = get_sub_field('image_type');
-if ( ! $header ) $header = get_sub_field('header');
-if ( ! $headerSize ) $headerSize = get_sub_field('header_size');
-if ( ! $cards ) $cards = get_sub_field('cards');
+if ( ! isset( $format ) ) $format = get_sub_field('format');
+if ( ! isset( $columns ) ) $columns = get_sub_field('columns');
+if ( ! isset( $imageType ) ) $imageType = get_sub_field('image_type');
+if ( ! isset( $header ) ) $header = get_sub_field('header');
+if ( ! isset( $headerSize ) ) $headerSize = get_sub_field('header_size');
+if ( ! isset( $cards ) ) $cards = get_sub_field('cards');
 ?>
 
 <div class="layout-grid layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview'; } ?> <?php echo strtolower(str_replace(' ', '-', $format)) ?>" data-layout-count="<?php echo $layoutCounter ?>">
