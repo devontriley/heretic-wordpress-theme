@@ -9,6 +9,8 @@
 }
 .layout-stats .stat-wrapper img {
   margin-bottom: 15px;
+  max-width: 70px !important;
+  height: auto !important;
 }
 .layout-stats .stat-wrapper p {
   margin-left: auto;
