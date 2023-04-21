@@ -108,7 +108,8 @@
 
 /* Articles & Services */
 .layout-grid.articles,
-.layout-grid.services {
+.layout-grid.services,
+.layout-grid.pages {
 
     .container-lg .row:last-child .row {
         margin-bottom: calc($grid-gutter-width * -1);

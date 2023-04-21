@@ -90,41 +90,49 @@
 
 /* Articles & Services */
 .layout-grid.articles .container-lg .row:last-child .row,
-.layout-grid.services .container-lg .row:last-child .row {
+.layout-grid.services .container-lg .row:last-child .row,
+.layout-grid.pages .container-lg .row:last-child .row {
   margin-bottom: -1.5rem;
 }
 .layout-grid.articles div[class*=col].grid,
-.layout-grid.services div[class*=col].grid {
+.layout-grid.services div[class*=col].grid,
+.layout-grid.pages div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
 .layout-grid.articles .text-center h1,
-.layout-grid.services .text-center h1 {
+.layout-grid.services .text-center h1,
+.layout-grid.pages .text-center h1 {
   margin-bottom: 1.2em;
 }
 .layout-grid.articles .card,
-.layout-grid.services .card {
+.layout-grid.services .card,
+.layout-grid.pages .card {
   height: 100%;
   border: none;
   border-radius: 0;
   /* Used for Related Services on service single pages */
 }
 .layout-grid.articles .card:hover .card-title,
-.layout-grid.services .card:hover .card-title {
+.layout-grid.services .card:hover .card-title,
+.layout-grid.pages .card:hover .card-title {
   color: var(--bs-primary);
 }
 .layout-grid.articles .card .card-body,
-.layout-grid.services .card .card-body {
+.layout-grid.services .card .card-body,
+.layout-grid.pages .card .card-body {
   padding: 15px 0 0 0;
 }
 .layout-grid.articles .card .image,
-.layout-grid.services .card .image {
+.layout-grid.services .card .image,
+.layout-grid.pages .card .image {
   position: relative;
   width: 100%;
   height: auto;
   aspect-ratio: 2.12/1;
 }
 .layout-grid.articles .card img,
-.layout-grid.services .card img {
+.layout-grid.services .card img,
+.layout-grid.pages .card img {
   position: absolute;
   height: 100% !important;
   width: 100% !important;
@@ -133,21 +141,25 @@
   border-radius: var(--borderRadius);
 }
 .layout-grid.articles .card .date,
-.layout-grid.services .card .date {
+.layout-grid.services .card .date,
+.layout-grid.pages .card .date {
   font-size: 1rem;
   margin: 0;
 }
 .layout-grid.articles .card .service-category-pills,
-.layout-grid.services .card .service-category-pills {
+.layout-grid.services .card .service-category-pills,
+.layout-grid.pages .card .service-category-pills {
   margin-top: 15px;
 }
 .layout-grid.articles .btn,
-.layout-grid.services .btn {
+.layout-grid.services .btn,
+.layout-grid.pages .btn {
   margin-top: calc(1.4375rem + 2.25vw);
 }
 @media (min-width: 1200px) {
   .layout-grid.articles .btn,
-  .layout-grid.services .btn {
+  .layout-grid.services .btn,
+  .layout-grid.pages .btn {
     margin-top: 3.125rem;
   }
 }
