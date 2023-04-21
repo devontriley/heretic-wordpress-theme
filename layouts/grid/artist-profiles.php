@@ -67,7 +67,7 @@ endif;
 
     <?php if( isset( $archivedArtists ) && $archivedArtists->found_posts ) : ?>
         <div class="row">
-            <div class="header text-center col-md-6 offset-md-3 col-lg-12 offset-lg-0">
+            <div class="header text-center col-md-6 offset-md-3 col-lg-12 offset-lg-0 mt-5">
                 <h1>Archived Artists</h1>
             </div>
         </div>
