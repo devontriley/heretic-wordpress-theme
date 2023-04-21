@@ -2,8 +2,10 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-.layout.code-block {
-
+.layout-code-block {
+    .header {
+        margin-bottom: 2em;
+    }
 }
 
 /**************************
