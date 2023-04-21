@@ -41,7 +41,7 @@ endswitch;
                                 <div class="stat-wrapper">
                                     <!-- Image -->
                                     <?php if ( $stat['icon'] ) : ?>
-                                        <?php echo wp_get_attachment_image( $stat['icon']['ID'], array( 50 ), false ); ?>
+                                        <?php echo wp_get_attachment_image( $stat['icon']['ID'], 'thumbnail', false ); ?>
                                     <?php endif; ?>
                                     <!-- Header -->
                                     <?php if ( $stat['header'] ) :?>
