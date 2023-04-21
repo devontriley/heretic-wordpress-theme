@@ -17,6 +17,8 @@ if ( ! isset( $cards ) ) $cards = get_sub_field('cards');
         include( 'info-boxes.php' );
     elseif ( $format === 'Articles' ) :
         include( 'articles.php' );
+    elseif ( $format === 'Pages' ) :
+        include( 'pages.php' );
     elseif ( $format === 'Services' ) :
         include( 'services.php' );
     elseif ( $format === 'Team Members' ) :
