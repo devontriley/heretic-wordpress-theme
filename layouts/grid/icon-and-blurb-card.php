@@ -1,6 +1,6 @@
 <!-- Icon -->
 <?php if ( $card['image'] ) : ?>
-    <?php echo wp_get_attachment_image( $card['image']['ID'], array(30), '', false ) ?>
+    <?php echo wp_get_attachment_image( $card['image']['ID'], 'thumbnail', '', false ) ?>
 <?php endif; ?>
 <!-- Header -->
 <?php if( $card['card_header'] ) : ?>

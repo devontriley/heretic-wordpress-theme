@@ -20,8 +20,8 @@
 }
 .layout-grid.icon-and-blurb img {
   margin-bottom: calc(1.3125rem + 0.75vw);
-  width: 30px;
-  height: auto;
+  max-width: 70px !important;
+  height: auto !important;
 }
 @media (min-width: 1200px) {
   .layout-grid.icon-and-blurb img {
