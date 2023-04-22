@@ -34,7 +34,7 @@ get_header();
 
     <div class="row">
         <div class="col">
-            <div class="layout-grid articles">
+            <div class="layout-grid articles layout-vertical-spacing">
                 <?php include( get_template_directory().'/layouts/grid/articles.php' ); ?>
             </div>
         </div>
