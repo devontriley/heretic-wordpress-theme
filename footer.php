@@ -25,6 +25,7 @@ $footerMenuHeader4 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'f
 $newsletterFormEmbed = get_field( 'newsletter_form_embed', 'option' );
 $socialLinks = get_field( 'social_media_links', 'option' );
 $privacyPolicyURL = get_field( 'privacy_policy_url', 'option' );
+$footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
 ?>
 
 <div class="primary-footer">
@@ -93,15 +94,10 @@ $privacyPolicyURL = get_field( 'privacy_policy_url', 'option' );
                         <?php echo $newsletterFormEmbed ?>
                     </div>
                 <?php endif; ?>
-                <h4>Gateway Arts</h4>
-                <p>
-                    60-62 Harvard St.<br />
-                    Brookline, MA 02445
-                </p>
-                <p>
-                    Phone: 617.734.1577<br />
-                    Email: gatewayarts@vinfen.org
-                </p>
+                <?php if ( $footerAddressContact ) { ?>
+                    <h4><?php echo get_bloginfo( 'name' ); ?></h4>
+                    <?php echo $footerAddressContact ?>
+                <?php } ?>
             </div>
         </div>
 
@@ -124,7 +120,7 @@ $privacyPolicyURL = get_field( 'privacy_policy_url', 'option' );
                 <ul class="social-links">
                     <?php foreach ( $socialLinks as $link ) : ?>
                         <li>
-                            <a href="<?php echo $link['url'] ?>">
+                            <a href="<?php echo $link['url'] ?>" target="_blank">
                                 <div class="icon"><?php echo $link['icon'] ?></div>
                             </a>
                         </li>
