@@ -24,6 +24,7 @@ $footerMenu4 = wp_get_nav_menu_items( 'footer-menu-4' );
 $footerMenuHeader4 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-4' ) );
 $newsletterFormEmbed = get_field( 'newsletter_form_embed', 'option' );
 $socialLinks = get_field( 'social_media_links', 'option' );
+$privacyPolicyURL = get_field( 'privacy_policy_url', 'option' );
 ?>
 
 <div class="primary-footer">
@@ -113,7 +114,9 @@ $socialLinks = get_field( 'social_media_links', 'option' );
             <div class="copyright-column col-12 col-xl-auto">
                 <p class="copyright">
                     © <?php echo date('Y') ?> Gateway Arts, All Rights Reserved.
-                    <a href="<?php echo get_site_url() . '/privacy-policy' ?>" class="privacy-policy">Privacy Policy</a>
+                    <?php if( $privacyPolicyURL ) { ?>
+                        <a href="<?php echo $privacyPolicyURL ?>" class="privacy-policy">Privacy Policy</a>
+                    <?php } ?>
                 </p>
             </div>
             <?php if ( $socialLinks ) : ?>
