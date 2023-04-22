@@ -86,18 +86,12 @@ $socialLinks = get_field( 'social_media_links', 'option' );
                 </div>
             <?php endif; ?>
             <div class="col-12 col-xl-4">
-                <!-- Newsletter -->
-                <div class="newsletter-form">
-                    <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-                    <?php echo $newsletterFormEmbed ?>
-<!--                    <form>-->
-<!--                        <div class="position-relative">-->
-<!--                            <input class="form-control" type="text" placeholder="Email" />-->
-<!--                            <button type="submit">Sign Up</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-                </div>
-                <!-- Address -->
+                <?php if ( $newsletterFormEmbed ) : ?>
+                    <div class="newsletter-form">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <?php echo $newsletterFormEmbed ?>
+                    </div>
+                <?php endif; ?>
                 <h4>Gateway Arts</h4>
                 <p>
                     60-62 Harvard St.<br />
