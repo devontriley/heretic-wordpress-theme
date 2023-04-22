@@ -37,8 +37,7 @@ $loopIteration = 0;
 
                 $postType = get_post_type();
                 $postCount = wp_count_posts( $postType );
-//            $postTypeLink = get_post_type_archive_link( $postType );
-                $postTypeLink = get_home_url() . '?s=&post_type='.$postType;
+                $postTypeLink = get_home_url() . '?s=&source='.$postType;
                 $nextPost = $wp_query->posts[$loopIteration + 1];
                 $gridType = '';
                 $gridItemClasses = '';
