@@ -39,6 +39,10 @@
         }
     }
 
+    p:last-child {
+        margin-bottom: 0;
+    }
+
     .image_video {
         background: red;
         width: 100%;

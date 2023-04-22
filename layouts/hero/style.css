@@ -39,6 +39,9 @@
     margin-top: 0;
   }
 }
+.layout-hero.primary p:last-child {
+  margin-bottom: 0;
+}
 .layout-hero.primary .image_video {
   background: red;
   width: 100%;
