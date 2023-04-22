@@ -17,11 +17,13 @@ if( $navItems ) :
         $title = $navItem->title;
         $url = $navItem->url;
         $parent = $navItem->menu_item_parent;
+        $target = $navItem->target;
 
         if ( $parent === "0" ) {
             $nav[$id] = array(
                 'title' => $title,
                 'url' => $url,
+                'target' => $target,
                 'children' => array()
             );
         } else {
@@ -29,7 +31,8 @@ if( $navItems ) :
                 'object' => $navItem,
                 'id' => $id,
                 'title' => $title,
-                'url' => $url
+                'url' => $url,
+                'target' => $target
             );
         }
     endforeach;
@@ -41,7 +44,7 @@ if( $nav ) : ?>
         <?php foreach( $nav as $key => $value ) : ?>
             <li class="<?php if ( $value['children'] ) { echo 'has-children'; } ?>">
                 <?php if ( $value['url'] !== '#' ) { ?>
-                <a href="<?php echo $value['url'] ?>">
+                <a href="<?php echo $value['url'] ?>" target="<?php echo $value['target'] ?>">
                 <?php } ?>
                     <?php echo $value['title'] ?>
                     <?php if ( $value['children'] ) : ?>
@@ -59,7 +62,7 @@ if( $nav ) : ?>
                             <?php foreach ( $value['children'] as $child ) :
                                 $icon = get_field('menu_item_icon', $child['id']); ?>
                                 <li>
-                                    <a href="<?php echo $child['url'] ?>">
+                                    <a href="<?php echo $child['url'] ?>" target="<?php echo $child['target'] ?>">
                                         <?php if ( $icon ) : ?>
                                             <?php echo wp_get_attachment_image( $icon['ID'], array(25,25), '', array( 'class' => 'sub-menu-icon' ) ) ?>
                                         <?php else : ?>

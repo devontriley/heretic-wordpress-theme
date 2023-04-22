@@ -331,6 +331,9 @@
 .layout-grid.external-links .card:hover .card-title {
   color: var(--bs-primary);
 }
+.layout-grid.external-links .card-title:last-child {
+  margin-bottom: 0;
+}
 
 /* Logos */
 .layout-grid.logos .container-lg .row:last-child .row {
