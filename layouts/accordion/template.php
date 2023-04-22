@@ -64,7 +64,7 @@ $accordionItems = get_sub_field( 'accordion_items' );
                                 <div class="image-wrapper">
                                     <!-- Image -->
                                     <?php if ( $image ) : ?>
-                                        <?php echo wp_get_attachment_image( $image['ID'] ) ?>
+                                        <?php echo wp_get_attachment_image( $image['ID'], 'full' ) ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
