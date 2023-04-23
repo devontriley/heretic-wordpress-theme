@@ -62,7 +62,7 @@
     .card {
         height: 100%;
 
-        &:has(.card):hover {
+        &:has(a):hover {
             .card-title {
                 color: var(--bs-primary);
             }

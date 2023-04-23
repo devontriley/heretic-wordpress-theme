@@ -53,7 +53,7 @@
 .layout-grid.info-boxes .card {
   height: 100%;
 }
-.layout-grid.info-boxes .card:has(.card):hover .card-title {
+.layout-grid.info-boxes .card:has(a):hover .card-title {
   color: var(--bs-primary);
 }
 .layout-grid.info-boxes .card-img-top {
