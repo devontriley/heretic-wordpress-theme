@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', function() {
 // Allow SVG uploads
 function heretic_mime_types( $mimes ) {
     $mimes['svg'] = 'image/svg+xml';
-    $mime_types['csv'] = 'text/csv';
+    $mimes['csv'] = 'text/csv';
     return $mimes;
 }
 add_filter('upload_mimes', 'heretic_mime_types');
