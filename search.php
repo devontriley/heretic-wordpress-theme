@@ -47,61 +47,47 @@ endswitch;
         </div>
     </div>
 
-    <?php
-    /*
-     * Only show results or nothing found message when a search term is passed
-     * When no search term is passed the posts aren't ordered by post_type so we can't display the different sections properly
-     */
-    if ( $wp_query->query['s'] ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-        <?php if ( have_posts() ) : ?>
+        <div class="search-result-type post-type-<?php echo $postType ?>">
+        <div class="layout-grid <?php echo $gridType ?>">
+        <div class="row">
+        <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
+        <div class="row">
 
-            <div class="search-result-type post-type-<?php echo $postType ?>">
-            <div class="layout-grid <?php echo $gridType ?>">
-            <div class="row">
-            <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
-            <div class="row">
+        <?php while ( have_posts() ) :
 
-            <?php while ( have_posts() ) :
+            the_post(); ?>
 
-                the_post(); ?>
+                <div class="<?php echo $gridItemClasses ?>">
+                    <?php
+                    /*
+                     * Include the Post-Format-specific template for the content.
+                     * If you want to override this in a child theme, then include a file
+                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                     */
+                    get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
+                    ?>
+                </div>
 
-                    <div class="<?php echo $gridItemClasses ?>">
-                        <?php
-                        /*
-                         * Include the Post-Format-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                         */
-                        get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
-                        ?>
-                    </div>
+        <?php endwhile; ?>
 
-            <?php endwhile; ?>
+        </div><!-- .row -->
+        </div><!-- .col -->
+        </div><!-- .row -->
+        </div><!-- .layout-grid -->
+        </div><!-- Close <?php echo $postType ?> -->
 
-            </div><!-- .row -->
-            </div><!-- .col -->
-            </div><!-- .row -->
-            </div><!-- .layout-grid -->
-            </div><!-- Close <?php echo $postType ?> -->
+        <?php
+        // Previous/next page navigation.
+        heretic_the_posts_navigation();
 
-            <?php
-            // Previous/next page navigation.
-            heretic_the_posts_navigation();
+    else :
 
-        else :
+        // If no content, include the "No posts found" template.
+        get_template_part( 'template-parts/content/content-none' );
 
-            // If no content, include the "No posts found" template.
-            get_template_part( 'template-parts/content/content-none' );
-
-        endif; ?>
-    <?php else : ?>
-
-        <?php if ( $wp_query->query['post_type'] ) : ?>
-            <p><?php esc_html_e( 'Enter a search term to find results', 'heretic' ); ?></p>
-        <?php endif; ?>
-
-    <?php endif; ?>
+    endif; ?>
 </div>
 
 <?php get_footer(); ?>
