@@ -47,7 +47,13 @@ endswitch;
         </div>
     </div>
 
-    <?php if ( have_posts() ) : ?>
+    <?php
+    if ( $wp_query->query['s'] === '' ) :
+
+        // If no search term is passed, include the "No posts found" template.
+        get_template_part( 'template-parts/content/content-none' );
+
+    elseif ( have_posts() ) : ?>
 
         <div class="search-result-type post-type-<?php echo $postType ?>">
         <div class="layout-grid <?php echo $gridType ?>">
@@ -81,11 +87,6 @@ endswitch;
         <?php
         // Previous/next page navigation.
         heretic_the_posts_navigation();
-
-    else :
-
-        // If no content, include the "No posts found" template.
-        get_template_part( 'template-parts/content/content-none' );
 
     endif; ?>
 </div>
