@@ -109,7 +109,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
             </div>
             <div class="copyright-column col-12 col-xl-auto">
                 <p class="copyright">
-                    © <?php echo date('Y') ?> Gateway Arts, All Rights Reserved.
+                    © <?php echo date('Y') ?> <?php echo get_bloginfo( 'site_name' ) ?>, All Rights Reserved.
                     <?php if( $privacyPolicyURL ) { ?>
                         <a href="<?php echo $privacyPolicyURL ?>" class="privacy-policy">Privacy Policy</a>
                     <?php } ?>
