@@ -53,7 +53,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
                     <ul>
                         <?php foreach ( $footerMenu2 as $key => $menuItem ) : ?>
                             <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->post_title ?></a>
+                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -67,7 +67,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
                     <ul>
                         <?php foreach ( $footerMenu3 as $key => $menuItem ) : ?>
                             <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->post_title ?></a>
+                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -81,7 +81,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
                     <ul>
                         <?php foreach ( $footerMenu4 as $key => $menuItem ) : ?>
                             <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->post_title ?></a>
+                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
