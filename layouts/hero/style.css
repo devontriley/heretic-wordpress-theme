@@ -113,6 +113,9 @@
     padding: 8.4375rem 4.5625rem;
   }
 }
+.layout-hero.carousel.background-none .glide__slide .content-wrapper h1 {
+  color: #fff;
+}
 @media (max-width: 991.98px) {
   .layout-hero.carousel.background-none .controls {
     left: calc(1.58125rem + 3.975vw);
@@ -189,6 +192,9 @@
 }
 .layout-hero.carousel:not(.background-none).background-dark .glide.content {
   background: var(--hero-carousel-bg-dark);
+  color: #fff;
+}
+.layout-hero.carousel:not(.background-none).background-dark .glide.content h1 {
   color: #fff;
 }
 

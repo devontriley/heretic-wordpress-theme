@@ -109,6 +109,10 @@
                     @include padding(135px 73px);
                 }
             }
+
+            h1 {
+                color: #fff;
+            }
         }
     }
 
@@ -189,6 +193,10 @@
     &.background-dark .glide.content {
         background: var(--hero-carousel-bg-dark);
         color: #fff;
+
+        h1 {
+            color: #fff;
+        }
     }
 }
 

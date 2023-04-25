@@ -20,6 +20,10 @@
         color: var(--bs-white);
         border-radius: var(--borderRadius);
 
+        h1 {
+            color: var(--bs-white);
+        }
+
         .gform_wrapper.gravity-theme .gform_fields {
             position: relative;
 

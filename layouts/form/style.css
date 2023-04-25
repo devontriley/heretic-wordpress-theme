@@ -24,6 +24,9 @@
     padding: 5rem;
   }
 }
+.layout-form .newsletter-container h1 {
+  color: var(--bs-white);
+}
 .layout-form .newsletter-container .gform_wrapper.gravity-theme .gform_fields {
   position: relative;
 }
