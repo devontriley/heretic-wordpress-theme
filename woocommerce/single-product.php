@@ -75,7 +75,7 @@ if ( $shopFields ) {
 	?>
 
 	<?php if ( $commissionContactHeader && $commissionContactBody ) : ?>
-		<div class="layout-rte mt-0">
+		<div class="layout-rte layout-vertical-spacing">
 			<div class="container-lg">
 				<div class="row">
 					<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-7 offset-xl-1">
@@ -99,7 +99,7 @@ if ( $shopFields ) {
 	<?php endif; ?>
 
 	<?php if ( $bigCTAText || $bigCTALink ) : ?>
-		<div class="layout-big-cta">
+		<div class="layout-big-cta layout-vertical-spacing">
 			<div class="container-lg">
 				<div class="row">
 					<div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
