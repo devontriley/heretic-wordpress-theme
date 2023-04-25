@@ -25,21 +25,21 @@ function heretic_add_woocommerce_support() {
 add_action( 'after_setup_theme', 'heretic_add_woocommerce_support' );
 
 // Remove default content editor
-add_action('admin_init', 'remove_textarea');
+//add_action('admin_init', 'remove_textarea');
 function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
 }
 
 // Disable Gutenberg
-add_filter('use_block_editor_for_post', '__return_false', 10);
-add_action( 'wp_enqueue_scripts', function() {
-    // Remove CSS on the front end.
-    wp_dequeue_style( 'wp-block-library' );
-    // Remove Gutenberg theme.
-    wp_dequeue_style( 'wp-block-library-theme' );
-    // Remove inline global CSS on the front end.
-    wp_dequeue_style( 'global-styles' );
-}, 20 );
+//add_filter('use_block_editor_for_post', '__return_false', 10);
+//add_action( 'wp_enqueue_scripts', function() {
+//    // Remove CSS on the front end.
+//    wp_dequeue_style( 'wp-block-library' );
+//    // Remove Gutenberg theme.
+//    wp_dequeue_style( 'wp-block-library-theme' );
+//    // Remove inline global CSS on the front end.
+//    wp_dequeue_style( 'global-styles' );
+//}, 20 );
 
 // Allow SVG uploads
 function heretic_mime_types( $mimes ) {
