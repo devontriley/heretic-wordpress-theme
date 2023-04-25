@@ -58,6 +58,8 @@ function heretic_enqueue_admin_script( $hook ) {
         wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css', array(), '5.2.3' );
         // Bootstrap Icons
         wp_enqueue_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css', array(), '1.10.3' );
+        // Heretic theme styles
+        wp_enqueue_style( 'heretic-style', get_template_directory_uri().'/style.css', array(), time() );
     }
 }
 add_action( 'admin_enqueue_scripts', 'heretic_enqueue_admin_script' );
