@@ -9,6 +9,7 @@
   border: none;
   background: var(--bs-gray-700);
   color: #fff;
+  margin: 0;
 }
 .layout-colored-icon-cards .card[data-color=primary] {
   background-color: var(--bs-primary);
