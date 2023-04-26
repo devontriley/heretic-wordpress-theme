@@ -6,6 +6,11 @@
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 /*
+ * Remove add to cart button from product grid
+ */
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+/*
  * Remove <a> tag around products in loop
  */
 remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
