@@ -39,6 +39,9 @@
     margin-top: 0;
   }
 }
+.layout-hero.primary h2 {
+  padding: 0;
+}
 .layout-hero.primary p:last-child {
   margin-bottom: 0;
 }

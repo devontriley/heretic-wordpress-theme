@@ -39,6 +39,10 @@
         }
     }
 
+    h2 {
+        padding: 0; // Style fix for preview
+    }
+
     p:last-child {
         margin-bottom: 0;
     }
