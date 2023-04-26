@@ -129,6 +129,9 @@
   width: 100%;
   height: auto;
   aspect-ratio: 2.12/1;
+  background: #eeeeee;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
 }
 .layout-grid.articles .card img,
 .layout-grid.services .card img,
@@ -138,7 +141,6 @@
   width: 100% !important;
   max-width: none !important;
   object-fit: cover;
-  border-radius: var(--borderRadius);
 }
 .layout-grid.articles .card .date,
 .layout-grid.services .card .date,

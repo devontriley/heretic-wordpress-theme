@@ -143,6 +143,9 @@
             width: 100%;
             height: auto;
             aspect-ratio: 2.12 / 1;
+            background: #eeeeee;
+            border-radius: var(--borderRadius);
+            overflow: hidden;
         }
 
         img {
@@ -151,7 +154,6 @@
             width: 100% !important;
             max-width: none !important;
             object-fit: cover;
-            border-radius: var(--borderRadius);
         }
 
         .date {
