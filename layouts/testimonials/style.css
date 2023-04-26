@@ -36,6 +36,10 @@
 /**************************
  Admin specific styles
  *************************/
+.layout-testimonials.is-preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .layout-testimonials.is-preview .testimonials-wrapper {
   padding: 30px;
   margin: 20px 0;
