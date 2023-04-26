@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="layout-grid products">
+<div class="layout-grid products layout-vertical-spacing">
     <div class="row">
         <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
             <div class="row">
