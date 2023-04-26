@@ -21,6 +21,9 @@
   height: auto !important;
   border-radius: var(--borderRadius);
 }
+.layout-rte .image iframe {
+  max-width: 100%;
+}
 .layout-rte p:last-child {
   margin-bottom: 0;
 }
