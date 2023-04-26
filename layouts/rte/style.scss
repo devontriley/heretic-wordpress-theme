@@ -22,6 +22,10 @@
             height: auto !important;
             border-radius: var(--borderRadius);
         }
+
+        iframe {
+            max-width: 100%;
+        }
     }
 
     p:last-child {
