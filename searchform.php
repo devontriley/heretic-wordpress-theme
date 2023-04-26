@@ -65,7 +65,7 @@ if ( isset( $engine_options[ $engine_slug ] ) ) {
     <select name="source" class="form-select">
         <?php foreach ( $post_types as $type ) :
             $typeName = ( $type === 'tribe_events' ) ? 'Events' : $type; ?>
-            <option value="<?php echo $type ?>" <?php if ( $getPostType === $type ){ echo 'selected'; }?>><?php echo ucfirst( $typeName ); ?></option>
+            <option value="<?php echo $type ?>" <?php if ( $getPostType === $type ){ echo 'selected'; }?>><?php echo str_replace( '-', ' ', ucfirst( $typeName ) ); ?></option>
         <?php endforeach; ?>
     </select>
 </form>
