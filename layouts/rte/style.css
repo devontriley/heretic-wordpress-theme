@@ -78,6 +78,6 @@
  Admin specific styles
  *************************/
 .layout-rte.is-preview {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
