@@ -7,6 +7,12 @@
     clear: both; /* Fixes float issue on woocommerce product/category grid */
 
     .header {
+        h1, .h1,
+        h2, .h2,
+        h3, .h3 {
+            color: var(--header-color);
+        }
+
         h1, .h1 {
             margin-bottom: 1.08em;
         }

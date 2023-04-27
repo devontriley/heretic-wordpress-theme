@@ -5,6 +5,7 @@
 .layout-check-list {
 
     h2 {
+        color: var(--header-color);
         @include margin-bottom(40px);
     }
 

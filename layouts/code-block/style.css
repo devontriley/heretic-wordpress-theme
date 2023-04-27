@@ -1,6 +1,9 @@
 .layout-code-block .header {
   margin-bottom: 2em;
 }
+.layout-code-block .header h1, .layout-code-block .header h2, .layout-code-block .header h3 {
+  color: var(--header-color);
+}
 
 /**************************
  Admin specific styles

@@ -1,6 +1,9 @@
 .layout-stats div[class*=col] {
   margin-bottom: var(--bs-gutter-x);
 }
+.layout-stats h2 {
+  color: var(--header-color);
+}
 .layout-stats .stat-wrapper {
   height: 100%;
   border: 1px solid var(--bs-gray-400);

@@ -8,6 +8,10 @@
         align-items: center;
     }
 
+    h2 {
+        color: var(--header-color);
+    }
+
     .image {
         order: 2;
         margin-top: calc(1.3125rem + 0.75vw);

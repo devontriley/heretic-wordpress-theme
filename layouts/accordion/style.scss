@@ -4,6 +4,10 @@
 
 .layout-accordion {
 
+    h2 {
+        color: var(--header-color);
+    }
+
     .accordion-container {
         background: var(--bs-gray-300);
         border-radius: var(--borderRadius);

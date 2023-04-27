@@ -4,6 +4,10 @@
 
 .layout-form {
 
+    h1 {
+        color: var(--header-color);
+    }
+
     .form-boxed-container {
         background: var(--bs-gray-200);
         padding: 40px;

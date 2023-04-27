@@ -193,6 +193,9 @@
 .layout-hero.carousel:not(.background-none).background-light .glide.content {
   background: var(--hero-carousel-bg-light);
 }
+.layout-hero.carousel:not(.background-none).background-light .glide.content h1, .layout-hero.carousel:not(.background-none).background-light .glide.content .h1, .layout-hero.carousel:not(.background-none).background-light .glide.content h2, .layout-hero.carousel:not(.background-none).background-light .glide.content .h2, .layout-hero.carousel:not(.background-none).background-light .glide.content h3, .layout-hero.carousel:not(.background-none).background-light .glide.content .h3 {
+  color: var(--header-color);
+}
 .layout-hero.carousel:not(.background-none).background-dark .glide.content {
   background: var(--hero-carousel-bg-dark);
   color: #fff;
@@ -279,6 +282,7 @@
   text-align: center;
   width: 100%;
   max-width: 80%;
+  color: var(--header-color);
 }
 @media (min-width: 768px) {
   .layout-hero.secondary h1 {

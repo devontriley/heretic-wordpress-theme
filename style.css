@@ -19001,6 +19001,7 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
 :root {
   --bs-body-color: $black;
   --borderRadius: 10px;
+  --header-color: $black;
   --eyebrow-color: $black;
   --rte-fifty-fifty-bg-color: $gray-300;
   --hero-carousel-bg-light: $gray-300;

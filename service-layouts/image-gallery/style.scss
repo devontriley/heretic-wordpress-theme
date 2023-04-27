@@ -3,15 +3,19 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .layout-image-gallery {
-}
 
-.layout-image-gallery div[class*=col] {
-    margin-bottom: var(--bs-gutter-x);
-}
+    div[class*=col] {
+        margin-bottom: var(--bs-gutter-x);
+    }
 
-.layout-image-gallery img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    h2 {
+        color: var(--header-color);
+    }
+
+    img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
 }
 
 /**************************

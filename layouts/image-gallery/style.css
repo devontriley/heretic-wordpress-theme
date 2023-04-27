@@ -1,3 +1,6 @@
+.layout-image-gallery h2 {
+  color: var(--header-color);
+}
 .layout-image-gallery div[class*=col] {
   margin-bottom: var(--bs-gutter-x);
 }

@@ -2,6 +2,11 @@
 .layout-grid {
   clear: both; /* Fixes float issue on woocommerce product/category grid */
 }
+.layout-grid .header h1, .layout-grid .header .h1,
+.layout-grid .header h2, .layout-grid .header .h2,
+.layout-grid .header h3, .layout-grid .header .h3 {
+  color: var(--header-color);
+}
 .layout-grid .header h1, .layout-grid .header .h1 {
   margin-bottom: 1.08em;
 }

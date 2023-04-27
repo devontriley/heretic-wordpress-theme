@@ -4,6 +4,10 @@
 
 .layout-image-gallery {
 
+    h2 {
+        color: var(--header-color);
+    }
+
     div[class*=col] {
         margin-bottom: var(--bs-gutter-x);
     }
