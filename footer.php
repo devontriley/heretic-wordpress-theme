@@ -104,7 +104,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
         <div class="row footer-bottom">
             <div class="logo col-auto">
                 <a href="<?php echo get_home_url() ?>" class="footer-logo">
-                    <?php echo wp_get_attachment_image( $logo['ID'], 'full' ) ?>
+                    <?php echo apply_filters( 'heretic_footer_logo', wp_get_attachment_image( $logo['ID'], 'full' ) ) ?>
                 </a>
             </div>
             <div class="copyright-column col-12 col-xl-auto">
