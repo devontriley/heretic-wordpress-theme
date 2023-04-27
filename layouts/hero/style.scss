@@ -39,7 +39,8 @@
         }
     }
 
-    h2 {
+    h1, h2, h3 {
+        color: var(--header-color);
         padding: 0 !important; // Style fix for preview
     }
 

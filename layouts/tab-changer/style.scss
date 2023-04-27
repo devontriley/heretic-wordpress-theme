@@ -32,8 +32,14 @@
             border-radius: 5px;
 
             &[aria-expanded="true"] {
-                color: red;
+                color: var(--bs-primary)
             }
+        }
+    }
+
+    .collapse {
+        h3 {
+            color: var(--header-color);
         }
     }
 

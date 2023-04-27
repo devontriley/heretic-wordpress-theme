@@ -39,7 +39,8 @@
     margin-top: 0;
   }
 }
-.layout-hero.primary h2 {
+.layout-hero.primary h1, .layout-hero.primary h2, .layout-hero.primary h3 {
+  color: var(--header-color);
   padding: 0 !important;
 }
 .layout-hero.primary p:last-child {

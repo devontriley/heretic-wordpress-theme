@@ -29,7 +29,10 @@
   border-radius: 5px;
 }
 .layout-tab-changer .list-group button[aria-expanded=true] {
-  color: red;
+  color: var(--bs-primary);
+}
+.layout-tab-changer .collapse h3 {
+  color: var(--header-color);
 }
 .layout-tab-changer .collapsing {
   transition: none;
