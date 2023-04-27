@@ -19783,6 +19783,9 @@ body .facetwp-load-more.facetwp-hidden {
     padding-bottom: 3.75rem;
   }
 }
+.blog-home-header h1, .blog-home-header .h1 {
+  color: var(--header-color);
+}
 
 /* Featured Post used on Blog Home and Post Single */
 .featured-post {
@@ -19799,6 +19802,9 @@ body .facetwp-load-more.facetwp-hidden {
   .featured-post {
     margin-bottom: 3.75rem;
   }
+}
+.featured-post h2, .featured-post .h2 {
+  color: var(--header-color);
 }
 .featured-post .post-categories {
   font-size: 1.125rem;
