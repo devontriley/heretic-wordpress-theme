@@ -153,6 +153,11 @@
   font-size: 1rem;
   margin: 0;
 }
+.layout-grid.articles .card p.excerpt,
+.layout-grid.services .card p.excerpt,
+.layout-grid.pages .card p.excerpt {
+  font-size: 1rem;
+}
 .layout-grid.articles .card .service-category-pills,
 .layout-grid.services .card .service-category-pills,
 .layout-grid.pages .card .service-category-pills {

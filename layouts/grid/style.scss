@@ -167,6 +167,10 @@
             margin: 0;
         }
 
+        p.excerpt {
+            @include font-size(16px);
+        }
+
         /* Used for Related Services on service single pages */
         .service-category-pills {
             margin-top: 15px;
