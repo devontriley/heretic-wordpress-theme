@@ -143,6 +143,23 @@
         }
     }
 
+    &.carousel-active .glide.images {
+        .glide__slide {
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+
+            &.glide__slide--active {
+                opacity: 1;
+                z-index: 2;
+            }
+
+            &.glide__slide--next {
+                opacity: 1;
+                z-index: 3;
+            }
+        }
+    }
+
     .glide.images {
         position: absolute;
         left: 0;
@@ -161,20 +178,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 500ms ease-in-out;
             z-index: 1;
             margin: 0 !important;
-
-            &.glide__slide--active {
-                opacity: 1;
-                z-index: 2;
-            }
-
-            &.glide__slide--next {
-                opacity: 1;
-                z-index: 3;
-            }
         }
     }
 
@@ -301,41 +306,43 @@
             transform: translateX(0);
         }
     }
-}
 
-.layout-hero.secondary img {
-    max-width: 100%;
-    height: auto !important;
-    aspect-ratio: 3.24 / 1;
-    object-fit: cover;
-    border-radius: var(--borderRadius);
+    img {
+        max-width: 100%;
+        height: auto !important;
+        aspect-ratio: 3.24 / 1;
+        object-fit: cover;
+        border-radius: var(--borderRadius);
+    }
 }
 
 /* Profile */
-.layout-hero.profile .inner {
-    position: relative;
-}
+.layout-hero.profile {
+    .inner {
+        position: relative;
+    }
 
-.layout-hero.profile .banner-image {
-    max-width: 100%;
-    height: auto !important;
-    aspect-ratio: 3.24 / 1;
-    object-fit: cover;
-    border-radius: var(--borderRadius);
-}
+    .banner-image {
+        max-width: 100%;
+        height: auto !important;
+        aspect-ratio: 3.24 / 1;
+        object-fit: cover;
+        border-radius: var(--borderRadius);
+    }
 
-.layout-hero.profile .circular-overlap-image {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    //width: 180px !important;
-    //height: 180px !important;
-    @include rfs(180px !important, width);
-    @include rfs(180px !important, height);
-    border-radius: 180px;
-    border: 10px solid var(--bs-white);
-    object-fit: cover;
+    .circular-overlap-image {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        //width: 180px !important;
+        //height: 180px !important;
+        @include rfs(180px !important, width);
+        @include rfs(180px !important, height);
+        border-radius: 180px;
+        border: 10px solid var(--bs-white);
+        object-fit: cover;
+    }
 }
 
 /**************************
