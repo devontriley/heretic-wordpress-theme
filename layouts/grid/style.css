@@ -81,7 +81,7 @@
   transform: translate(-50%, -50%);
   width: auto !important;
   height: auto !important;
-  max-height: 90%;
+  max-height: 60%;
   object-fit: inherit;
 }
 @media (max-width: 1199.98px) {
