@@ -1,6 +1,9 @@
 .layout-rte .row {
   align-items: center;
 }
+.layout-rte .row.image-top-aligned {
+  align-items: flex-start;
+}
 .layout-rte .image {
   order: 2;
   margin-top: calc(1.3125rem + 0.75vw);

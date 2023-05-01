@@ -12,16 +12,20 @@ $bodyCopy = get_sub_field('body_copy');
 $sidebar = get_sub_field('sidebar');
 $imageVideo = get_sub_field('image_or_video');
 $image = get_sub_field('image');
+$imageTopAligned = get_sub_field( 'image_top_aligned' );
 $video = get_sub_field('video');
 $imageVideoAlignment = get_sub_field('image_video_alignment');
 $button = get_sub_field('button');
 ?>
 
-<div id="layout-rte-<?php echo $layoutCounter ?>" class="layout-rte layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview '; } ?> <?php echo 'size-'.strtolower($size); ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div id="layout-rte-<?php echo $layoutCounter ?>"
+     class="layout-rte layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview '; } ?> <?php echo 'size-'.strtolower($size); ?>"
+     data-layout-count="<?php echo $layoutCounter ?>"
+>
 
     <?php if ( ! $isServicesSingle ) : ?>
     <div class="container-lg">
-    <div class="row">
+    <div class="row <?php if ( $imageTopAligned && $size === 'Medium' ) { echo 'image-top-aligned'; }?>">
     <?php endif; ?>
 
             <?php if ( $size === 'Large' ) : ?>

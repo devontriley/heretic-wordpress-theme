@@ -6,6 +6,10 @@
 
     .row {
         align-items: center;
+
+        &.image-top-aligned {
+            align-items: flex-start;
+        }
     }
 
     .image {
