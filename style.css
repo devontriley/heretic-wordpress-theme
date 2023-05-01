@@ -20013,7 +20013,7 @@ a:hover {
 .hamburger-container {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .hamburger-container {
     display: none;
   }
@@ -20024,7 +20024,7 @@ a:hover {
   width: 120px !important;
   height: auto !important;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .primary-header .logo img {
     width: 180px !important;
   }
@@ -20053,7 +20053,7 @@ a:hover {
 .header-donate {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .header-donate {
     display: inline-block;
   }
@@ -20063,7 +20063,7 @@ a:hover {
 .primary-nav-container {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .primary-nav-container {
     display: block;
   }
@@ -20178,7 +20178,7 @@ a:hover {
   padding: 15px 25px;
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .nav-drawer {
     display: none;
   }
