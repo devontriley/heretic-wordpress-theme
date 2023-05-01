@@ -20205,12 +20205,13 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
-@media (min-width: 768px) {
-  .nav-drawer .primary-nav > li a {
-    padding: 25px 30px 25px 0;
-  }
-}
 .nav-drawer .primary-nav > li a:hover {
+  color: var(--bs-primary);
+}
+.nav-drawer .primary-nav > li span {
+  cursor: pointer;
+}
+.nav-drawer .primary-nav > li span:hover {
   color: var(--bs-primary);
 }
 .nav-drawer .primary-nav > li a > svg {
@@ -20229,6 +20230,7 @@ a:hover {
 .nav-drawer .primary-nav > li.has-children.active .sub-menu {
   display: block;
   padding: 0 0 0 30px;
+  margin-top: 10px;
   border-left: 1px solid var(--bs-gray-300);
   list-style-type: none;
 }
@@ -20237,9 +20239,14 @@ a:hover {
   position: relative;
   font-size: 0.875rem;
 }
+@media (min-width: 768px) {
+  .nav-drawer .primary-nav > li.has-children.active .sub-menu li {
+    font-size: 1rem;
+  }
+}
 .nav-drawer .primary-nav > li.has-children.active .sub-menu a {
   display: block;
-  padding: 10px 0 10px 20px;
+  padding: 5px 0 5px 20px;
   text-decoration: none;
 }
 .nav-drawer .primary-nav > li.has-children.active .sub-menu .sub-menu-icon {

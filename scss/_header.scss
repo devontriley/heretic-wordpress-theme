@@ -272,9 +272,14 @@
                 padding: 0 30px 0 0;
                 text-decoration: none;
                 color: inherit;
-                @include media-breakpoint-up(md) {
-                    padding: 25px 30px 25px 0;
+
+                &:hover {
+                    color: var(--bs-primary);
                 }
+            }
+
+            span {
+                cursor: pointer;
 
                 &:hover {
                     color: var(--bs-primary);
@@ -300,6 +305,7 @@
             &.has-children.active .sub-menu {
                 display: block;
                 padding: 0 0 0 30px;
+                margin-top: 10px;
                 border-left: 1px solid var(--bs-gray-300);
                 list-style-type: none;
 
@@ -307,11 +313,14 @@
                     font-weight: 700;
                     position: relative;
                     @include font-size(14px);
+                    @include media-breakpoint-up(md) {
+                        @include font-size(16px);
+                    }
                 }
 
                 a {
                     display: block;
-                    padding: 10px 0 10px 20px;
+                    padding: 5px 0 5px 20px;
                     text-decoration: none;
                 }
 
