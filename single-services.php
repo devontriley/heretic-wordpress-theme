@@ -91,6 +91,7 @@ $serviceModules = get_field( 'service_modules' );
 
                         <div class="row">
                             <?php foreach ( $services->posts as $key => $service ) :
+                                $serviceExcerpt = get_field( 'service_excerpt', $service->ID );
                                 $fImage = wp_get_attachment_image( get_post_thumbnail_id( $service->ID ), 'medium' );
                                 $serviceCats = wp_get_post_terms( $service->ID, array(
                                     'taxonomy' => 'services-categories'
@@ -112,15 +113,8 @@ $serviceModules = get_field( 'service_modules' );
                                             <?php if( $service->post_title ) : ?>
                                                 <h3 class="card-title"><?php echo $service->post_title ?></h3>
                                             <?php endif; ?>
-                                            <!-- Categories -->
-                                            <?php if ( $serviceCats ) : ?>
-                                                <ul class="service-category-pills">
-                                                    <?php foreach ( $serviceCats as $serviceCat ) : ?>
-                                                        <?php if ( $serviceCat->parent !== 0 ) : ?>
-                                                            <li><?php echo $serviceCat->name ?></li>
-                                                        <?php endif; ?>
-                                                    <?php endforeach; ?>
-                                                </ul>
+                                            <?php if ( $serviceExcerpt ) : ?>
+                                                <p class="excerpt"><?php echo $serviceExcerpt ?></p>
                                             <?php endif; ?>
                                         </div>
                                     </div>
