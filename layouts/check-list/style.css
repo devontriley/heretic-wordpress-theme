@@ -19,7 +19,7 @@
   margin-bottom: 1em;
 }
 .layout-check-list ul li svg {
-  color: #0d6efd;
+  color: var(--bs-secondary);
   position: absolute;
   left: 0;
   top: 0.2em;
