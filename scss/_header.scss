@@ -6,13 +6,22 @@
     top: 0;
     width: 100%;
     padding: 18px;
-    background: var(--bs-gray-900);
+    background: var(--notification-bar-bg);
     color: var(--bs-white);
     font-size: 1rem;
-}
 
-.notification-bar a {
-    display: block;
+    span {
+        color: rgba(255,255,255,0.8);
+    }
+
+    a {
+        display: inline-block;
+        color: $white;
+    }
+
+    span + a {
+        margin-left: 20px;
+    }
 }
 
 /* Primary Header */

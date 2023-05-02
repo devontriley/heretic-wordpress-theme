@@ -12,11 +12,9 @@ $logo = get_field( 'logo', 'option' );
     <div class="container">
         <div class="row justify-content-center">
             <div class="col text-center">
-                <!-- Text -->
                 <?php if ( $notificationBarText ) : ?>
-                    <?php echo $notificationBarText ?>
+                    <span><?php echo $notificationBarText ?></span>
                 <?php endif; ?>
-                <!-- Link -->
                 <?php if ( $notificationBarLink ) : ?>
                     <a href="<?php echo $notificationBarLink['url'] ?>" target="<?php echo $notificationBarLink['target'] ?>"><?php echo $notificationBarLink['title'] ?></a>
                 <?php endif; ?>
