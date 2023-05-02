@@ -20016,7 +20016,8 @@ a:hover {
     transform: translateY(0%);
   }
 }
-.primary-header .container-xl {
+.primary-header .container-fluid, .primary-header .container-sm, .primary-header .container-md, .primary-header .container-lg, .primary-header .container-xl, .primary-header .container-xxl, .primary-header .entry-content > .woocommerce,
+.primary-header .entry-content > .woocommerce-page {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;

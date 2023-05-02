@@ -26,7 +26,7 @@ $logo = get_field( 'logo', 'option' );
 
 <header id="masthead" class="primary-header <?php if ( $enableNotificationBar ) { echo 'enable-notification-bar'; } ?>">
     <div class="primary-header-inner">
-        <div class="container-xl">
+        <div class="container-fluid">
             <div class="hamburger-container">
                 <button class="hamburger hamburger--squeeze" type="button">
                 <span class="hamburger-box">
