@@ -8,6 +8,9 @@
     --header-color: $black;
     --eyebrow-color: $black;
 
+    --link-color: var(--bs-body-color);
+    --link-hover-color: var(--bs-secondary);
+
     --notification-bar-bg: var(--bs-primary);
 
     --rte-fifty-fifty-bg-color: $gray-300;

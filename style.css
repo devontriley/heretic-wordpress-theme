@@ -19003,6 +19003,8 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
   --borderRadius: 10px;
   --header-color: $black;
   --eyebrow-color: $black;
+  --link-color: var(--bs-body-color);
+  --link-hover-color: var(--bs-secondary);
   --notification-bar-bg: var(--bs-primary);
   --rte-fifty-fifty-bg-color: $gray-300;
   --hero-carousel-bg-light: $gray-300;
@@ -19945,11 +19947,11 @@ ul li, ol li {
 }
 
 a {
-  color: var(--bs-primary);
+  color: var(--link-color);
   text-decoration: none;
 }
 a:hover {
-  color: var(--bs-primary-shade);
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 

@@ -27,11 +27,11 @@ ul, ol {
 }
 
 a {
-    color: var(--bs-primary);
+    color: var(--link-color);
     text-decoration: none;
 
     &:hover {
-        color: var(--bs-primary-shade);
+        color: var(--link-hover-color);
         text-decoration: underline;
     }
 }
