@@ -19616,6 +19616,14 @@ body .facetwp-load-more.facetwp-hidden {
   margin: 0;
 }
 
+.service-container {
+  padding-top: calc(1.4375rem + 2.25vw);
+}
+@media (min-width: 1200px) {
+  .service-container {
+    padding-top: 3.125rem;
+  }
+}
 .service-container .content-column {
   order: 2;
 }

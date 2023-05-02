@@ -23,6 +23,8 @@
 // Service Single
 
 .service-container {
+    @include padding-top(50px);
+
     .content-column {
         order: 2;
 
