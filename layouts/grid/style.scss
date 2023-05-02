@@ -70,7 +70,7 @@
 
         &:has(a):hover {
             .card-title {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
     }
@@ -136,7 +136,7 @@
 
         &:hover {
             .card-title {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
 
@@ -233,7 +233,7 @@
 
         svg {
             &:hover {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
     }
@@ -261,7 +261,7 @@
     .artist-card {
         &:hover {
             .artist-name {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
     }
@@ -304,7 +304,7 @@
 
         &:hover {
             .card-title {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
 
@@ -355,7 +355,7 @@
 
         &:hover {
             .card-title {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
 
@@ -406,7 +406,7 @@
 
         &:hover {
             .card-title {
-                color: var(--header-hover-color);
+                color: var(--link-hover-color);
             }
         }
     }

@@ -59,7 +59,7 @@
   height: 100%;
 }
 .layout-grid.info-boxes .card:has(a):hover .card-title {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.info-boxes .card-img-top {
   position: relative;
@@ -120,7 +120,7 @@
 .layout-grid.articles .card:hover .card-title,
 .layout-grid.services .card:hover .card-title,
 .layout-grid.pages .card:hover .card-title {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.articles .card .card-body,
 .layout-grid.services .card .card-body,
@@ -216,7 +216,7 @@
   top: 15px;
 }
 #team-members-bio-drawer .btn-close svg:hover {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 #team-members-bio-drawer .offcanvas-body {
   padding-top: 35px;
@@ -233,7 +233,7 @@
   margin-bottom: 1.5rem;
 }
 .layout-grid.artist-profiles .artist-card:hover .artist-name {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.artist-profiles a {
   color: inherit;
@@ -265,7 +265,7 @@
   border-radius: 0;
 }
 .layout-grid.product-categories .card:hover .card-title {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.product-categories .card .card-body {
   padding: 25px 0 0 0;
@@ -305,7 +305,7 @@
   border-radius: 0;
 }
 .layout-grid.products .card:hover .card-title {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.products .card .card-body {
   padding: 25px 0 0 0;
@@ -341,7 +341,7 @@
   height: 100%;
 }
 .layout-grid.external-links .card:hover .card-title {
-  color: var(--header-hover-color);
+  color: var(--link-hover-color);
 }
 .layout-grid.external-links .card-title:last-child {
   margin-bottom: 0;

@@ -19002,7 +19002,6 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
   --bs-body-color: $black;
   --borderRadius: 10px;
   --header-color: $black;
-  --header-hover-color: var(--bs-primary);
   --eyebrow-color: $black;
   --link-color: var(--bs-body-color);
   --link-hover-color: var(--bs-secondary);
