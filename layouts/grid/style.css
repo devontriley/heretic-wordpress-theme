@@ -218,7 +218,7 @@
 .layout-grid.team-members img {
   height: auto !important;
   width: 100% !important;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/1.3;
   object-fit: cover;
 }
 
