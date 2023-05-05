@@ -19987,6 +19987,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 105px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
 }
 .primary-header.sticky {
   position: fixed;
