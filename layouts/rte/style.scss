@@ -4,6 +4,29 @@
 
 .layout-rte {
 
+    &.full-bleed-bg {
+        @include padding-top(80px);
+        @include padding-bottom(80px);
+        background: var(--bs-secondary);
+        color: $white;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        h1, .h1, h2, .h2, h3, .h3, .eyebrow {
+            color: $white;
+        }
+
+        a:not(.btn) {
+            color: $white;
+
+            &:hover {
+                color: var(--bs-tertiary-1);
+            }
+        }
+    }
+
     .row {
         align-items: center;
 

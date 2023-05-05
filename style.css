@@ -19001,6 +19001,7 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
 :root {
   --bs-body-color: $black;
   --borderRadius: 10px;
+  --cardBoxShadow: 0 0 12px rgba(0,0,0,0.2);
   --header-color: $black;
   --eyebrow-color: $black;
   --link-color: var(--bs-body-color);

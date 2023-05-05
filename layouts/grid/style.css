@@ -1,3 +1,21 @@
+.layout-grid.info-boxes .card,
+.layout-grid.team-members .card,
+.layout-grid.external-links .card,
+.layout-grid.logos .card {
+  box-shadow: var(--cardBoxShadow);
+}
+
+.layout-grid.articles .card,
+.layout-grid.services .card,
+.layout-grid.pages .card {
+  overflow: visible;
+}
+.layout-grid.articles .card .image,
+.layout-grid.services .card .image,
+.layout-grid.pages .card .image {
+  box-shadow: var(--cardBoxShadow);
+}
+
 /* Universal Grid */
 .layout-grid {
   clear: both; /* Fixes float issue on woocommerce product/category grid */
@@ -133,7 +151,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  aspect-ratio: 2.12/1;
+  aspect-ratio: 1.5/1;
   background: #eeeeee;
   border-radius: var(--borderRadius);
   overflow: hidden;
