@@ -58,6 +58,9 @@
 .layout-rte h1, .layout-rte .h1, .layout-rte h2, .layout-rte .h2, .layout-rte h3, .layout-rte .h3 {
   color: var(--header-color);
 }
+.layout-rte h1:last-child, .layout-rte .h1:last-child, .layout-rte h2:last-child, .layout-rte .h2:last-child, .layout-rte h3:last-child, .layout-rte .h3:last-child {
+  margin-bottom: 0 !important;
+}
 .layout-rte p:last-child {
   margin-bottom: 0;
 }
