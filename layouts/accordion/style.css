@@ -2,7 +2,7 @@
   color: var(--header-color);
 }
 .layout-accordion .accordion-container {
-  background: var(--bs-gray-300);
+  background: var(--bs-gray-200);
   border-radius: var(--borderRadius);
   padding: calc(1.75rem + 6vw) calc(1.75rem + 6vw);
 }
