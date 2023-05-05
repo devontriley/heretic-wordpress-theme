@@ -97,15 +97,15 @@
         height: auto;
         width: 100%;
         aspect-ratio: 2.12 / 1;
-    }
 
-    .card-img-top img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
     }
 
     [data-image-as-icon="1"] .card-img-top img {
@@ -116,6 +116,10 @@
         height: auto !important;
         max-height: 60%;
         object-fit: inherit;
+    }
+
+    .card-title {
+        color: var(--header-color);
     }
 
     p {

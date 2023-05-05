@@ -102,6 +102,9 @@
   max-height: 60%;
   object-fit: inherit;
 }
+.layout-grid.info-boxes .card-title {
+  color: var(--header-color);
+}
 @media (max-width: 1199.98px) {
   .layout-grid.info-boxes p {
     font-size: 1rem;
