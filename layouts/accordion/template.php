@@ -17,7 +17,7 @@ $accordionItems = get_sub_field( 'accordion_items' );
 
                         <!-- Header -->
                         <?php if ( $image && $header ) : ?>
-                            <h2 class="h1"><?php echo $header ?></h2>
+                            <h2><?php echo $header ?></h2>
                         <?php endif; ?>
 
                         <div class="<?php echo ( ! $image ) ? 'col-12' : 'col-lg-7 col-xl-6'; ?>">
