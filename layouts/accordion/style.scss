@@ -9,7 +9,7 @@
     }
 
     .accordion-container {
-        background: var(--bs-gray-200);
+        background: var(--bs-gray-100);
         border-radius: var(--borderRadius);
         @include padding(100px 100px);
     }
@@ -56,6 +56,7 @@
         padding: 0 30px 0 0;
         margin: 0;
         font: inherit;
+        color: var(--header-color);
 
         &:after {
             position: absolute;
