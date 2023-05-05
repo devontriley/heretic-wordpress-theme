@@ -24,6 +24,8 @@
     clear: both; /* Fixes float issue on woocommerce product/category grid */
 
     .header {
+        @include margin-bottom(40px);
+
         h1, .h1,
         h2, .h2,
         h3, .h3 {
