@@ -194,6 +194,16 @@
   }
 }
 
+/* Posts page */
+body.blog .layout-grid.articles:first-child {
+  margin-top: calc(1.3125rem + 0.75vw);
+}
+@media (min-width: 1200px) {
+  body.blog .layout-grid.articles:first-child {
+    margin-top: 1.875rem;
+  }
+}
+
 /* Team Members */
 .layout-grid.team-members .container-lg .row:last-child .row {
   margin-bottom: -1.5rem;

@@ -199,6 +199,11 @@
     }
 }
 
+/* Posts page */
+body.blog .layout-grid.articles:first-child {
+    @include margin-top(30px);
+}
+
 /* Team Members */
 .layout-grid.team-members {
 
