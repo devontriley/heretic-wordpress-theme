@@ -81,7 +81,7 @@ if (!function_exists('register_heretic_styles')) :
         }
 
         // Services Landing Page
-        if ( is_page_template( 'page-services.php' ) ) {
+        if ( is_page_template( 'page-template-services.php' ) ) {
             wp_enqueue_style( 'heretic-layout-grid', get_template_directory_uri().'/layouts/grid/style.css', array() );
         }
 
