@@ -1,7 +1,7 @@
 .layout-stats div[class*=col] {
   margin-bottom: var(--bs-gutter-x);
 }
-.layout-stats h2 {
+.layout-stats h2, .layout-stats .h2 {
   color: var(--header-color);
 }
 .layout-stats .stat-wrapper {
@@ -9,6 +9,7 @@
   border: 1px solid var(--bs-gray-400);
   padding: 50px 30px;
   border-radius: var(--borderRadius);
+  box-shadow: var(--cardBoxShadow);
 }
 .layout-stats .stat-wrapper img {
   margin-bottom: 15px;
