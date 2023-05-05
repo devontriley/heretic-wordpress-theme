@@ -1,11 +1,12 @@
 <?php
 $imageAsIcon = get_sub_field( 'image_as_icon' );
+$centerHeader = get_sub_field( 'center_header' );
 ?>
 
 <div class="container-lg">
     <div class="row">
         <?php if ( $header ) : ?>
-        <div class="header col-sm-10 offset-sm-1 col-md-6 offset-md-1 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'col-lg-12 offset-lg-0' : 'col-lg-8 offset-lg-2'; ?>">
+        <div class="header col-sm-10 offset-sm-1 col-md-6 offset-md-1 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'col-lg-12 offset-lg-0' : 'col-lg-8 offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center'; } ?>">
             <<?php echo $headerSize ?>>
                 <?php echo $header ?>
             </<?php echo $headerSize ?>>
