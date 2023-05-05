@@ -14,6 +14,7 @@
 
 <?php
 $logo = get_field( 'logo', 'option' );
+$footerLogo = get_field( 'footer_logo', 'options' );
 $footerMenu1 = wp_get_nav_menu_items( 'footer-menu-1' );
 $footerMenuHeader1 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-1' ) );
 $footerMenu2 = wp_get_nav_menu_items( 'footer-menu-2' );
@@ -104,7 +105,7 @@ $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
         <div class="row footer-bottom">
             <div class="logo col-auto">
                 <a href="<?php echo get_home_url() ?>" class="footer-logo">
-                    <?php echo apply_filters( 'heretic_footer_logo', wp_get_attachment_image( $logo['ID'], 'full' ) ) ?>
+                    <?php echo apply_filters( 'heretic_footer_logo', wp_get_attachment_image( ($footerLogo ? $footerLogo['ID'] : $logo['ID']), 'full' ) ) ?>
                 </a>
             </div>
             <div class="copyright-column col-12 col-xl-auto">
