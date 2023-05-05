@@ -196,11 +196,11 @@
 
 /* Posts page */
 body.blog .layout-grid.articles:first-child {
-  margin-top: calc(1.3125rem + 0.75vw);
+  margin-top: calc(1.4375rem + 2.25vw);
 }
 @media (min-width: 1200px) {
   body.blog .layout-grid.articles:first-child {
-    margin-top: 1.875rem;
+    margin-top: 3.125rem;
   }
 }
 
