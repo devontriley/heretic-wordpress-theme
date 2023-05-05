@@ -63,20 +63,29 @@ $articles = getArticles( $articleCount );
 <div class="container-lg">
     <div class="row">
         <?php if ( !$postsPage && !$postSingle ) : ?>
-        <div class="header col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
-            <<?php echo $headerSize ?>>
-                <?php echo $header ?>
-            </<?php echo $headerSize ?>>
-        </div>
-    <?php elseif ( $postSingle ) : ?>
-        <div class="header text-center col-md-8 offset-md-2">
-            <h2>Related Articles</h2>
-        </div>
-    <?php elseif ( $postsPage ) : ?>
-        <div class="header text-center col-md-8 offset-md-2">
-            <h1><?php echo get_the_title( get_option( 'page_for_posts' ) ) ?></h1>
-        </div>
-    <?php endif; ?>
+            <?php if ( $header || $bodyCopy ) : ?>
+                <div class="header col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
+                    <?php if ( $header ) : ?>
+                        <<?php echo $headerSize ?>>
+                            <?php echo $header ?>
+                        </<?php echo $headerSize ?>>
+                    <?php endif; ?>
+                    <?php if ( $bodyCopy ) : ?>
+                        <div class="col-lg-6 <?php if ( $centerHeader ) { echo 'offset-lg-3'; } ?>">
+                            <?php echo $bodyCopy ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        <?php elseif ( $postSingle ) : ?>
+            <div class="header text-center col-md-8 offset-md-2">
+                <h2>Related Articles</h2>
+            </div>
+        <?php elseif ( $postsPage ) : ?>
+            <div class="header text-center col-md-8 offset-md-2">
+                <h1><?php echo get_the_title( get_option( 'page_for_posts' ) ) ?></h1>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="row">

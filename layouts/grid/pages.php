@@ -5,11 +5,20 @@ $pages = get_sub_field( 'pages' );
 
 <div class="container-lg">
     <div class="row">
-        <div class="header col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
-            <<?php echo $headerSize ?>>
-                <?php echo $header ?>
-            </<?php echo $headerSize ?>>
-        </div>
+        <?php if ( $header || $bodyCopy ) : ?>
+            <div class="header col-sm-10 offset-sm-1 <?php if ( $centerHeader ) { echo 'text-center'; } else { echo 'col-md-6'; } ?> col-lg-12 offset-lg-0">
+                <?php if ( $header ) : ?>
+                    <<?php echo $headerSize ?>>
+                        <?php echo $header ?>
+                    </<?php echo $headerSize ?>>
+                <?php endif; ?>
+                <?php if ( $bodyCopy ) : ?>
+                    <div class="col-lg-6 <?php if ( $centerHeader ) { echo 'offset-lg-3'; } ?>">
+                        <?php echo $bodyCopy ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="row">
