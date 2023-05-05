@@ -4,6 +4,19 @@
 
 .layout-list-group {
 
+    .header {
+        @include margin-bottom(40px);
+
+        h2 {
+            color: var(--bs-secondary);
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
     .column2 {
         margin-top: $grid-gutter-width;
 
@@ -34,10 +47,15 @@
         list-style: none;
 
         li {
-            margin-bottom: 1em;
+            line-height: 1.3em;
+            margin-bottom: 0.5em;
 
             &:last-child {
                 margin-bottom: 0;
+            }
+
+            p {
+                margin: 0;
             }
         }
     }

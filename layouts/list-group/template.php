@@ -1,6 +1,8 @@
 <?php
 global $layoutCounter;
 
+$header = get_sub_field( 'header' );
+$bodyCopy = get_sub_field( 'body_copy' );
 $column1 = get_sub_field( 'column_1' );
 if ( $column1 ) $column1List = $column1['lists'];
 $column2 = get_sub_field( 'column_2' );
@@ -9,6 +11,22 @@ if ( $column2 ) $column2List = $column2['lists'];
 
 <div class="layout-list-group layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
+
+        <?php if ( $header || $bodyCopy ) : ?>
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                    <div class="header">
+                        <?php if ( $header ) : ?>
+                            <h2><?php echo $header ?></h2>
+                        <?php endif; ?>
+                        <?php if ( $bodyCopy ) : ?>
+                            <?php echo $bodyCopy ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+
         <div class="row">
             <div class="col-sm-10 offset-sm-1">
                 <div class="row <?php if ( ! $column2List ) { echo 'justify-content-center'; } ?>">
