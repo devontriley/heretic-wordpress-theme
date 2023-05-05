@@ -1,25 +1,45 @@
-const teamMemberDrawer = document.getElementById("team-members-bio-drawer");
+const teamMemberDialog = document.getElementById("team-members-dialog");
 
-if ( teamMemberDrawer ) {
-    const teamMemberDrawerBios = teamMemberDrawer.querySelectorAll(".team-member");
-    const teamMemberDrawerOffcanvas = new bootstrap.Offcanvas("#team-members-bio-drawer");
+if ( teamMemberDialog ) {
     const teamMemberOpenButtons = document.querySelectorAll(".team-member-open-drawer");
+    const closeTeamMembersDialogButton = document.querySelector('.close-team-members-dialog')
 
-    teamMemberDrawer.addEventListener("hidden.bs.offcanvas", event => {
-        teamMemberDrawerBios.forEach(bio => {
-            bio.classList.remove("d-block");
-        });
-    });
+    closeTeamMembersDialogButton.addEventListener('click', e => {
+        e.preventDefault()
 
-    document.addEventListener("click", event => {
-        if (event.target.classList.contains("team-member-open-drawer")) {
-            event.preventDefault();
-            let id = event.target.dataset.id;
+        teamMemberDialog.close()
+    })
+
+    teamMemberOpenButtons.forEach(button => {
+        button.addEventListener('click', e => {
+            console.log(e)
+            e.preventDefault()
+
+            let id = e.target.dataset.id;
             if (id) {
-                let member = teamMemberDrawer.querySelector('.team-member[data-id="' + id + '"]');
+                let member = teamMemberDialog.querySelector('.team-member[data-id="' + id + '"]');
                 member.classList.add("d-block");
-                teamMemberDrawerOffcanvas.show();
             }
+
+            teamMemberDialog.showModal()
+        })
+    })
+
+    teamMemberDialog.addEventListener('close', e => {
+        teamMemberDialog.querySelectorAll('.team-member').forEach(member => {
+            member.classList.remove('d-block')
+        })
+    })
+
+    teamMemberDialog.addEventListener('click', e => {
+        const dialogDimensions = teamMemberDialog.getBoundingClientRect()
+        if(
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            teamMemberDialog.close()
         }
-    });
+    })
 }

@@ -3,13 +3,22 @@ $teamMembers = get_sub_field('team_members');
 ?>
 
 <div class="container-lg">
-    <div class="row">
-        <div class="col-sm-10 offset-sm-1 col-md-6 <?php echo ( in_array( $columns, array( 'Three', 'Four' ) ) ) ? 'col-lg-6 offset-lg-0' : 'col-lg-6 offset-lg-2'; ?>">
-            <<?php echo $headerSize ?>>
-                <?php echo $header ?>
-            </<?php echo $headerSize ?>>
+    <?php if ( $header || $bodyCopy ) : ?>
+        <div class="row">
+            <div class="header col-sm-10 offset-sm-1 col-md-6 <?php echo ( in_array( $columns, array( 'Three', 'Four' ) ) ) ? 'col-lg-6 offset-lg-0' : 'col-lg-6 offset-lg-2'; ?>">
+                <?php if ( $header ) : ?>
+                    <<?php echo $headerSize ?>>
+                        <?php echo $header ?>
+                    </<?php echo $headerSize ?>>
+                <?php endif; ?>
+                <?php if ( $bodyCopy ) : ?>
+                    <div class="col-lg-6 <?php if ( $centerHeader ) { echo 'offset-lg-3'; } ?>">
+                        <?php echo $bodyCopy ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 
     <?php if( $teamMembers ) : ?>
 
