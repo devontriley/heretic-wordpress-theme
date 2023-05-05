@@ -10,10 +10,15 @@ $images = get_sub_field( 'images' );
      data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
 
-        <?php if ( $header ) : ?>
+        <?php if ( $header || $bodyCopy ) : ?>
             <div class="row">
                 <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0 text-center">
-                    <h2><?php echo $header ?></h2>
+                    <?php if ( $header ) : ?>
+                        <h2 class="h1"><?php echo $header ?></h2>
+                    <?php endif; ?>
+                    <?php if ( $bodyCopy ) : ?>
+                        <?php echo $bodyCopy ?>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
