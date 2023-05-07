@@ -14,6 +14,10 @@
     padding-bottom: 5rem;
   }
 }
+.service-container .layout-rte.full-bleed-bg {
+  padding-left: 8.33%;
+  padding-right: 8.33%;
+}
 .layout-rte.full-bleed-bg:last-child {
   margin-bottom: 0 !important;
 }
