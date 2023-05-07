@@ -10,6 +10,10 @@
         background: var(--bs-secondary);
         color: $white;
 
+        &:first-child {
+            margin-top: 0 !important;
+        }
+
         // Add horizontal inner padding equal to one column width when on service page
         .service-container & {
             padding-left: 8.33%;
