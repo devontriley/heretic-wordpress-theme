@@ -193,6 +193,9 @@
 .layout-hero.carousel:not(.background-none) .glide.content .glide__slide {
   align-self: center;
 }
+.layout-hero.carousel:not(.background-none) .glide.content ul, .layout-hero.carousel:not(.background-none) .glide.content ol {
+  margin-bottom: 1.5em;
+}
 .layout-hero.carousel:not(.background-none).background-light .glide.content {
   background: var(--hero-carousel-bg-light);
 }
