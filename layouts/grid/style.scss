@@ -260,6 +260,8 @@ body.blog .layout-grid.articles:first-child {
 
 /* Team Member Drawer */
 #team-members-dialog {
+    max-width: 700px;
+
     .close-team-members-dialog {
         background: none;
         border: none;
