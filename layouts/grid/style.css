@@ -225,6 +225,10 @@ body.blog .layout-grid.articles:first-child {
 .layout-grid.team-members .card {
   height: 100%;
 }
+.layout-grid.team-members .card .card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
 .layout-grid.team-members .card .title {
   font-size: 1rem;
 }
@@ -237,7 +241,9 @@ body.blog .layout-grid.articles:first-child {
   text-decoration: underline;
 }
 .layout-grid.team-members .card .btn {
+  flex-basis: 100%;
   margin-top: 20px;
+  align-self: flex-end;
 }
 .layout-grid.team-members img {
   height: auto !important;

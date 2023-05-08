@@ -224,6 +224,11 @@ body.blog .layout-grid.articles:first-child {
     .card {
         height: 100%;
 
+        .card-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .title {
             @include font-size(16px);
         }
@@ -239,7 +244,9 @@ body.blog .layout-grid.articles:first-child {
         }
 
         .btn {
+            flex-basis: 100%;
             margin-top: 20px;
+            align-self: flex-end;
         }
     }
 
