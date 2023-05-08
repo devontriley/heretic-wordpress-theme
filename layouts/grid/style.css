@@ -253,7 +253,7 @@ body.blog .layout-grid.articles:first-child {
 }
 
 /* Team Member Drawer */
-#team-members-bio-drawer .btn-close {
+#team-members-dialog .close-team-members-dialog {
   background: none;
   border: none;
   padding: 0;
@@ -263,13 +263,10 @@ body.blog .layout-grid.articles:first-child {
   right: 15px;
   top: 15px;
 }
-#team-members-bio-drawer .btn-close svg:hover {
+#team-members-dialog .close-team-members-dialog:hover {
   color: var(--link-hover-color);
 }
-#team-members-bio-drawer .offcanvas-body {
-  padding-top: 35px;
-}
-#team-members-bio-drawer .team-member {
+#team-members-dialog .team-member {
   display: none;
 }
 

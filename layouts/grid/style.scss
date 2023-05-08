@@ -259,8 +259,8 @@ body.blog .layout-grid.articles:first-child {
 }
 
 /* Team Member Drawer */
-#team-members-bio-drawer {
-    .btn-close {
+#team-members-dialog {
+    .close-team-members-dialog {
         background: none;
         border: none;
         padding: 0;
@@ -270,15 +270,9 @@ body.blog .layout-grid.articles:first-child {
         right: 15px;
         top: 15px;
 
-        svg {
-            &:hover {
-                color: var(--link-hover-color);
-            }
+        &:hover {
+            color: var(--link-hover-color);
         }
-    }
-
-    .offcanvas-body {
-        padding-top: 35px;
     }
 
     .team-member {
