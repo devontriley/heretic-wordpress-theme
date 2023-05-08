@@ -228,13 +228,16 @@ body.blog .layout-grid.articles:first-child {
 .layout-grid.team-members .card .title {
   font-size: 1rem;
 }
-.layout-grid.team-members .card a {
+.layout-grid.team-members .card a:not(.btn) {
   font-size: 1.125rem;
   color: var(--bs-primary);
   text-decoration: none;
 }
-.layout-grid.team-members .card a:hover {
+.layout-grid.team-members .card a:not(.btn):hover {
   text-decoration: underline;
+}
+.layout-grid.team-members .card .btn {
+  margin-top: 20px;
 }
 .layout-grid.team-members img {
   height: auto !important;
