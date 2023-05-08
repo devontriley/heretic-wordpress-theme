@@ -256,6 +256,9 @@ body.blog .layout-grid.articles:first-child {
 #team-members-dialog {
   max-width: 700px;
 }
+#team-members-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 #team-members-dialog .close-team-members-dialog {
   background: none;
   border: none;
