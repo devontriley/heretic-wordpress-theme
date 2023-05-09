@@ -19013,10 +19013,10 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
   --newsletter-bg-color: var(--bs-primary);
 }
 
-html body {
+html body:not(.wp-admin) {
   padding-top: 105px; /* Matches header height */
 }
-html body.nav-drawer-open {
+html body:not(.wp-admin).nav-drawer-open {
   height: 100%;
   overflow-y: hidden;
 }
