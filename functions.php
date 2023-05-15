@@ -30,8 +30,14 @@ function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
 }
 
-// Disable ACF Post Type registration page
+// Disable ACF/ACFE Post Type registration page
 add_filter( 'acf/settings/enable_post_types', '__return_false' );
+
+add_action('acf/init', 'my_acfe_modules');
+function my_acfe_modules(){
+    acf_update_setting('acfe/modules/post_types', false);
+
+}
 
 // Disable Gutenberg
 //add_filter('use_block_editor_for_post', '__return_false', 10);
