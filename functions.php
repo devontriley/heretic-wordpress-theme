@@ -30,6 +30,12 @@ function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
 }
 
+// Remove Comments admin page from sidebar
+function disable_comments_admin_menu() {
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'disable_comments_admin_menu');
+
 // Disable ACF/ACFE Post Type registration page
 add_filter( 'acf/settings/enable_post_types', '__return_false' );
 
