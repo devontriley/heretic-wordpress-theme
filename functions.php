@@ -38,12 +38,16 @@ add_action('admin_menu', 'disable_comments_admin_menu');
 
 // Disable ACF/ACFE Post Type registration page
 add_filter( 'acf/settings/enable_post_types', '__return_false' );
-
-add_action('acf/init', 'my_acfe_modules');
-function my_acfe_modules(){
+function disable_acfe_post_types(){
     acf_update_setting('acfe/modules/post_types', false);
-
 }
+add_action('acf/init', 'disable_acfe_post_types');
+
+// Disable ACFE Taxonomy registration page
+function disable_acfe_taxonomies(){
+    acf_update_setting('acfe/modules/taxonomies', false);
+}
+add_action('acf/init', 'disable_acfe_taxonomies');
 
 // Disable Gutenberg
 //add_filter('use_block_editor_for_post', '__return_false', 10);
