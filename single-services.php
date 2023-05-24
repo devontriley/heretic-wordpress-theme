@@ -77,6 +77,7 @@ $serviceModules = get_field( 'service_modules' );
         ?>
 
         <!-- Related Services -->
+        <!--
         <div class="col-12">
             <div class="layout-grid articles">
                 <div class="related-services">
@@ -102,14 +103,12 @@ $serviceModules = get_field( 'service_modules' );
                                         <?php if ( $service ) : ?>
                                             <a href="<?php echo get_permalink( $service->ID ); ?>" target="" class="cover-link"></a>
                                         <?php endif; ?>
-                                        <!-- Image -->
                                         <div class="image">
                                             <?php if ( $fImage ) : ?>
                                                 <?php echo $fImage ?>
                                             <?php endif; ?>
                                         </div>
                                         <div class="card-body">
-                                            <!-- Header -->
                                             <?php if( $service->post_title ) : ?>
                                                 <h3 class="card-title"><?php echo $service->post_title ?></h3>
                                             <?php endif; ?>
@@ -126,6 +125,7 @@ $serviceModules = get_field( 'service_modules' );
                 </div>
             </div>
         </div>
+        -->
     </div>
 </div>
 
