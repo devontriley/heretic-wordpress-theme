@@ -1,7 +1,7 @@
 <?php
 $termLink = get_term_link( $category->term_id );
 $thumbnailID = get_term_meta( $category->term_id, 'thumbnail_id', true );
-$featuredImage = wp_get_attachment_image( $thumbnailID );
+$featuredImage = wp_get_attachment_image( $thumbnailID, 'woocommerce_thumbnail' );
 ?>
 
 <div class="card">
