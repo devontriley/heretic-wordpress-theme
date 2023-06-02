@@ -5,14 +5,14 @@ $teamMembers = get_sub_field('team_members');
 <div class="container-lg">
     <?php if ( $header || $bodyCopy ) : ?>
         <div class="row">
-            <div class="header col-sm-10 offset-sm-1 col-md-6 <?php echo ( in_array( $columns, array( 'Three', 'Four' ) ) ) ? 'col-lg-6 offset-lg-0' : 'col-lg-6 offset-lg-2'; ?>">
+            <div class="header col-sm-10 offset-sm-1 col-lg-8 offset-lg-0">
                 <?php if ( $header ) : ?>
                     <<?php echo $headerSize ?>>
                         <?php echo $header ?>
                     </<?php echo $headerSize ?>>
                 <?php endif; ?>
                 <?php if ( $bodyCopy ) : ?>
-                    <div class="col-lg-6 <?php if ( $centerHeader ) { echo 'offset-lg-3'; } ?>">
+                    <div class="col">
                         <?php echo $bodyCopy ?>
                     </div>
                 <?php endif; ?>
