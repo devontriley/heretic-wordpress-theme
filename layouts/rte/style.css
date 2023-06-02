@@ -21,9 +21,6 @@
   padding-left: 8.33%;
   padding-right: 8.33%;
 }
-.layout-rte.full-bleed-bg:last-child {
-  margin-bottom: 0 !important;
-}
 .layout-rte.full-bleed-bg h1, .layout-rte.full-bleed-bg .h1, .layout-rte.full-bleed-bg h2, .layout-rte.full-bleed-bg .h2, .layout-rte.full-bleed-bg h3, .layout-rte.full-bleed-bg .h3, .layout-rte.full-bleed-bg .eyebrow {
   color: #fff;
 }
