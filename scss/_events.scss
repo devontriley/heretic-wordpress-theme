@@ -25,7 +25,7 @@ body {
     }
 
     .tribe-events-content a {
-        border: none;
+        border: none !important;
         color: var(--bs-primary);
 
         &:hover {

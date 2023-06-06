@@ -19801,7 +19801,7 @@ body .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-
   background-color: var(--bs-primary);
 }
 body .tribe-events-content a {
-  border: none;
+  border: none !important;
   color: var(--bs-primary);
 }
 body .tribe-events-content a:hover {
