@@ -19800,6 +19800,13 @@ body .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-
 body .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
   background-color: var(--bs-primary);
 }
+body .tribe-events-content a {
+  border: none;
+  color: var(--bs-primary);
+}
+body .tribe-events-content a:hover {
+  color: var(--bs-primary-shade);
+}
 
 /* Blog Home */
 .blog-home-header {

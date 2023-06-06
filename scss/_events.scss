@@ -23,4 +23,13 @@ body {
     .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
         background-color: var(--bs-primary);
     }
+
+    .tribe-events-content a {
+        border: none;
+        color: var(--bs-primary);
+
+        &:hover {
+            color: var(--bs-primary-shade);
+        }
+    }
 }
