@@ -1,5 +1,6 @@
 body {
-    .tribe-events .tribe-events-c-search__button {
+    .tribe-events .tribe-events-c-search__button,
+    .tribe-events button.tribe-events-c-search__button {
         background-color: var(--bs-primary);
 
         &:hover {
@@ -24,12 +25,29 @@ body {
         background-color: var(--bs-primary);
     }
 
-    .tribe-events-content a {
+    .tribe-events-content a,
+    .tribe-events-event-meta a,
+    .tribe-events-event-meta a:visited {
         border: none !important;
-        color: var(--bs-primary);
+        color: var(--link-color);
+        text-decoration: underline;
 
         &:hover {
-            color: var(--bs-primary-shade);
+            color: var(--link-hover-color);
+        }
+    }
+
+    .tribe-common .tribe-common-cta--alt:active,
+    .tribe-common .tribe-common-cta--alt:focus,
+    .tribe-common .tribe-common-cta--alt:hover {
+        color: var(--link-hover-color);
+    }
+
+    .tribe-events .tribe-events-calendar-series-archive__link {
+        color: var(--link-color);
+
+        &:hover {
+            color: var(--link-hover-color);
         }
     }
 }

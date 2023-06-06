@@ -19779,10 +19779,12 @@ body .facetwp-load-more.facetwp-hidden {
   }
 }
 
-body .tribe-events .tribe-events-c-search__button {
+body .tribe-events .tribe-events-c-search__button,
+body .tribe-events button.tribe-events-c-search__button {
   background-color: var(--bs-primary);
 }
-body .tribe-events .tribe-events-c-search__button:hover {
+body .tribe-events .tribe-events-c-search__button:hover,
+body .tribe-events button.tribe-events-c-search__button:hover {
   background-color: var(--bs-primary-shade);
 }
 body .tribe-common .tribe-common-c-btn-border,
@@ -19800,12 +19802,28 @@ body .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-
 body .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
   background-color: var(--bs-primary);
 }
-body .tribe-events-content a {
+body .tribe-events-content a,
+body .tribe-events-event-meta a,
+body .tribe-events-event-meta a:visited {
   border: none !important;
-  color: var(--bs-primary);
+  color: var(--link-color);
+  text-decoration: underline;
 }
-body .tribe-events-content a:hover {
-  color: var(--bs-primary-shade);
+body .tribe-events-content a:hover,
+body .tribe-events-event-meta a:hover,
+body .tribe-events-event-meta a:visited:hover {
+  color: var(--link-hover-color);
+}
+body .tribe-common .tribe-common-cta--alt:active,
+body .tribe-common .tribe-common-cta--alt:focus,
+body .tribe-common .tribe-common-cta--alt:hover {
+  color: var(--link-hover-color);
+}
+body .tribe-events .tribe-events-calendar-series-archive__link {
+  color: var(--link-color);
+}
+body .tribe-events .tribe-events-calendar-series-archive__link:hover {
+  color: var(--link-hover-color);
 }
 
 /* Blog Home */
