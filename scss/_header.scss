@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/variables";
+
 /* Notification Bar */
 .notification-bar {
     position: absolute;
@@ -181,6 +183,12 @@
         border: 1px solid var(--bs-gray-400);
     }
 
+    ul.sub-sub-menu {
+        margin: 0 0 0 20px;
+        padding: 0;
+        border-left: 1px solid var(--bs-gray-200);
+    }
+
     li {
         display: block;
         @include font-size(16px);
@@ -314,7 +322,7 @@
 
             &.has-children.active .sub-menu {
                 display: block;
-                padding: 0 0 0 30px;
+                padding: 0 0 0 20px;
                 margin-top: 10px;
                 border-left: 1px solid var(--bs-gray-300);
                 list-style-type: none;
@@ -356,5 +364,10 @@
                 }
             }
         }
+    }
+
+    ul.sub-sub-menu {
+        margin: 0.5em 0 0 0;
+        padding: 0 0 0 1em;
     }
 }
