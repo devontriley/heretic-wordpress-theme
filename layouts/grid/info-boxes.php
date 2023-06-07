@@ -1,9 +1,10 @@
 <?php
 $imageAsIcon = get_sub_field( 'image_as_icon' );
 $centerHeader = get_sub_field( 'center_header' );
+$tealBackground = get_sub_field( 'teal_card_background' );
 ?>
 
-<div class="container-lg">
+<div class="container-lg <?php if ( $tealBackground ) { echo 'colored-cards'; } ?>">
     <div class="row">
         <?php if ( $header || $bodyCopy ) : ?>
         <div class="header col-sm-10 offset-sm-1 col-md-6 offset-md-1 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'col-lg-12 offset-lg-0' : 'col-lg-8 offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center'; } ?>">

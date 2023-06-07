@@ -84,6 +84,25 @@
         margin-bottom: $grid-gutter-width;
     }
 
+    .colored-cards .card {
+        color: $white;
+        background: var(--info-box-bg-color);
+        border: none;
+        transition: background ease 250ms;
+
+        .card-title {
+            color: $white;
+        }
+
+        &:has(a):hover {
+            background: var(--info-box-bg-color-hover);
+
+            .card-title {
+                color: $white;
+            }
+        }
+    }
+
     .card {
         height: 100%;
 

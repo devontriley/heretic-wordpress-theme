@@ -43,8 +43,9 @@ Version: 1.0
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Import other libraries
-@import '../node_modules/bootstrap-icons/font/bootstrap-icons';
-@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+//@import '../node_modules/bootstrap-icons/font/bootstrap-icons';
+//@import '../node_modules/hamburgers/_sass/hamburgers/base';
+@import './hamburgers/hamburgers';
 @import '../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 @import '../node_modules/simplelightbox/src/simple-lightbox';
 
@@ -56,15 +57,14 @@ Version: 1.0
 // 10. Import custom code
 @import 'root';
 @import 'global';
+@import 'services';
+@import 'events';
+@import 'type';
+@import 'header';
+@import 'facetWP';
 @import 'woocommerce';
-@import 'cart';
 @import 'gravity-forms';
 @import 'search';
 @import 'pagination';
-@import 'facetWP';
-@import 'services';
-@import 'events';
 @import 'blog';
-@import 'type';
-@import 'header';
 @import 'footer';

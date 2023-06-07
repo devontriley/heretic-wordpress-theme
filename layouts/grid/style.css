@@ -81,6 +81,21 @@
 .layout-grid.info-boxes div[class*=col].grid {
   margin-bottom: 1.5rem;
 }
+.layout-grid.info-boxes .colored-cards .card {
+  color: #fff;
+  background: var(--info-box-bg-color);
+  border: none;
+  transition: background ease 250ms;
+}
+.layout-grid.info-boxes .colored-cards .card .card-title {
+  color: #fff;
+}
+.layout-grid.info-boxes .colored-cards .card:has(a):hover {
+  background: var(--info-box-bg-color-hover);
+}
+.layout-grid.info-boxes .colored-cards .card:has(a):hover .card-title {
+  color: #fff;
+}
 .layout-grid.info-boxes .card {
   height: 100%;
 }
