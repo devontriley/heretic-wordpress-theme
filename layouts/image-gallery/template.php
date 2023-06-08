@@ -32,7 +32,7 @@ $images = get_sub_field( 'images' );
                                 <!-- Image -->
                                 <?php if ( $image['image'] ) : ?>
                                     <a href="<?php echo $image['image']['url'] ?>" class="d-block" rel="lightbox1">
-                                        <?php echo wp_get_attachment_image( $image['image']['ID'] ); ?>
+                                        <?php echo wp_get_attachment_image( $image['image']['ID'], 'medium' ); ?>
                                     </a>
                                 <?php endif; ?>
                             </div>
