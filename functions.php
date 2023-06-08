@@ -24,6 +24,9 @@ function heretic_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'heretic_add_woocommerce_support' );
 
+// Remove classic themes stylesheet
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
+
 // Remove default content editor
 //add_action('admin_init', 'remove_textarea');
 function remove_textarea() {
@@ -51,7 +54,7 @@ add_action('acf/init', 'disable_acfe_taxonomies');
 
 // Disable Gutenberg
 //add_filter('use_block_editor_for_post', '__return_false', 10);
-//add_action( 'wp_enqueue_scripts', function() {
+//add_filter( 'wp_enqueue_scripts', function() {
 //    // Remove CSS on the front end.
 //    wp_dequeue_style( 'wp-block-library' );
 //    // Remove Gutenberg theme.
@@ -89,7 +92,7 @@ if (!function_exists('register_heretic_styles')) :
         $postType = get_post_type();
 
         // Heretic theme styles
-        wp_enqueue_style( 'heretic-style', get_template_directory_uri().'/style.css', array(), time() );
+        wp_enqueue_style( 'heretic-style', get_template_directory_uri().'/style.css', array(), filemtime(get_template_directory() . '/style.css') );
 
         // Woocommerce product archive
         if ( is_page( 'shop' ) || is_tax( 'product_cat') || is_singular( 'product' ) ) {
@@ -140,9 +143,7 @@ if (!function_exists('heretic_scripts')) :
         // Simple Lightbox
         wp_enqueue_script( 'simplelightboxjs', get_template_directory_uri().'/node_modules/simplelightbox/dist/simple-lightbox.js', array('jquery'), '2.12.1', true );
         // Heretic theme scripts
-        wp_enqueue_script( 'heretic-script', get_template_directory_uri().'/main.js', array('jquery'), '1.0', true );
-        // Password strength for registration form
-        // wp_enqueue_script( 'password-strength-meter' );
+        wp_enqueue_script( 'heretic-script', get_template_directory_uri().'/main.js', array('jquery'), filemtime(get_template_directory() . '/main.js'), true );
 
         // Search page
         if ( is_search() ) {
