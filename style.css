@@ -10668,6 +10668,12 @@ a:hover {
   }
 }
 
+.header-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 /* Search */
 .header-search {
   display: inline-block;
