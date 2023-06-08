@@ -14,26 +14,26 @@
 .layout-colored-icon-cards .card[data-color=primary] {
   background-color: var(--bs-primary);
 }
-.layout-colored-icon-cards .card[data-color=primary]:hover {
+.layout-colored-icon-cards .card[data-color=primary]:has(a):hover {
   background-color: var(--bs-primary-shade);
 }
 .layout-colored-icon-cards .card[data-color=secondary] {
   background-color: var(--bs-secondary);
 }
-.layout-colored-icon-cards .card[data-color=secondary]:hover {
+.layout-colored-icon-cards .card[data-color=secondary]:has(a):hover {
   background-color: var(--bs-secondary-shade);
 }
 .layout-colored-icon-cards .card[data-color=tertiary1] {
   background-color: var(--bs-tertiary-1);
   color: #000;
 }
-.layout-colored-icon-cards .card[data-color=tertiary1]:hover {
+.layout-colored-icon-cards .card[data-color=tertiary1]:has(a):hover {
   background-color: var(--bs-tertiary-1-shade);
 }
 .layout-colored-icon-cards .card[data-color=tertiary2] {
   background-color: var(--bs-tertiary-2);
 }
-.layout-colored-icon-cards .card[data-color=tertiary2]:hover {
+.layout-colored-icon-cards .card[data-color=tertiary2]:has(a):hover {
   background-color: var(--bs-tertiary-2-shade);
 }
 .layout-colored-icon-cards .card-body {

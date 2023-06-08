@@ -22,26 +22,26 @@
 
         &[data-color="primary"] {
             background-color: var(--bs-primary);
-            &:hover {
+            &:has(a):hover {
                 background-color: var(--bs-primary-shade);
             }
         }
         &[data-color="secondary"] {
             background-color: var(--bs-secondary);
-            &:hover {
+            &:has(a):hover {
                 background-color: var(--bs-secondary-shade);
             }
         }
         &[data-color="tertiary1"] {
             background-color: var(--bs-tertiary-1);
             color: $black;
-            &:hover {
+            &:has(a):hover {
                 background-color: var(--bs-tertiary-1-shade);
             }
         }
         &[data-color="tertiary2"] {
             background-color: var(--bs-tertiary-2);
-            &:hover {
+            &:has(a):hover {
                 background-color: var(--bs-tertiary-2-shade);
             }
         }
