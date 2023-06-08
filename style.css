@@ -10531,6 +10531,9 @@ body .tribe-events .tribe-events-calendar-series-archive__link {
 body .tribe-events .tribe-events-calendar-series-archive__link:hover {
   color: var(--link-hover-color);
 }
+body .tribe-events-nav-pagination {
+  display: none;
+}
 
 .eyebrow {
   font-size: 0.875rem;
