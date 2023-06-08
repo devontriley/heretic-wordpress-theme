@@ -7,14 +7,14 @@ $tealBackground = get_sub_field( 'teal_card_background' );
 <div class="container-lg <?php if ( $tealBackground ) { echo 'colored-cards'; } ?>">
     <div class="row">
         <?php if ( $header || $bodyCopy ) : ?>
-        <div class="header col-sm-10 offset-sm-1 col-md-6 offset-md-1 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'col-lg-12 offset-lg-0' : 'col-lg-8 offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center'; } ?>">
+        <div class="header col-sm-10 offset-sm-1 col-lg-8 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'offset-lg-0' : 'offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center'; } ?>">
             <?php if ( $header ) : ?>
                 <<?php echo $headerSize ?>>
                     <?php echo $header ?>
                 </<?php echo $headerSize ?>>
             <?php endif; ?>
             <?php if ( $bodyCopy ) : ?>
-                <div class="col-lg-6 <?php if ( $centerHeader ) { echo 'offset-lg-3'; } ?>">
+                <div class="col">
                     <?php echo $bodyCopy ?>
                 </div>
             <?php endif; ?>
