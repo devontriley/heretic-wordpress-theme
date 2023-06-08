@@ -43,11 +43,16 @@ $logo = get_field( 'logo', 'option' );
                 <?php get_template_part( 'template-parts/header/site-nav' ); ?>
             </div>
             <div class="header-buttons">
-                <a href="<?php echo get_site_url().'?s='; ?>" class="header-search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                </a>
+                <div class="header-search-wrapper">
+                    <a href="<?php echo get_site_url().'?s='; ?>" class="header-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </a>
+                    <form action="<?php echo get_site_url(); ?>" class="header-search-form">
+                        <input class="header-search-input" type="search" value="" name="s" placeholder="Search" />
+                    </form>
+                </div>
                 <?php if ( is_plugin_active ( 'woocommerce/woocommerce.php' ) ) : ?>
                     <a href="<?php echo wc_get_cart_url(); ?>" class="header-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">

@@ -15,6 +15,36 @@ if ( notificationBar ) {
     document.body.style.paddingTop = ( notificationBar.offsetHeight + primaryHeader.offsetHeight ) + 'px'
 }
 
+/* Header search icon click */
+let headerSearchFormActive = false
+const headerSearchButton = document.querySelector('.header-search');
+const headerSearchForm = document.querySelector('.header-search-form');
+const headerSearchInput = document.querySelector('.header-search-input');
+if ( headerSearchButton && headerSearchInput ) {
+    // Search button click handler
+    headerSearchButton.addEventListener( 'click', (e) => {
+        e.preventDefault();
+        e.stopPropagation()
+        headerSearchForm.classList.add('active');
+        headerSearchInput.focus()
+        headerSearchFormActive = true
+    })
+
+    // Close search input click handler
+    document.addEventListener( 'click', (e) => {
+        if ( e.target !== headerSearchInput && headerSearchFormActive ) {
+            headerSearchForm.classList.remove('active')
+        }
+    })
+
+    // Search input submit handler
+    headerSearchForm.addEventListener( 'submit', (e) => {
+        if ( headerSearchInput.value === '' ) {
+            e.preventDefault();
+        }
+    });
+}
+
 /* Hamburger & nav drawer toggle */
 const hamburgerButton = document.querySelector( '.hamburger-container .hamburger' )
 const navDrawer = document.getElementById( 'nav-drawer' )

@@ -3,7 +3,7 @@
 @import "../node_modules/bootstrap/scss/mixins";
 
 .search-form-container {
-    @include margin(60px 0 130px 0);
+    @include margin(60px 0);
 }
 
 .search-results-type-header {

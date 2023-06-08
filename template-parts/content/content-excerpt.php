@@ -12,9 +12,25 @@
 
 <?php global $isSearchTemplate; ?>
 
-<?php if ( $isSearchTemplate ) : ?>
+<?php if ( $isSearchTemplate ) :
+
+    $fImage = get_the_post_thumbnail( $post, 'medium', array( 'sizes' => '(max-width: 575px) 100vw, (min-width: 576px) and (max-width: 992px) 50vw, 33vw' ) );
+    ?>
+
+    <div class="card">
+        <a href="<?php echo the_permalink(); ?>" class="cover-link"></a>
+        <div class="image">
+            <?php if ( $fImage ) : ?>
+                <?php echo $fImage ?>
+            <?php endif; ?>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title"><?php echo the_title(); ?></h3>
+        </div>
+    </div>
 
     <?php
+    /*
     switch ( get_post_type() ) :
         case 'post':
         case 'page':
@@ -38,6 +54,7 @@
             $p = get_post();
             include( get_template_directory().'/layouts/grid/services-card.php' );
     endswitch;
+    */
     ?>
 
 <?php endif; ?>

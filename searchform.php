@@ -38,17 +38,14 @@ if ( isset( $engine_options[ $engine_slug ] ) ) {
     class="search-form"
     action="<?php echo esc_url( home_url( '/' ) ); ?>"
 >
-	<label for="<?php echo esc_attr( $heretic_unique_id ); ?>" class="form-label">
-        <?php _e( 'Search', 'heretic' ); ?>
-    </label>
-
     <div class="position-relative">
         <input
                 type="search"
                 id="<?php echo esc_attr( $heretic_unique_id ); ?>"
-                class="search-term form-control mb-3"
+                class="search-term form-control"
                 value="<?php echo get_search_query(); ?>"
                 name="s"
+                aria-label="Search term"
         />
 
         <button
@@ -62,10 +59,12 @@ if ( isset( $engine_options[ $engine_slug ] ) ) {
         </button>
     </div>
 
+    <!--
     <select name="source" class="form-select">
         <?php foreach ( $post_types as $type ) :
             $typeName = ( $type === 'tribe_events' ) ? 'Events' : $type; ?>
             <option value="<?php echo $type ?>" <?php if ( $getPostType === $type ){ echo 'selected'; }?>><?php echo str_replace( '-', ' ', ucfirst( $typeName ) ); ?></option>
         <?php endforeach; ?>
     </select>
+    -->
 </form>

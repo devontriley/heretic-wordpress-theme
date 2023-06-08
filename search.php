@@ -42,6 +42,7 @@ endswitch;
     <div class="search-form-container">
         <div class="row">
             <div class="col-md-6 col-lg-4">
+                <h1>Search</h1>
                 <?php get_template_part( 'searchform' ); ?>
             </div>
         </div>
@@ -55,8 +56,7 @@ endswitch;
 
     elseif ( have_posts() ) : ?>
 
-        <div class="search-result-type post-type-<?php echo $postType ?>">
-        <div class="layout-grid <?php echo $gridType ?>">
+        <div class="layout-grid articles">
         <div class="row">
         <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
         <div class="row">
@@ -65,7 +65,7 @@ endswitch;
 
             the_post(); ?>
 
-                <div class="<?php echo $gridItemClasses ?>">
+                <div class="grid col-sm-6 col-md-6 col-lg-4">
                     <?php
                     /*
                      * Include the Post-Format-specific template for the content.
@@ -82,7 +82,6 @@ endswitch;
         </div><!-- .col -->
         </div><!-- .row -->
         </div><!-- .layout-grid -->
-        </div><!-- Close <?php echo $postType ?> -->
 
         <?php
         // Previous/next page navigation.
