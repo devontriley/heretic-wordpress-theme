@@ -64,7 +64,7 @@ $articles = getArticles( $articleCount );
     <div class="row">
         <?php if ( !$postsPage && !$postSingle ) : ?>
             <?php if ( $header || $bodyCopy ) : ?>
-                <div class="header col-sm-10 offset-sm-1 col-lg-8 offset-lg-0 <?php if ( $centerHeader ) { echo 'text-center'; } ?>">
+                <div class="header col-sm-10 offset-sm-1 col-lg-8 offset-lg-0 <?php if ( $centerHeader ) { echo 'text-center offset-lg-2'; } ?>">
                     <?php if ( $header ) : ?>
                         <<?php echo $headerSize ?>>
                             <?php echo $header ?>
