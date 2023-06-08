@@ -7,7 +7,7 @@ $tealBackground = get_sub_field( 'teal_card_background' );
 <div class="container-lg <?php if ( $tealBackground ) { echo 'colored-cards'; } ?>">
     <div class="row">
         <?php if ( $header || $bodyCopy ) : ?>
-        <div class="header col-sm-10 offset-sm-1 col-lg-8 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'offset-lg-0' : 'offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center'; } ?>">
+        <div class="header col-sm-10 offset-sm-1 col-lg-8 <?php echo in_array( $columns, array( 'Three', 'Four' ) ) ? 'offset-lg-0' : 'offset-lg-2'; ?> <?php if ( $centerHeader ) { echo 'text-center offset-lg-2'; } ?>">
             <?php if ( $header ) : ?>
                 <<?php echo $headerSize ?>>
                     <?php echo $header ?>
