@@ -14,6 +14,10 @@
     }
 }
 
+body .services-facets .facetwp-checkbox.checked:before {
+    background-color: var(--facet-checkbox-color);
+}
+
 .facetwp-template {
     .layout-grid.services {
         margin: 0;
@@ -23,8 +27,6 @@
 // Service Single
 
 .service-container {
-    @include padding-top(50px);
-
     .content-column {
         order: 2;
 

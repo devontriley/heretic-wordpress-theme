@@ -10257,6 +10257,7 @@ body .gform_wrapper.gravity-theme .gform_page_footer input:hover, .added_to_cart
   --newsletter-bg-color: var(--bs-primary);
   --info-box-bg-color: var(--bs-secondary);
   --info-box-bg-color-hover: var(--bs-secondary-shade);
+  --facet-checkbox-color: var(--bs-primary);
 }
 
 html body:not(.wp-admin) {
@@ -10324,18 +10325,14 @@ footer.entry-footer {
   margin-bottom: 1em;
 }
 
+body .services-facets .facetwp-checkbox.checked:before {
+  background-color: var(--facet-checkbox-color);
+}
+
 .facetwp-template .layout-grid.services {
   margin: 0;
 }
 
-.service-container {
-  padding-top: calc(1.4375rem + 2.25vw);
-}
-@media (min-width: 1200px) {
-  .service-container {
-    padding-top: 3.125rem;
-  }
-}
 .service-container .content-column {
   order: 2;
 }
