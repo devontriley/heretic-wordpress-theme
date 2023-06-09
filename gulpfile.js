@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 const log = require('fancy-log')
 const browsersync = require("browser-sync").create();
+const concat = require('gulp-concat');
 
 // BrowserSync
 function browserSync(done) {
@@ -27,50 +28,37 @@ function browserSyncReload(done) {
 
 function js() {
     return src([
-        '**/*.js',
-        '!**/*.min.js',
-        '!gulpfile.js',
-        '!node_modules/**'
+        'node_modules/reframe.js/dist/reframe.min.js',
+        'node_modules/@glidejs/glide/dist/glide.js',
+        'node_modules/simplelightbox/dist/simple-lightbox.js',
+        './js/main.js'
     ])
+        .pipe(concat('bundle.js'))
+        .pipe(dest('./js'))
         .pipe(uglify())
-        .pipe(rename({ extname: '.min.js' }))
-        .pipe(dest('.'))
-        .pipe(browsersync.stream());
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('./js'));
 }
 
-function layoutSCSS() {
+function scss() {
     return src([
-        './layouts/**/*.scss'
-    ])
-        .pipe(sass().on('error', sass.logError))
-        .pipe(dest('layouts'))
-        .pipe(browsersync.stream());
-}
-
-function serviceLayoutSCSS() {
-    return src([
-        './service-layouts/**/*.scss'
-    ])
-        .pipe(sass().on('error', sass.logError))
-        .pipe(dest('service-layouts'))
-        .pipe(browsersync.stream());
-}
-
-function mainSCSS() {
-    return src([
+        './layouts/**/*.scss',
         './scss/style.scss'
     ])
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('.'))
+        .pipe(dest(function(file) {
+            if (file.dirname.includes('layouts')) {
+                return 'layouts';
+            }
+            return '.';
+        }))
         .pipe(browsersync.stream());
 }
 
 function watchFiles () {
-    watch( [ './layouts/**/*.scss' ], series( layoutSCSS, browserSyncReload ) )
-    watch( [ './service-layouts/**/*.scss' ], series( serviceLayoutSCSS, browserSyncReload ) )
-    watch( [ './scss/**/*.scss' ], series( mainSCSS, browserSyncReload ) )
-    watch( [ '**/*.js', '!**/*.min.js', '!gulpfile.js', '!mode_modules/**' ], series( js, browserSyncReload ) )
+    watch( [ './layouts/**/*.scss', './scss/*.scss' ], series( scss, browserSyncReload ) )
+    // watch( [ './layouts/**/*.js' ], series( layoutJS, browserSyncReload ) )
 }
 
-exports.build = parallel( layoutSCSS, mainSCSS, js )
 exports.default = parallel( browserSync, watchFiles )
+exports.build = js

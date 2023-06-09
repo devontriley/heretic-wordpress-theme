@@ -132,23 +132,14 @@ add_action( 'wp_enqueue_scripts', 'register_heretic_styles' );
 // Register scripts
 if (!function_exists('heretic_scripts')) :
     function heretic_scripts() {
-        $postType = get_post_type();
+        $env = wp_get_environment_type();
 
         // Bootstrap
         wp_enqueue_script( 'bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', array(), '5.2.3', true );
-        //  Reframe.js
-        wp_enqueue_script( 'reframejs', get_template_directory_uri().'/node_modules/reframe.js/dist/reframe.min.js', array(), '4.0.1', true );
-        // Glide.js
-        wp_enqueue_script( 'glidejs', get_template_directory_uri().'/node_modules/@glidejs/glide/dist/glide.js', array(), '3.6', true);
-        // Simple Lightbox
-        wp_enqueue_script( 'simplelightboxjs', get_template_directory_uri().'/node_modules/simplelightbox/dist/simple-lightbox.js', array('jquery'), '2.12.1', true );
         // Heretic theme scripts
-        wp_enqueue_script( 'heretic-script', get_template_directory_uri().'/main.js', array('jquery'), filemtime(get_template_directory() . '/main.js'), true );
-
-        // Search page
-        if ( is_search() ) {
-            wp_enqueue_script( 'layout-grid', get_template_directory_uri().'/layouts/grid/script.min.js', array(), '1.0', true );
-        }
+        $jsSrc = $env === 'production' ? get_template_directory_uri().'/js/bundle.min.js' : get_template_directory_uri().'/js/bundle.js';
+        $jsPath = $env === 'production' ? get_template_directory().'/js/bundle.min.js' : get_template_directory().'/js/bundle.js';
+        wp_enqueue_script( 'heretic-script', $jsSrc, array('jquery'), filemtime($jsPath), true );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'heretic_scripts' );
