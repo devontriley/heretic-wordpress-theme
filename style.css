@@ -18867,7 +18867,7 @@ a:hover {
   }
 }
 .nav-drawer.active {
-  top: calc(100% + 15px);
+  top: 100%;
   bottom: auto;
 }
 .nav-drawer .primary-nav {
