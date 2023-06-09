@@ -73,7 +73,6 @@ if ( $format !== 'Carousel' ) {
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
-
                 <?php if ( $columns === 'Two' ) : ?>
                     <div class="column2 col-sm-10 offset-sm-1 col-md-6 offset-md-0">
                         <?php if ( $autoCrossfadeImages ) : ?>
@@ -124,6 +123,7 @@ if ( $format !== 'Carousel' ) {
                                 $eyebrow = $value['eyebrow_text'];
                                 $body = $value['body_copy'];
                                 $button = $value['button'];
+                                $loading = $key === 0 ? false : 'lazy';
                                 ?>
                                 <div class="glide__slide">
                                     <div class="content-wrapper">
@@ -145,7 +145,7 @@ if ( $format !== 'Carousel' ) {
                                         </div>
                                     </div>
                                     <?php if ( $backgroundColor === 'None' ) : ?>
-                                        <?php echo wp_get_attachment_image( $value['image']['ID'], 'full', '', array() ) ?>
+                                        <?php echo wp_get_attachment_image( $value['image']['ID'], 'full', '', array( 'loading' => $loading ) ) ?>
                                     <?php endif; ?>
                                 </div>
                                 <?php endforeach; ?>
@@ -153,7 +153,6 @@ if ( $format !== 'Carousel' ) {
                         </div>
                     </div>
                 </div>
-
                 <?php if ( $backgroundColor !== 'None' ) : ?>
                     <div class="image col-lg-4 align-self-stretch">
                         <div class="glide images">
@@ -209,6 +208,6 @@ if ( $format !== 'Carousel' ) {
     </div>
 </div>
 
-<?php unset( $format, $columns, $backgroundColor, $headerAlignment, $content, $header, $headerSize, $eyebrow, $body, $button, $image, $video ); ?>
+<?php unset( $format, $columns, $backgroundColor, $headerAlignment, $content, $header, $headerSize, $eyebrow, $body, $button, $image, $video, $loading ); ?>
 
 <?php $layoutCounter++; ?>
