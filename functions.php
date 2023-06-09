@@ -54,14 +54,16 @@ add_action('acf/init', 'disable_acfe_taxonomies');
 
 // Disable Gutenberg
 //add_filter('use_block_editor_for_post', '__return_false', 10);
-//add_filter( 'wp_enqueue_scripts', function() {
-//    // Remove CSS on the front end.
-//    wp_dequeue_style( 'wp-block-library' );
-//    // Remove Gutenberg theme.
-//    wp_dequeue_style( 'wp-block-library-theme' );
-//    // Remove inline global CSS on the front end.
-//    wp_dequeue_style( 'global-styles' );
-//}, 20 );
+add_filter( 'wp_enqueue_scripts', function() {
+    // Remove CSS on the front end.
+    wp_dequeue_style( 'wp-block-library' );
+    // Remove Gutenberg theme.
+    wp_dequeue_style( 'wp-block-library-theme' );
+    // Remove inline global CSS on the front end.
+    wp_dequeue_style( 'global-styles' );
+    // Remove Woocommerce block css
+    wp_dequeue_style( 'wc-blocks-style' );
+}, 20 );
 
 // Allow SVG uploads
 function heretic_mime_types( $mimes ) {
