@@ -33,6 +33,9 @@ function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
 }
 
+// Disable admin bar for performance
+add_filter( 'show_admin_bar', '__return_false' );
+
 // Remove Comments admin page from sidebar
 function disable_comments_admin_menu() {
     remove_menu_page('edit-comments.php');
