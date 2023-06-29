@@ -44,19 +44,9 @@ add_action('admin_menu', 'disable_comments_admin_menu');
 
 // Disable ACF/ACFE Post Type registration page
 add_filter( 'acf/settings/enable_post_types', '__return_false' );
-function disable_acfe_post_types(){
-    acf_update_setting('acfe/modules/post_types', false);
-}
-add_action('acf/init', 'disable_acfe_post_types');
-
-// Disable ACFE Taxonomy registration page
-function disable_acfe_taxonomies(){
-    acf_update_setting('acfe/modules/taxonomies', false);
-}
-add_action('acf/init', 'disable_acfe_taxonomies');
 
 // Disable Gutenberg
-//add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter( 'wp_enqueue_scripts', function() {
     // Remove CSS on the front end.
     wp_dequeue_style( 'wp-block-library' );
@@ -88,20 +78,8 @@ function heretic_mime_types( $mimes ) {
 }
 add_filter('upload_mimes', 'heretic_mime_types');
 
-// Register admin styles and scripts
-function heretic_enqueue_admin_script( $hook ) {
-    global $pagenow;
-
-    if( $pagenow === 'post.php' ) {
-        // Bootstrap
-        wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css', array(), '5.2.3' );
-        // Bootstrap Icons
-        wp_enqueue_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css', array(), '1.10.3' );
-        // Heretic theme styles
-        wp_enqueue_style( 'heretic-style', get_template_directory_uri().'/style.css', array(), time() );
-    }
-}
-add_action( 'admin_enqueue_scripts', 'heretic_enqueue_admin_script' );
+// Load Google Tag Manager scripts
+include( 'inc/google-tag-manager.php' );
 
 // Register styles
 if (!function_exists('register_heretic_styles')) :
@@ -131,11 +109,6 @@ if (!function_exists('register_heretic_styles')) :
 
         // Search
         if ( is_search() ) {
-            wp_enqueue_style( 'heretic-layout-grid', get_template_directory_uri().'/layouts/grid/style.css', array() );
-        }
-
-        // Posts page
-        if ( is_home() ) {
             wp_enqueue_style( 'heretic-layout-grid', get_template_directory_uri().'/layouts/grid/style.css', array() );
         }
 
@@ -447,11 +420,10 @@ function form_layout_thumbnail($thumbnail, $field, $layout){ return get_template
 add_filter('acfe/flexible/thumbnail/layout=form', 'form_layout_thumbnail', 10, 3);
 
 include('inc/button.php');
-
 include( 'inc/wc-template-hooks.php' );
 
-
-
+// Include shortcodes
+include('inc/shortcodes.php');
 
 ////////////////////////////////////////////////////////////
 // FROM TWENTY TWENTY ONE THEME
