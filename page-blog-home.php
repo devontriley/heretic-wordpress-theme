@@ -24,40 +24,8 @@ get_header(); ?>
         </div>
     <?php endif; ?>
 
-    <!-- Featured Posts -->
-    <div class="featured-posts">
-        <div class="row">
-            <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
-                <?php
-                $recentPosts = new WP_Query(array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 3,
-                    'orderby' => 'date',
-                    'order' => 'DESC'
-                ));
+    <?php include( get_template_directory() . '/layouts/modules.php' ); ?>
 
-                while ( $recentPosts->have_posts() ) :
-                    $recentPosts->the_post();
-
-                    get_template_part( 'template-parts/content/content-featured-post' );
-
-                    // If comments are open or there is at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) {
-                        comments_template();
-                    }
-                endwhile;
-                wp_reset_postdata();
-                ?>
-            </div>
-        </div>
-    </div>
-
-    <!-- ACF Modules -->
-    <?php
-    if(has_flexible('Modules')):
-        the_flexible('Modules');
-    endif;
-    ?>
 </div>
 
 <?php get_footer(); ?>

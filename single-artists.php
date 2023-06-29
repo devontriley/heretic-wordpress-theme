@@ -4,10 +4,7 @@
 while ( have_posts() ) :
     the_post();
 
-    /* ACF Modules */
-    if(has_flexible('Modules')):
-        the_flexible('Modules');
-    endif;
+    include( get_template_directory() . '/layouts/modules.php' );
 endwhile;
 ?>
 
