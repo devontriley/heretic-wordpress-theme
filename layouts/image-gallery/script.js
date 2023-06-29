@@ -1,1 +1,1 @@
-const lightboxLayouts=document.querySelectorAll(".layout-image-gallery");lightboxLayouts.forEach(o=>{o=o.querySelectorAll(".lightbox a"),"function"==typeof SimpleLightbox&&new SimpleLightbox(o,{})});
+const lightboxLayouts=document.querySelectorAll(".layout-image-gallery");lightboxLayouts.forEach(o=>{o=o.querySelectorAll(".lightbox a"),"function"==typeof SimpleLightbox&&new SimpleLightbox(o)});
