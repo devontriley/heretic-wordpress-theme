@@ -13,16 +13,31 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "hamburgers": "^1.2.1",
+    "loadcss": "^0.0.2",
     "reframe.js": "^4.0.1",
     "simplelightbox": "^2.12.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-transform-runtime": "^7.22.4",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.29.1",
+    "browserify": "^17.0.0",
     "fancy-log": "^2.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.58.3"
+    "gulp-webpack": "^1.5.0",
+    "sass": "^1.58.3",
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^5.85.1",
+    "webpack-stream": "^7.0.0"
   }
 }
