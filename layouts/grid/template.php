@@ -10,7 +10,7 @@ if ( ! isset( $bodyCopy ) ) $bodyCopy = get_sub_field( 'body_copy' );
 if ( ! isset( $cards ) ) $cards = get_sub_field('cards');
 ?>
 
-<div class="layout-grid layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview'; } ?> <?php echo strtolower(str_replace(' ', '-', $format)) ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-grid layout-vertical-spacing <?php echo strtolower(str_replace(' ', '-', $format)) ?>" data-layout-count="<?php echo $layoutCounter ?>">
     <?php
     if ( $format === 'Icon and Blurb' ) :
         include( 'icon-and-blurb.php' );

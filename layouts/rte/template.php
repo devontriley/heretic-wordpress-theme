@@ -18,7 +18,7 @@ $button = get_sub_field('button');
 ?>
 
 <div id="layout-rte-<?php echo $layoutCounter ?>"
-     class="layout-rte layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview '; } ?> <?php echo 'size-'.strtolower($size); ?> <?php if ( $fullBleedBG ) { echo 'full-bleed-bg'; }?>"
+     class="layout-rte layout-vertical-spacing <?php echo 'size-'.strtolower($size); ?> <?php if ( $fullBleedBG ) { echo 'full-bleed-bg'; }?>"
      data-layout-count="<?php echo $layoutCounter ?>"
 >
 

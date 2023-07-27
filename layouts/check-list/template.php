@@ -6,7 +6,7 @@ $bodyCopy = get_sub_field( 'body_copy' );
 $listItems = get_sub_field( 'list_items' );
 ?>
 
-<div id="layout-check-list-<?php echo $layoutCounter ?>" class="layout-check-list layout-vertical-spacing <?php if ( $is_preview ){ echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div id="layout-check-list-<?php echo $layoutCounter ?>" class="layout-check-list layout-vertical-spacing" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">

@@ -30,7 +30,7 @@ if( $navItems ) :
                 'children' => array()
             );
         } else {
-            if ( $nav[$parent] ) {
+            if ( isset($nav[$parent]) ) {
                 $currentSubNav = $parent;
                 $nav[$parent]['children'][$id] = array(
                     'object' => $navItem,

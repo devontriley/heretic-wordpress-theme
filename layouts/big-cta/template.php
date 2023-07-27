@@ -5,7 +5,7 @@ $text = get_sub_field('text');
 $textLink = get_sub_field('text_link');
 ?>
 
-<div class="layout-big-cta layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-big-cta layout-vertical-spacing" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">

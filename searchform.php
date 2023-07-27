@@ -15,7 +15,7 @@
 $heretic_unique_id = wp_unique_id( 'search-form-' );
 $heretic_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . esc_attr( $args['aria_label'] ) . '"' : '';
 
-$getPostType = $_GET['source'];
+$getPostType = $_GET['source'] ?? null;
 
 // Get post types used by SearchWP engine
 $post_types = array();

@@ -6,7 +6,7 @@ $bodyCopy = get_sub_field('body_copy');
 $code = get_sub_field( 'code' );
 ?>
 
-<div class="layout-code-block layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-code-block layout-vertical-spacing" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
         <div class="row">
             <?php if ( $header ) : ?>

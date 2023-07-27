@@ -21,7 +21,7 @@ switch( $columns ) :
 endswitch;
 ?>
 
-<div class="layout-stats layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-stats layout-vertical-spacing" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
 
         <?php if ( $header ) : ?>

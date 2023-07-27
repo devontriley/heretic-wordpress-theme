@@ -21,7 +21,6 @@ if ( $format !== 'Carousel' ) {
 ?>
 
 <div class="layout-hero layout-vertical-spacing
-    <?php if ( $is_preview ){ echo 'is-preview'; } ?>
     <?php echo strtolower( $format ) ?>
     <?php if ( $format === 'Primary' ){ echo $columns === 'One' ? 'one-column' : 'two-columns'; } ?>
     <?php if ( $format === 'Secondary' ){ echo 'header-'.strtolower( $headerAlignment ); } ?>

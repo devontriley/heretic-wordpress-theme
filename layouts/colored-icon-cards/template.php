@@ -1,15 +1,15 @@
 <?php
 global $layoutCounter;
 
-if ( ! $rows ) {
+if ( ! isset($rows) ) {
     $rows = get_sub_field( 'rows' );
 }
 $defaultCardColor = get_sub_field( 'default_card_color' ) ?: 'primary';
 ?>
 
-<div class="layout-colored-icon-cards layout-vertical-spacing <?php if ( $is_preview ) { echo 'is-preview'; } ?>" data-layout-count="<?php echo $layoutCounter ?>">
+<div class="layout-colored-icon-cards layout-vertical-spacing" data-layout-count="<?php echo $layoutCounter ?>">
     <div class="container-lg">
-        <?php if ( $rows ) : ?>
+        <?php if ( isset($rows) ) : ?>
             <?php foreach ( $rows as $key => $row ) :
                 $cards = $row['cards'];
                 $columns = $row['columns'];
@@ -38,19 +38,19 @@ $defaultCardColor = get_sub_field( 'default_card_color' ) ?: 'primary';
                     <div class="col-sm-10 offset-sm-1 col-lg-12 offset-lg-0">
                         <div class="row justify-content-center">
                             <?php for ( $i = 0; $i < $cardCount; $i++ ) :
-                                $cardColor = $cards[$i]['color'] ?: $defaultCardColor; ?>
+                                $cardColor = $cards[$i]['color'] ?? $defaultCardColor; ?>
                                 <div class="grid col-sm-6 col-md-<?php echo $tabletColumnWidth ?> col-lg-<?php echo $columnWidth ?>">
                                     <div class="card" data-color="<?php echo $cardColor ?>">
-                                        <?php if ( $cards[$i]['url'] ) : ?>
+                                        <?php if ( isset($cards[$i]['url']) ) : ?>
                                             <a href="<?php echo $cards[$i]['url'] ?>" class="cover-link"></a>
                                         <?php endif; ?>
                                         <div class="card-body text-center">
                                             <!-- Image -->
-                                            <?php if ( $cards[$i]['icon'] ) : ?>
+                                            <?php if ( isset($cards[$i]['icon']) && is_array($cards[$i]['icon']) ) : ?>
                                                 <?php echo wp_get_attachment_image( $cards[$i]['icon']['ID'], '30x30' ); ?>
                                             <?php endif; ?>
                                             <!-- Text -->
-                                            <?php if ( $cards[$i]['text'] ) : ?>
+                                            <?php if ( isset($cards[$i]['text']) ) : ?>
                                                 <p class="h4 mb-0"><?php echo $cards[$i]['text'] ?></p>
                                             <?php endif; ?>
                                         </div>
