@@ -8,6 +8,7 @@
         @include margin-bottom(40px);
 
         h2 {
+            font-family: var(--bs-header-font-family);
             color: var(--header-color);
         }
     }

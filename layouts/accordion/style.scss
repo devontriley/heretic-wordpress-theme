@@ -5,6 +5,7 @@
 .layout-accordion {
 
     h2 {
+        font-family: var(--bs-header-font-family);
         color: var(--header-color);
     }
 
@@ -71,24 +72,5 @@
 
     .accordion-button:focus {
         box-shadow: none;
-    }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-accordion.is-preview {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    h2 {
-        font-size: 26px !important;
-        font-weight: 700;
-        padding: 0 !important;
-    }
-
-    h3.accordion-header {
-        font-size: 20px !important;
     }
 }

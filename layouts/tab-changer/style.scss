@@ -48,16 +48,3 @@
         transition: none;
     }
 }
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-tab-changer.is-preview {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    .collapse:first-child {
-        display: block !important;
-    }
-}

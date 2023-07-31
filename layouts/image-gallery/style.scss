@@ -5,6 +5,7 @@
 .layout-image-gallery {
 
     h2 {
+        font-family: var(--bs-header-font-family);
         color: var(--header-color);
     }
 
@@ -25,13 +26,4 @@
             border-radius: var(--borderRadius);
         }
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-image-gallery.is-preview {
-    margin-top: 0;
-    margin-bottom: 0;
 }

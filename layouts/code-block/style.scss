@@ -7,16 +7,8 @@
         margin-bottom: 2em;
 
         h1,h2,h3 {
+            font-family: var(--bs-header-font-family);
             color: var(--header-color);
         }
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout.code-block.is-preview {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }

@@ -3,9 +3,15 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 /* Universal hero */
-.layout-hero .eyebrow-text {
-    color: lightblue;
-    font-weight: 700;
+.layout-hero {
+    h1, .h1, h2, .h2, h3, .h3 {
+        font-family: var(--bs-header-font-family);
+    }
+
+    .eyebrow-text {
+        color: lightblue;
+        font-weight: 700;
+    }
 }
 
 /* Primary */
@@ -133,6 +139,10 @@
 /* Not Image Background Carousel */
 
 .layout-hero.carousel:not(.background-none) {
+
+    h1, .h1, h2, .h2, h3, .h3 {
+        font-family: var(--bs-header-font-family);
+    }
 
     .image {
         display: none;
@@ -347,36 +357,4 @@
         border: 10px solid var(--bs-white);
         object-fit: cover;
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-hero.is-preview {
-    padding: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.layout-hero.is-preview .image_video {
-    height: 200px;
-}
-
-/* Admin secondary */
-.layout-hero.is-preview.secondary img {
-    height: 200px !important;
-}
-
-/* Admin carousel */
-.layout-hero.is-preview.carousel .glide__slides {
-    padding: 0;
-}
-
-.layout-hero.is-preview.carousel .glide__slide:not(:first-child) {
-    display: none;
-}
-
-.layout-hero.is-preview.carousel .glide.images .controls button {
-    pointer-events: none;
 }

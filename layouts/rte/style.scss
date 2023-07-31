@@ -67,6 +67,7 @@
     }
 
     h1, .h1, h2, .h2, h3, .h3 {
+        font-family: var(--bs-header-font-family);
         color: var(--header-color);
 
         &:last-child {
@@ -135,13 +136,4 @@
     .row {
         align-items: flex-start;
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-rte.is-preview {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }

@@ -8,6 +8,7 @@
         @include margin-bottom(40px);
 
         h2 {
+            font-family: var(--bs-header-font-family);
             color: var(--bs-secondary);
             margin-bottom: 0;
         }
@@ -59,13 +60,4 @@
             }
         }
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-list-group.is-preview {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }

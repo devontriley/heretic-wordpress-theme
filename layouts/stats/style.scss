@@ -9,6 +9,7 @@
     }
 
     h2, .h2 {
+        font-family: var(--bs-header-font-family);
         color: var(--header-color);
     }
 
@@ -31,13 +32,4 @@
             overflow-wrap: break-word;
         }
     }
-}
-
-/**************************
- Admin specific styles
- *************************/
-
-.layout-stats.is-preview {
-    margin-top: 0;
-    margin-bottom: 0;
 }
