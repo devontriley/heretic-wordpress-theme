@@ -159,7 +159,9 @@ if ( $format !== 'Carousel' ) {
                                 <ul class="glide__slides">
                                     <?php foreach( $content as $key => $value ) : ?>
                                         <div class="glide__slide">
-                                            <?php echo wp_get_attachment_image( $value['image']['ID'], 'full', '', array() ) ?>
+                                            <?php if ( is_array( $value['image'] ) ) {
+                                                echo wp_get_attachment_image($value['image']['ID'], 'full', '', array());
+                                            } ?>
                                         </div>
                                     <?php endforeach; ?>
                                 </ul>
