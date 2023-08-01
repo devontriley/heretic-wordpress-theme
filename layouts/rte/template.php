@@ -8,6 +8,7 @@ $eyebrowText = get_sub_field('eyebrow_text');
 $header = get_sub_field('header');
 $headerSize = get_sub_field('header_size') ?? 'h2';
 $bodyCopy = get_sub_field('body_copy');
+$bodyCopy2 = get_sub_field( 'body_copy_2' );
 $sidebar = get_sub_field('sidebar');
 $imageVideo = get_sub_field('image_or_video');
 $image = get_sub_field('image');
@@ -44,20 +45,16 @@ $button = get_sub_field('button');
 
         <?php elseif ( $size === 'Large' ) : ?>
 
-            <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2' ?>">
-                <!-- Eyebrow text -->
+            <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                 <?php if ( $eyebrowText ) : ?>
                     <p class="eyebrow"><?php echo $eyebrowText ?></p>
                 <?php endif; ?>
-                <!-- Header -->
                 <?php if ( $header ) : ?>
                     <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
                 <?php endif; ?>
-                <!-- Body copy -->
                 <?php if ( $bodyCopy ) : ?>
                     <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
                 <?php endif; ?>
-                <!-- Button -->
                 <?php if ( $button ) : ?>
                     <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
                 <?php endif; ?>
@@ -65,40 +62,32 @@ $button = get_sub_field('button');
 
         <?php elseif ( $size === 'Medium' ) : ?>
 
-            <?php if ( !$image && !$video ) : ?>
+            <?php
+            if ( !$image && !$video ) :
+            $colClasses = 'col-sm-10 offset-sm-1';
+            $colClasses .= $centeredText ? ' text-center col-md-6 offset-md-3' : ' col-md-8 offset-md-2';
+            ?>
 
-                <!-- Medium: Single column -->
-
-                <?php
-                $colClasses = 'col-sm-10 offset-sm-1';
-                $colClasses .= $centeredText ? ' text-center col-md-6 offset-md-3' : ' col-md-8 offset-md-2';
-                ?>
-
-            <div class="<?php echo $colClasses ?>">
-                <!-- Eyebrow text -->
-                <?php if ( $eyebrowText ) : ?>
-                    <p class="eyebrow"><?php echo $eyebrowText ?></p>
-                <?php endif; ?>
-                <!-- Header -->
-                <?php if ( $header ) : ?>
-                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                <?php endif; ?>
-                <!-- Body copy -->
-                <?php if ( $bodyCopy ) : ?>
-                    <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                <?php endif; ?>
-                <!-- Button -->
-                <?php if ( $button ) : ?>
-                    <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                <?php endif; ?>
+                <div class="<?php echo $colClasses ?>">
+                    <?php if ( $eyebrowText ) : ?>
+                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                    <?php endif; ?>
+                    <?php if ( $header ) : ?>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                    <?php endif; ?>
+                    <?php if ( $bodyCopy ) : ?>
+                        <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                    <?php endif; ?>
+                    <?php if ( $button ) : ?>
+                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                    <?php endif; ?>
                 </div>
 
             <?php else : ?>
 
-                <!-- Medium: Two columns with image/video -->
+                <?php /* Medium: Two columns with image/video */ ?>
 
                 <?php if ( $imageVideoAlignment === 'Left' ) : ?>
-                    <!-- Image/Video -->
                     <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-0 image'; ?>">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -106,46 +95,35 @@ $button = get_sub_field('button');
                             <?php echo $video; ?>
                         <?php endif; ?>
                     </div>
-                    <!-- Copy -->
-                <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-1 copy'; ?>">
-                    <!-- Eyebrow text -->
-                    <?php if ( $eyebrowText ) : ?>
-                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
-                    <?php endif; ?>
-                    <!-- Header -->
-                    <?php if ( $header ) : ?>
-                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                    <?php endif; ?>
-                    <!-- Body copy -->
-                    <?php if ( $bodyCopy ) : ?>
-                        <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                    <?php endif; ?>
-                    <!-- Button -->
-                    <?php if ( $button ) : ?>
-                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                    <?php endif; ?>
+                    <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-1 copy'; ?>">
+                        <?php if ( $eyebrowText ) : ?>
+                            <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                        <?php endif; ?>
+                        <?php if ( $header ) : ?>
+                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                        <?php endif; ?>
+                        <?php if ( $bodyCopy ) : ?>
+                            <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                        <?php endif; ?>
+                        <?php if ( $button ) : ?>
+                            <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                        <?php endif; ?>
                     </div>
                 <?php else : ?>
-                    <!-- Copy -->
-                <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 copy'; ?>">
-                    <!-- Eyebrow text -->
-                    <?php if ( $eyebrowText ) : ?>
-                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
-                    <?php endif; ?>
-                    <!-- Header -->
-                    <?php if ( $header ) : ?>
-                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                    <?php endif; ?>
-                    <!-- Body copy -->
-                    <?php if ( $bodyCopy ) : ?>
-                        <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                    <?php endif; ?>
-                    <!-- Button -->
-                    <?php if ( $button ) : ?>
-                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                    <?php endif; ?>
+                    <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 copy'; ?>">
+                        <?php if ( $eyebrowText ) : ?>
+                            <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                        <?php endif; ?>
+                        <?php if ( $header ) : ?>
+                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                        <?php endif; ?>
+                        <?php if ( $bodyCopy ) : ?>
+                            <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                        <?php endif; ?>
+                        <?php if ( $button ) : ?>
+                            <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                        <?php endif; ?>
                     </div>
-                    <!-- Image -->
                     <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 image'; ?>">
                         <?php if ( $image ) : ?>
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -160,7 +138,6 @@ $button = get_sub_field('button');
         <?php elseif ( $size === 'Small' ) : ?>
 
             <?php if ( $imageVideoAlignment === 'Left' ) : ?>
-                <!-- Image/Video -->
                 <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-1 image'; ?>">
                     <?php if ( $image ) : ?>
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -168,46 +145,35 @@ $button = get_sub_field('button');
                         <?php echo $video; ?>
                     <?php endif; ?>
                 </div>
-                <!-- Copy -->
-            <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 copy'; ?>">
-                <!-- Eyebrow text -->
-                <?php if ( $eyebrowText ) : ?>
-                    <p class="eyebrow"><?php echo $eyebrowText ?></p>
-                <?php endif; ?>
-                <!-- Header -->
-                <?php if ( $header ) : ?>
-                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                <?php endif; ?>
-                <!-- Body copy -->
-                <?php if ( $bodyCopy ) : ?>
-                    <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                <?php endif; ?>
-                <!-- Button -->
-                <?php if ( $button ) : ?>
-                    <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                <?php endif; ?>
+                <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 copy'; ?>">
+                    <?php if ( $eyebrowText ) : ?>
+                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                    <?php endif; ?>
+                    <?php if ( $header ) : ?>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                    <?php endif; ?>
+                    <?php if ( $bodyCopy ) : ?>
+                        <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                    <?php endif; ?>
+                    <?php if ( $button ) : ?>
+                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                    <?php endif; ?>
                 </div>
             <?php else : ?>
-                <!-- Copy -->
-            <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 copy'; ?>">
-                <!-- Eyebrow text -->
-                <?php if ( $eyebrowText ) : ?>
-                    <p class="eyebrow"><?php echo $eyebrowText ?></p>
-                <?php endif; ?>
-                <!-- Header -->
-                <?php if ( $header ) : ?>
-                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                <?php endif; ?>
-                <!-- Body copy -->
-                <?php if ( $bodyCopy ) : ?>
-                    <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                <?php endif; ?>
-                <!-- Button -->
-                <?php if ( $button ) : ?>
-                    <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                <?php endif; ?>
+                <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 copy'; ?>">
+                    <?php if ( $eyebrowText ) : ?>
+                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                    <?php endif; ?>
+                    <?php if ( $header ) : ?>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                    <?php endif; ?>
+                    <?php if ( $bodyCopy ) : ?>
+                        <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                    <?php endif; ?>
+                    <?php if ( $button ) : ?>
+                        <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                    <?php endif; ?>
                 </div>
-                <!-- Image -->
                 <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-1 image'; ?>">
                     <?php if ( $image ) : ?>
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -220,22 +186,18 @@ $button = get_sub_field('button');
         <?php elseif ( $size === 'Sidebar' ) : ?>
 
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-7 offset-xl-1">
-            <!-- Eyebrow text -->
-            <?php if ( $eyebrowText ) : ?>
-                <p class="eyebrow"><?php echo $eyebrowText ?></p>
-            <?php endif; ?>
-            <!-- Header -->
-            <?php if ( $header ) : ?>
-                <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-            <?php endif; ?>
-            <!-- Body copy -->
-            <?php if ( $bodyCopy ) : ?>
-                <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-            <?php endif; ?>
-            <!-- Button -->
-            <?php if ( $button ) : ?>
-                <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-            <?php endif; ?>
+                <?php if ( $eyebrowText ) : ?>
+                    <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                <?php endif; ?>
+                <?php if ( $header ) : ?>
+                    <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                <?php endif; ?>
+                <?php if ( $bodyCopy ) : ?>
+                    <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                <?php endif; ?>
+                <?php if ( $button ) : ?>
+                    <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-2 offset-xl-1">
                 <?php if ( $sidebar ) : ?>
@@ -246,7 +208,7 @@ $button = get_sub_field('button');
         <?php elseif ( $size === 'FiftyFifty' ) : ?>
 
             <?php if ( $imageVideoAlignment === 'Left' ) : ?>
-                <!-- Image/Video -->
+
                 <div class="d-none d-lg-block col-lg-6 image">
                     <?php if ( $image ) : ?>
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -254,54 +216,45 @@ $button = get_sub_field('button');
                         <?php echo $video; ?>
                     <?php endif; ?>
                 </div>
-                <!-- Copy -->
                 <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-0 copy">
                     <div class="copy-inner">
                         <div class="copy-wrapper">
-                            <!-- Eyebrow text -->
                             <?php if ( $eyebrowText ) : ?>
                                 <p class="eyebrow"><?php echo $eyebrowText ?></p>
                             <?php endif; ?>
-                            <!-- Header -->
                             <?php if ( $header ) : ?>
-                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                        <?php endif; ?>
-                        <!-- Body copy -->
-                        <?php if ( $bodyCopy ) : ?>
-                            <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                        <?php endif; ?>
-                        <!-- Button -->
-                        <?php if ( $button ) : ?>
-                            <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                        <?php endif; ?>
+                                <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                            <?php endif; ?>
+                            <?php if ( $bodyCopy ) : ?>
+                                <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                            <?php endif; ?>
+                            <?php if ( $button ) : ?>
+                                <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-                </div>
+
             <?php else : ?>
-                <!-- Copy -->
+
                 <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-0 copy">
                     <div class="copy-inner">
                         <div class="copy-wrapper">
-                            <!-- Eyebrow text -->
                             <?php if ( $eyebrowText ) : ?>
                                 <p class="eyebrow"><?php echo $eyebrowText ?></p>
                             <?php endif; ?>
-                            <!-- Header -->
                             <?php if ( $header ) : ?>
-                            <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
-                        <?php endif; ?>
-                        <!-- Body copy -->
-                        <?php if ( $bodyCopy ) : ?>
-                            <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
-                        <?php endif; ?>
-                        <!-- Button -->
-                        <?php if ( $button ) : ?>
-                            <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
-                        <?php endif; ?>
+                                <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                            <?php endif; ?>
+                            <?php if ( $bodyCopy ) : ?>
+                                <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                            <?php endif; ?>
+                            <?php if ( $button ) : ?>
+                                <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-                </div>
-                <!-- Image -->
                 <div class="d-none d-lg-block col-lg-6 image">
                     <?php if ( $image ) : ?>
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
@@ -309,7 +262,35 @@ $button = get_sub_field('button');
                         <?php echo $video; ?>
                     <?php endif; ?>
                 </div>
+
             <?php endif; ?>
+
+        <?php elseif ( $size === 'TwoColumn' ) : ?>
+
+            <div class="col-sm-10 offset-sm-1">
+
+                <div class="header">
+                    <?php if ( $eyebrowText ) : ?>
+                        <p class="eyebrow"><?php echo $eyebrowText ?></p>
+                    <?php endif; ?>
+                    <?php if ( $header ) : ?>
+                        <<?php echo $headerSize ?>><?php echo $header ?></<?php echo $headerSize ?>>
+                    <?php endif; ?>
+                </div>
+
+                <div class="row align-items-start">
+                    <div class="col-md-6">
+                        <?php if ( $bodyCopy ) : ?>
+                            <?php echo apply_filters( 'the_content', $bodyCopy ) ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-md-6">
+                        <?php if ( $bodyCopy2 ) : ?>
+                            <?php echo apply_filters( 'the_content', $bodyCopy2 ) ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
 
         <?php endif; ?>
 
@@ -325,6 +306,7 @@ unset(
     $eyebrowText,
     $header,
     $bodyCopy,
+    $bodyCopy2,
     $sidebar,
     $imageVideo,
     $image,

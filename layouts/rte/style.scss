@@ -137,3 +137,19 @@
         align-items: flex-start;
     }
 }
+
+/* Two Column */
+.layout-rte.size-twocolumn {
+    .header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    div[class*=col] {
+        @include media-breakpoint-down(md) {
+            &:not(:last-child) {
+                margin-bottom: var(--bs-gutter-x);
+            }
+        }
+    }
+}
