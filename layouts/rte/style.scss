@@ -66,6 +66,10 @@
         height: auto;
     }
 
+    .wp-caption {
+        max-width: 100%;
+    }
+
     h1, .h1, h2, .h2, h3, .h3 {
         font-family: var(--bs-header-font-family);
         color: var(--header-color);
