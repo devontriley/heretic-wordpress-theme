@@ -43,6 +43,7 @@ if ( ! isset( $cards ) ) $cards = get_sub_field('cards');
     $columns,
     $imageType,
     $header,
+    $bodyCopy,
     $headerSize,
     $cards
 );
