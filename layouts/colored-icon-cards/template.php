@@ -41,15 +41,13 @@ $defaultCardColor = get_sub_field( 'default_card_color' ) ?: 'primary';
                                 $cardColor = $cards[$i]['color'] ?? $defaultCardColor; ?>
                                 <div class="grid col-sm-6 col-md-<?php echo $tabletColumnWidth ?> col-lg-<?php echo $columnWidth ?>">
                                     <div class="card" data-color="<?php echo $cardColor ?>">
-                                        <?php if ( isset($cards[$i]['url']) ) : ?>
+                                        <?php if ( isset($cards[$i]['url']) && $cards[$i]['url'] !== '' ) : ?>
                                             <a href="<?php echo $cards[$i]['url'] ?>" class="cover-link"></a>
                                         <?php endif; ?>
                                         <div class="card-body text-center">
-                                            <!-- Image -->
                                             <?php if ( isset($cards[$i]['icon']) && is_array($cards[$i]['icon']) ) : ?>
                                                 <?php echo wp_get_attachment_image( $cards[$i]['icon']['ID'], '30x30' ); ?>
                                             <?php endif; ?>
-                                            <!-- Text -->
                                             <?php if ( isset($cards[$i]['text']) ) : ?>
                                                 <p class="h4 mb-0"><?php echo $cards[$i]['text'] ?></p>
                                             <?php endif; ?>
