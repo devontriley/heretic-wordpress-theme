@@ -24,11 +24,11 @@
             color: $white;
         }
 
-        a:not(.btn) {
+        a:not([class]) {
             color: $white;
 
             &:hover {
-                color: var(--bs-tertiary-1);
+                color: var(--rte-full-bleed-bg-link-hover-color);
             }
         }
     }
