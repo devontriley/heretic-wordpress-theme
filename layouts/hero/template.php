@@ -18,6 +18,9 @@ if ( $format !== 'Carousel' ) {
     $video = $content[0]['video'];
     $circularImage = $content[0]['circular_overlap_image'];
 }
+if ( $format == 'Primary' ) {
+    $imageVideoDescription = $content[0]['image_video_description'];
+}
 ?>
 
 <div class="layout-hero layout-vertical-spacing
@@ -35,25 +38,20 @@ if ( $format !== 'Carousel' ) {
             <div class="row align-items-center">
                 <!-- Column one -->
                 <div class="column1 col-sm-10 offset-sm-1 <?php echo ( $columns === 'One' ) ? 'col-md-8 offset-md-2' : 'col-md-6 offset-md-0'; ?>">
-                    <!-- Eyebrow -->
                     <?php if ($eyebrow) : ?>
                         <p class="eyebrow"><?php echo $eyebrow ?></p>
                     <?php endif; ?>
-                    <!-- Header -->
                     <?php if ($header) : ?>
                         <<?php echo $headerSize ?>>
                             <?php echo $header ?>
                         </<?php echo $headerSize ?>>
                     <?php endif; ?>
-                    <!-- Body copy -->
                     <?php if ( $body ) : ?>
                         <?php echo apply_filters( 'the_content', $body ) ?>
                     <?php endif; ?>
-                    <!-- Button -->
                     <?php if ( $button ) : ?>
                         <?php button( $button['title'], $button['url'], $button['target'], 'btn btn-primary' ); ?>
                     <?php endif; ?>
-                    <!-- Image/video -->
                     <?php if ( $columns === 'One' ) : ?>
                         <?php if ( $autoCrossfadeImages ) : ?>
                             <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
@@ -69,6 +67,11 @@ if ( $format !== 'Carousel' ) {
                             <?php echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'single-image' ) ) ?>
                         <?php elseif ( $video ) : ?>
                             <?php echo $video ?>
+                        <?php endif; ?>
+                        <?php if ( $imageVideoDescription ) : ?>
+                            <div class="image-video-description">
+                                <p><?php echo $imageVideoDescription; ?></p>
+                            </div>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
@@ -88,6 +91,11 @@ if ( $format !== 'Carousel' ) {
                             <?php echo wp_get_attachment_image( $image['ID'], 'full' ) ?>
                         <?php elseif ( $video ) : ?>
                             <?php echo $video ?>
+                        <?php endif; ?>
+                        <?php if ( $imageVideoDescription ) : ?>
+                            <div class="image-video-description">
+                                <p><?php echo $imageVideoDescription; ?></p>
+                            </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

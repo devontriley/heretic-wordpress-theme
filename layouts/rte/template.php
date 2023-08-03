@@ -15,6 +15,7 @@ $image = get_sub_field('image');
 $imageTopAligned = get_sub_field( 'image_top_aligned' );
 $video = get_sub_field('video');
 $imageVideoAlignment = get_sub_field('image_video_alignment');
+$imageVideoDescription = get_sub_field( 'image_video_description' );
 $button = get_sub_field('button');
 ?>
 
@@ -94,6 +95,11 @@ $button = get_sub_field('button');
                         <?php elseif ( $video ) : ?>
                             <?php echo $video; ?>
                         <?php endif; ?>
+                        <?php if ( $imageVideoDescription ) : ?>
+                            <div class="image-video-description">
+                                <p><?php echo $imageVideoDescription; ?></p>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-1 copy'; ?>">
                         <?php if ( $eyebrowText ) : ?>
@@ -130,6 +136,11 @@ $button = get_sub_field('button');
                         <?php elseif ( $video ) : ?>
                             <?php echo $video; ?>
                         <?php endif; ?>
+                        <?php if ( $imageVideoDescription ) : ?>
+                            <div class="image-video-description">
+                                <p><?php echo $imageVideoDescription; ?></p>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
 
@@ -143,6 +154,11 @@ $button = get_sub_field('button');
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
                     <?php elseif ( $video ) : ?>
                         <?php echo $video; ?>
+                    <?php endif; ?>
+                    <?php if ( $imageVideoDescription ) : ?>
+                        <div class="image-video-description">
+                            <p><?php echo $imageVideoDescription; ?></p>
+                        </div>
                     <?php endif; ?>
                 </div>
                 <div class="<?php echo 'col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-1 copy'; ?>">
@@ -179,6 +195,11 @@ $button = get_sub_field('button');
                         <?php echo wp_get_attachment_image( $image['ID'], 'full', '', false ) ?>
                     <?php elseif ( $video ) : ?>
                         <?php echo $video; ?>
+                    <?php endif; ?>
+                    <?php if ( $imageVideoDescription ) : ?>
+                        <div class="image-video-description">
+                            <p><?php echo $imageVideoDescription; ?></p>
+                        </div>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
