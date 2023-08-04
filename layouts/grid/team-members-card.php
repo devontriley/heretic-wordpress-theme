@@ -8,7 +8,7 @@ $textLink = get_field( 'thumbnail_text_link' , $id );
 global $allGridTeamMembers;
 
 $bio = get_field('bio', $teamMember->ID);
-if ( $bio && !$allGridTeamMembers[$id] ) {
+if ( $bio && !isset($allGridTeamMembers[$id]) ) {
     $allGridTeamMembers[$id]['name'] = $teamMember->post_title;
     $allGridTeamMembers[$id]['bio'] = $bio;
 }
