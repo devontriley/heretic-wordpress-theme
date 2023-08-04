@@ -425,6 +425,27 @@ include( 'inc/wc-template-hooks.php' );
 // Include shortcodes
 include('inc/shortcodes.php');
 
+
+/**
+ * Disable Woocommerce resize for SVG images.
+ */
+add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10, 4 );
+
+function fix_wp_get_attachment_image_svg($image, $attachment_id, $size, $icon) {
+    // if Woocommerce enabled
+    if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+
+        if ( ! is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+            $attachment = get_post($attachment_id);
+            $mime_type = $attachment->post_mime_type; // The attachment mime_type
+            if($mime_type == 'image/svg+xml') {
+                return false;
+            }
+        }
+    }
+    return $image;
+}
+
 ////////////////////////////////////////////////////////////
 // FROM TWENTY TWENTY ONE THEME
 ////////////////////////////////////////////////////////////
